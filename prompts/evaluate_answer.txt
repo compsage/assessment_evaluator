@@ -1,0 +1,9 @@
+Given the assessment question: {key_text}
+with the true and actual answers of {key_answer} a student entered the answer 
+{student_answer}.  Return in json whether the students answer matches the actual answer with an explanation of why.  Also return a field if the student should get partial credit for this 
+answer.
+
+Json output fields:
+    correct: true|false <should never be capitalized>,
+    explanation: <assessment of why student supplied this answer>,
+    partial_credit: True|False

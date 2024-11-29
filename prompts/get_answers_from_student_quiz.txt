@@ -1,0 +1,23 @@
+Look at this test by a student and convert it into a well-formed JSON structure. The answers are
+in the student's handwriting and written in the underlined blank space. Associated work may or may not be 
+next to the answer.  
+
+The JSON structure should be:
+    {
+        'student_name': <insert the student's name on the top of the page here>,
+        'date': <insert the date that was entered at the top of the page>,
+        'name': <Insert the Name of the quiz/test here>,
+        'subject': <insert the subject matter of the quiz/test here>,
+        'section': <insert the section of the test/quiz here>,
+        'page': <insert the page number of the test here. Sometimes it is printed at the top if it is a multi-page test>,
+        'questions': [
+            {
+                'text': <insert the full text of the question here>,
+                'student_answer': <insert the full text of the extracted answer the student entered here>,
+                'generated answer': <determine what you think the answer is and insert it here>,
+                'number': <insert the number of the question here>,
+                'correct_value': <fully_correct | partially_correct | incorrect | undetermined>,
+                'assessment': <one sentence explaining what the student did>
+            }
+        ]
+    }

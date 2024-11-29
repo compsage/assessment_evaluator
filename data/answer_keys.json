@@ -1,0 +1,776 @@
+[
+    {
+        "name": "QUIZ 3",
+        "subject": "Intermediate Mathematics",
+        "section": "Sections 1.6–1.8",
+        "page": null,
+        "questions": [
+            {
+                "answer": [
+                    "96"
+                ],
+                "question": "1. 6 and 96",
+                "number": 1,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "96"
+                ],
+                "question": "2.",
+                "number": 2,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "1"
+                ],
+                "question": "3. 3 and 17",
+                "number": 3,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "51"
+                ],
+                "question": "4.",
+                "number": 4,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "7"
+                ],
+                "question": "5. 14 and 49",
+                "number": 5,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "98"
+                ],
+                "question": "6.",
+                "number": 6,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "10"
+                ],
+                "question": "7. 2 + 3 + 4 + 9",
+                "number": 7,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "12"
+                ],
+                "question": "8. 6 ÷ 3 + 27 ÷ 3",
+                "number": 8,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "57"
+                ],
+                "question": "9. 54 + 3² + (4 - 1)",
+                "number": 9,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "5"
+                ],
+                "question": "10. 9 ÷ 6(6)",
+                "number": 10,
+                "value": 10
+            }
+        ]
+    },
+    {
+        "name": "QUIZ 21",
+        "subject": "Intermediate Mathematics",
+        "section": "6.1",
+        "page": 63,
+        "questions": [
+            {
+                "answer": [
+                    "12"
+                ],
+                "question": "1. ft. = ___ in.",
+                "number": 1,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "36"
+                ],
+                "question": "1. yd. = ___ in.",
+                "number": 2,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "5,280"
+                ],
+                "question": "1. mi. = ___ ft.",
+                "number": 3,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "16"
+                ],
+                "question": "1. pt. = ___ fl. oz.",
+                "number": 4,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "16"
+                ],
+                "question": "1. lb. = ___ oz.",
+                "number": 5,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "4"
+                ],
+                "question": "1. bu. = ___ pk.",
+                "number": 6,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "2,000"
+                ],
+                "question": "1. t. = ___ lb.",
+                "number": 7,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "3"
+                ],
+                "question": "1. tbsp. = ___ tsp.",
+                "number": 8,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "21"
+                ],
+                "question": "7. yd. = ___ ft.",
+                "number": 9,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "7"
+                ],
+                "question": "84 in. = ___ ft.",
+                "number": 10,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "2 1/2"
+                ],
+                "question": "90 in. = ___ yd.",
+                "number": 11,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "4"
+                ],
+                "question": "8 pt. = ___ qt.",
+                "number": 12,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "64"
+                ],
+                "question": "4 lb. = ___ oz.",
+                "number": 13,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "32"
+                ],
+                "question": "8 gal. = ___ qt.",
+                "number": 14,
+                "value": 10
+            }
+        ]
+    },
+    {
+        "name": "TEST 1",
+        "subject": "Intermediate Mathematics",
+        "section": "Chapter 1",
+        "page": 9,
+        "questions": [
+            {
+                "answer": [
+                    "3.082"
+                ],
+                "question": "Write the number to which 8 has the greater value: 3.082 or 3.28.",
+                "number": 1,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "5"
+                ],
+                "question": "In the number 987,654.126, which digit is in the hundred thousand place?",
+                "number": 2,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "integers"
+                ],
+                "question": "What number category includes whole numbers as well as their opposites?",
+                "number": 3,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "-4, -3, 0, 3"
+                ],
+                "question": "Order these numbers from least to greatest: -3, 3, -4, 0.",
+                "number": 4,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "5 to 6"
+                ],
+                "question": "Give the ratio of boys to girls in a class if there are 15 boys and 18 girls.",
+                "number": 5,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "7"
+                ],
+                "question": "What is the only even number that is prime?",
+                "number": 6,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "7"
+                ],
+                "question": "Identify the base for the number 7.",
+                "number": 7,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "6x^2 + 21x"
+                ],
+                "question": "Expand and multiply: 6(x^2 + 3.5x).",
+                "number": 8,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "0.625"
+                ],
+                "question": "Give the decimal equivalent of 5/8.",
+                "number": 9,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "0.401"
+                ],
+                "question": "Write the decimal that is greater: 0.4015 or 0.401.",
+                "number": 10,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "2 x 2 x 2 x 2"
+                ],
+                "question": "Write the prime factorization of 16 using division by primes.",
+                "number": 11,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "3 and 11"
+                ],
+                "question": "Which of the following numbers are prime: 3, 4, 9, 11, 15?",
+                "number": 12,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "product"
+                ],
+                "question": "What is the term for the answer to a multiplication problem?",
+                "number": 13,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "16/12"
+                ],
+                "question": "Write the equivalent fraction for 4/3 with a denominator of 16.",
+                "number": 14,
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "QUIZ 2",
+        "subject": "Intermediate Mathematics",
+        "section": "Sections 1.3-1.5",
+        "page": 3,
+        "questions": [
+            {
+                "answer": [
+                    "23"
+                ],
+                "question": "Identify the base for the number 23^1.",
+                "number": 1,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "64"
+                ],
+                "question": "Expand and multiply 4^3. 4 x 4 x 4 =",
+                "number": 2,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "0 or 1"
+                ],
+                "question": "Write one of the two numbers that are neither prime nor composite.",
+                "number": 3,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "composite"
+                ],
+                "question": "Is the number 27 prime, composite, or neither?",
+                "number": 4,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "2"
+                ],
+                "question": "What is the only even number that is prime?",
+                "number": 5,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "13"
+                ],
+                "question": "Which of the following numbers are prime? 12, 13, 14, 15?",
+                "number": 6,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "1 and 2"
+                ],
+                "question": "What are the common factors of 4 and 14? Factors of 4: 1, 2, 4 Factors of 14: 1, 2, 7, 14",
+                "number": 7,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "2^3 x 3^3"
+                ],
+                "question": "Rewrite the following using exponents: 2 x 2 x 2 x 3 x 3 x 3.",
+                "number": 8,
+                "value": 5
+            },
+            {
+                "answer": [
+                    "2 x 2 x 2 x 3 or 2^3 x 3"
+                ],
+                "question": "Find the prime factorization of each number using division by primes. Show all work. 24",
+                "number": 9,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "3 x 5 x 7"
+                ],
+                "question": "Find the prime factorization of each number using division by primes. Show all work. 105",
+                "number": 10,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "12,560"
+                ],
+                "question": "Find the answers. 12,560",
+                "number": 11,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "55.67"
+                ],
+                "question": "Find the answers. 0.5567 x 100",
+                "number": 12,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "0.7894"
+                ],
+                "question": "Find the answers. 7.894 ÷ 10",
+                "number": 13,
+                "value": 10
+            },
+            {
+                "answer": [
+                    "1.9787"
+                ],
+                "question": "Find the answers. 19.787 ÷ 10",
+                "number": 14,
+                "value": 10
+            }
+        ]
+    },
+    {
+        "name": "Test 1",
+        "subject": "Intermediate Mathematics",
+        "section": "Find the answers",
+        "page": 2,
+        "questions": [
+            {
+                "answer": [
+                    "3.701"
+                ],
+                "question": "15.",
+                "number": 15,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "0.24"
+                ],
+                "question": "16.",
+                "number": 16,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "358"
+                ],
+                "question": "16.",
+                "number": 16,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "70.225"
+                ],
+                "question": "17.",
+                "number": 17,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "140.22"
+                ],
+                "question": "18.",
+                "number": 18,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "400"
+                ],
+                "question": "19.",
+                "number": 19,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "0"
+                ],
+                "question": "20.",
+                "number": 20,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "12.345"
+                ],
+                "question": "21.",
+                "number": 21,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "455.69"
+                ],
+                "question": "22.",
+                "number": 22,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "2"
+                ],
+                "question": "23.",
+                "number": 23,
+                "value": 2
+            },
+            {
+                "answer": [
+                    "28"
+                ],
+                "question": "24.",
+                "number": 24,
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "QUIZ 4",
+        "subject": "Intermediate Mathematics",
+        "section": "Sections 1.9-1.10",
+        "page": 7,
+        "questions": [
+            {
+                "number": 1,
+                "question": "Write 20/3 as a mixed number.",
+                "answer": [
+                    "6 2/3"
+                ],
+                "value": 10
+            },
+            {
+                "number": 2,
+                "question": "Write 5 1/5 as an improper fraction.",
+                "answer": [
+                    "26/5"
+                ],
+                "value": 10
+            },
+            {
+                "number": 3,
+                "question": "What must be the same before two fractions can be added or subtracted?",
+                "answer": [
+                    "denominator"
+                ],
+                "value": 10
+            },
+            {
+                "number": 4,
+                "question": "Find the LCD for 5/6 and 2/3.",
+                "answer": [
+                    "6"
+                ],
+                "value": 10
+            },
+            {
+                "number": 5,
+                "question": "Reduce 21/63 to lowest terms.",
+                "answer": [
+                    "1/3"
+                ],
+                "value": 10
+            },
+            {
+                "number": 6,
+                "question": "Write the equivalent fraction for 2/3 with a denominator of 15.",
+                "answer": [
+                    "10/15"
+                ],
+                "value": 10
+            },
+            {
+                "number": 7,
+                "question": "Identify 7/6 as a proper fraction, an improper fraction, or a mixed number.",
+                "answer": [
+                    "improper"
+                ],
+                "value": 10
+            },
+            {
+                "number": 8,
+                "question": "1/15 + 13/15",
+                "answer": [
+                    "14/15"
+                ],
+                "value": 6
+            },
+            {
+                "number": 9,
+                "question": "4/9 - 2/9",
+                "answer": [
+                    "2/9"
+                ],
+                "value": 6
+            },
+            {
+                "number": 10,
+                "question": "1/3 x 4/1",
+                "answer": [
+                    "4/3"
+                ],
+                "value": 6
+            },
+            {
+                "number": 11,
+                "question": "5/8 x 10/16",
+                "answer": [
+                    "25/64"
+                ],
+                "value": 6
+            },
+            {
+                "number": 12,
+                "question": "5/6 ÷ 1/3",
+                "answer": [
+                    "2 1/2"
+                ],
+                "value": 6
+            }
+        ]
+    },
+    {
+        "name": "QUIZ 1",
+        "subject": "Intermediate Mathematics",
+        "section": "Sections 1.1-1.2",
+        "page": 1,
+        "questions": [
+            {
+                "answer": [
+                    "6,785",
+                    "6785"
+                ],
+                "question": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+                "number": 1,
+                "value": 6
+            },
+            {
+                "answer": [
+                    "0"
+                ],
+                "question": "In the number 243,107,569, which digit is in the ten thousands place?",
+                "number": 2,
+                "value": 6
+            },
+            {
+                "answer": [
+                    "4,482,190",
+                    "4482110"
+                ],
+                "question": "Round 4,482,186 to the tens place.",
+                "number": 3,
+                "value": 6
+            },
+            {
+                "answer": [
+                    "difference",
+                    "diff"
+                ],
+                "question": "What is the answer to a subtraction problem called?",
+                "number": 4,
+                "value": 6
+            },
+            {
+                "answer": [
+                    "36"
+                ],
+                "question": "What is the value of |-36|?",
+                "number": 5,
+                "value": 6
+            },
+            {
+                "answer": [
+                    "integers",
+                    "int",
+                    "ints"
+                ],
+                "question": "What number category includes whole numbers as well as their opposites?",
+                "number": 6,
+                "value": 6
+            },
+            {
+                "answer": [
+                    "<"
+                ],
+                "question": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =): 0.233 ___ 0.33",
+                "number": 7,
+                "value": 7
+            },
+            {
+                "answer": [
+                    "<"
+                ],
+                "question": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =): -2 ___ -11",
+                "number": 8,
+                "value": 7
+            },
+            {
+                "answer": [
+                    "<"
+                ],
+                "question": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =): |-7| ___ |-10|",
+                "number": 9,
+                "value": 7
+            },
+            {
+                "answer": [
+                    "<"
+                ],
+                "question": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =): 25.19 ___ 25.2",
+                "number": 10,
+                "value": 7
+            },
+            {
+                "answer": [
+                    "22,658",
+                    "22658"
+                ],
+                "question": "Find the answers: 12,719 + 2,574 + 7,365",
+                "number": 11,
+                "value": 9
+            },
+            {
+                "answer": [
+                    "11.506"
+                ],
+                "question": "Find the answers: 14.56 - 3.054",
+                "number": 12,
+                "value": 9
+            },
+            {
+                "answer": [
+                    "57.36"
+                ],
+                "question": "Find the answers: 47.8 x 1.2",
+                "number": 13,
+                "value": 9
+            },
+            {
+                "answer": [
+                    "3.2"
+                ],
+                "question": "Find the answers: 1.944 / 0.6",
+                "number": 14,
+                "value": 9
+            }
+        ]
+    }
+]
