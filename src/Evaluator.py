@@ -120,7 +120,7 @@ class AssessmentEvaluator(Processor) :
             'performance_overview' : performance['overview']   
             }
 
-        text_summary = self.format_student_assessment(summary)
+        text_summary = self.format(summary)
         summary['text_summary'] = text_summary
 
         return summary
@@ -147,6 +147,7 @@ class AssessmentEvaluator(Processor) :
         partial_points = sum(points for _, points in partial)
         incorrect_points = -sum(points for _, points in incorrect)  # Negative for incorrect
 
+        total_points = correct_points + partial_points
         # Overall points and performance overview
         overall_points = data.get('overall_points', 0)
         total_possible_points = correct_points + partial_points - incorrect_points
@@ -164,7 +165,8 @@ class AssessmentEvaluator(Processor) :
             
             f"Correct Answers: {correct_numbers} ({correct_points} points)\n"
             f"Partially Correct Answers: {partial_numbers} ({partial_points} points)\n"
-            f"Incorrect Answers: {incorrect_numbers} ({incorrect_points} points)\n\n"
+            f"Incorrect Answers: {incorrect_numbers} ({incorrect_points} points)\n"
+            f"Total Points: {total_points} points\n\n"
             f"{performance_overview}\n"
         )
 

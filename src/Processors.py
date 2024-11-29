@@ -82,7 +82,7 @@ class ImageProcessor(Processor):
         print(f"Available Prompts: {list(self.prompts.keys())}")
         print(f"Additional parameters: {kwargs}")
 
-    def extract_data_from_images(self, images, key, max_workers=5):
+    def call_genai_multi_threaded(self, images, key, max_workers=5):
         """
         Processes a list of SourceImage objects concurrently and extracts data from them.
 
@@ -95,7 +95,7 @@ class ImageProcessor(Processor):
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_index = {
-                executor.submit(self.extract_data_from_image, image, key): index for index, image in enumerate(images)
+                executor.submit(self.call_genai, image, key): index for index, image in enumerate(images)
             }
 
             for future in concurrent.futures.as_completed(future_to_index):

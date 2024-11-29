@@ -10,7 +10,6 @@ from botocore.exceptions import BotoCoreError, NoCredentialsError, PartialCreden
 import io
 import json
 
-
 class SourceImage:
     # Class-level source type (either "file", "s3", or "url")
     source_type = None
