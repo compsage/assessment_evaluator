@@ -65,8 +65,6 @@ class Processor(ABC):
         """
         pass
 
-class ImageProcessor(Processor):
-
     def process(self, source_image, **kwargs):
         """
         Processes a SourceImage object. Placeholder for custom operations.
@@ -95,7 +93,7 @@ class ImageProcessor(Processor):
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_index = {
-                executor.submit(self.call_genai, image, key): index for index, image in enumerate(images)
+                executor.submit(self.call_genai, image, key, {}): index for index, image in enumerate(images)
             }
 
             for future in concurrent.futures.as_completed(future_to_index):
@@ -108,11 +106,24 @@ class ImageProcessor(Processor):
 
         return results
 
-    def call_genai(self, source_image, key):
-        if not isinstance(source_image, SourceImage):
+    def call_genai(self, source_image, key, **kwargs):
+        
+        image_url_payload = None
+        if source_image and not isinstance(source_image, SourceImage):
             raise ValueError("Input must be an instance of SourceImage.")
+        elif source_image and isinstance(source_image, SourceImage):
+            image_url = f"data:image/jpeg;base64,{source_image.get_base64()}"
+            image_url_payload = {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": image_url
+                    }
+                }
 
-        image_url = f"data:image/jpeg;base64,{source_image.get_base64()}"
+        if kwargs :
+            formatted_template = self.prompts[key].format(**kwargs)
+        else :
+            formatted_template = self.prompts[key]
 
         payload = {
             "model": "gpt-4o",
@@ -126,13 +137,7 @@ class ImageProcessor(Processor):
                     "content": [
                         {
                             "type": "text",
-                            "text": self.prompts[key]
-                        },
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": image_url
-                            }
+                            "text": formatted_template
                         }
                     ]
                 }
@@ -140,6 +145,9 @@ class ImageProcessor(Processor):
             "max_tokens": 2500,
             "temperature": 0
         }
+
+        if image_url_payload :
+            payload['messages'][1]['content'].append(image_url_payload)
 
         try:
             # Convert the payload to JSON and encode as bytes for urllib
@@ -174,7 +182,3 @@ class ImageProcessor(Processor):
         except Exception as e:
             print(f"Error while calling ChatGPT: {e}")
             return None
-
-    
-
-

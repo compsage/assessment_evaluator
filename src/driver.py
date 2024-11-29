@@ -3,7 +3,7 @@ import os
 import pprint
 
 from SourceImage import SourceImage
-from Processors import ImageProcessor
+from Processors import Processor
 from Evaluator import AssessmentEvaluator
 
 def get_file_paths(directory):
@@ -27,7 +27,7 @@ def get_file_paths(directory):
 
 
 if __name__ == "__main__":
-    image_processor = ImageProcessor()
+    image_processor = Processor()
     student_quiz_image = SourceImage("../data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")
 
     print("calling...")

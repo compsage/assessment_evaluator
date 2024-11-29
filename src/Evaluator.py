@@ -1,10 +1,6 @@
 
 from Processors import Processor
-import json
 import math
-import urllib.request
-import urllib.error
-import concurrent.futures
 
 class AssessmentEvaluator(Processor) :
     def process(self):
@@ -15,32 +11,6 @@ class AssessmentEvaluator(Processor) :
         :param kwargs: Additional parameters for processing (optional).
         :return: None
         """
-
-    def extract_data_from_images(self, images, key, max_workers=5):
-        """
-        Processes a list of SourceImage objects concurrently and extracts data from them.
-
-        :param images: List of SourceImage objects to process.
-        :param key: The key to fetch the prompt for processing.
-        :param max_workers: Maximum number of concurrent workers (default is 5).
-        :return: A dictionary where keys are image indices and values are the results or errors.
-        """
-        results = []
-
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-            future_to_index = {
-                executor.submit(self.extract_data_from_image, image, key): index for index, image in enumerate(images)
-            }
-
-            for future in concurrent.futures.as_completed(future_to_index):
-                index = future_to_index[future]
-                try:
-                    result = future.result()
-                    results.append(result)
-                except Exception as e:
-                    results.append({f"error_{index}": str(e)})
-
-        return results
 
     def check(self, answer_key, student_assessment) :
         ql = []
@@ -64,7 +34,7 @@ class AssessmentEvaluator(Processor) :
                         'student_answer' : answer['student_answer']
                     }
 
-            analysis_output = self.call_genai('evaluate_answer', **values)
+            analysis_output = self.call_genai(None, 'evaluate_answer', **values)
             output.append({**answer, 'analysis' : analysis_output})
 
         student_assessment['checked_answers'] = output
@@ -102,7 +72,7 @@ class AssessmentEvaluator(Processor) :
                 explanations += '\n'
 
         kwargs = {'explanations' : explanations}
-        performance = self.call_genai('summarize_performance', **kwargs)
+        performance = self.call_genai(None, 'summarize_performance', **kwargs)
 
         summary = {
             'student_name' : student_assessment['student_name'],
@@ -170,61 +140,61 @@ class AssessmentEvaluator(Processor) :
 
         return formatted_output
 
-    def call_genai(self, key, **kwargs) :
+    # def call_genai(self, key, **kwargs) :
 
-        formatted_template = self.prompts[key].format(**kwargs)
+    #     formatted_template = self.prompts[key].format(**kwargs)
 
-        payload = {
-            "model": "gpt-4o",
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You are a helpful teacher's assistant that always responds using JSON."
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": formatted_template
-                        }
-                    ]
-                }
-            ],
-            "max_tokens": 2500,
-            "temperature": 0
-        }
+    #     payload = {
+    #         "model": "gpt-4o",
+    #         "messages": [
+    #             {
+    #                 "role": "system",
+    #                 "content": "You are a helpful teacher's assistant that always responds using JSON."
+    #             },
+    #             {
+    #                 "role": "user",
+    #                 "content": [
+    #                     {
+    #                         "type": "text",
+    #                         "text": formatted_template
+    #                     }
+    #                 ]
+    #             }
+    #         ],
+    #         "max_tokens": 2500,
+    #         "temperature": 0
+    #     }
 
-        try:
-            # Convert the payload to JSON and encode as bytes for urllib
-            json_data = json.dumps(payload).encode("utf-8")
+    #     try:
+    #         # Convert the payload to JSON and encode as bytes for urllib
+    #         json_data = json.dumps(payload).encode("utf-8")
 
-            # Create the request
-            request = urllib.request.Request(
-                self.api_endpoint,
-                data=json_data,
-                headers=self.headers,
-                method="POST"
-            )
+    #         # Create the request
+    #         request = urllib.request.Request(
+    #             self.api_endpoint,
+    #             data=json_data,
+    #             headers=self.headers,
+    #             method="POST"
+    #         )
 
-            # Make the request
-            with urllib.request.urlopen(request) as response:
-                if response.status == 200:
-                    response_string = response.read().decode("utf-8")
-                    response_json = json.loads(response_string)
-                    response_content = response_json["choices"][0]["message"]["content"]
+    #         # Make the request
+    #         with urllib.request.urlopen(request) as response:
+    #             if response.status == 200:
+    #                 response_string = response.read().decode("utf-8")
+    #                 response_json = json.loads(response_string)
+    #                 response_content = response_json["choices"][0]["message"]["content"]
 
-                    # Process and return the parsed JSON response
-                    return self._process_chatgpt_response(response_content)
-                else:
-                    print(f"Error: {response.status}, {response.read().decode('utf-8')}")
-                    return None
-        except urllib.error.HTTPError as e:
-            print(f"HTTPError: {e.code}, {e.read().decode('utf-8')}")
-            return None
-        except urllib.error.URLError as e:
-            print(f"URLError: {e.reason}")
-            return None
-        except Exception as e:
-            print(f"Error while calling ChatGPT: {e}")
-            return None
+    #                 # Process and return the parsed JSON response
+    #                 return self._process_chatgpt_response(response_content)
+    #             else:
+    #                 print(f"Error: {response.status}, {response.read().decode('utf-8')}")
+    #                 return None
+    #     except urllib.error.HTTPError as e:
+    #         print(f"HTTPError: {e.code}, {e.read().decode('utf-8')}")
+    #         return None
+    #     except urllib.error.URLError as e:
+    #         print(f"URLError: {e.reason}")
+    #         return None
+    #     except Exception as e:
+    #         print(f"Error while calling ChatGPT: {e}")
+    #         return None
