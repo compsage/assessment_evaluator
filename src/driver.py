@@ -51,14 +51,14 @@ if __name__ == "__main__":
     with open(file_path, "r", encoding="utf-8") as json_file:
         answer_keys = json.load(json_file)
 
-    answers = {}
+    answer_keys = {}
     for answer_key in answer_keys :
         if answer_key:
-            answers[answer_key['name'].lower()] = answer_key
+            answer_keys[answer_key['name'].lower()] = answer_key
 
     assessment_evaluator = AssessmentEvaluator()
     print("evaluating...")
-    output = assessment_evaluator.check(answers['quiz 1'], student_answers)
+    output = assessment_evaluator.check(answer_keys['quiz 1'], student_answers)
     print("grading...")
     graded_assessment = assessment_evaluator.grade(output, student_answers)
     print("formatting...")
