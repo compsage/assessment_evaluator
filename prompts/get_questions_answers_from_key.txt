@@ -1,17 +1,17 @@
 Look at this answer key and convert it into a well formed json structure.  Each question is numbered and has the associated answer with it in blue.  This is the answer we want to extract.  All the answers are underlined and in blue.  
     
 The following structure is:
-    {
-        'name' : <Insert the Name of the quiz/test here>,
-        'subject' : <insert the subject matter of the quiz/test here>,
-        'section' : <insert the section of the test/quiz here>,
-        'page' : <insert the page number of the test here.  sometimes it is printed at the top if it is a multi page test>,
-        'questions' : [
-            {
-                'answer' : [<insert the full text of the answer as a single element in a list.  There should only be a single answer and it should only by calculated by you if you fully understand what is being asked.>],
-                'question : <the text of the question being asked>,
-                'number' : <insert the number of the question in the list>,
-                'value' : <how many points is this question worth.  The point value for a set of questions is mentioned before a set of questions in the form '[number value] each'>
-            }
-        ]
-    }
+{
+    'name' : <Insert the Name of the quiz/test here>,
+    'subject' : <insert the subject matter of the quiz/test here>,
+    'section' : <insert the section of the test/quiz here>,
+    'page' : <insert the page number of the test here.  sometimes it is printed at the top if it is a multi page test>,
+    'questions' : [
+        {
+            'answer' : [<insert the full text of the answer as a single element in a list.  There should only be a single answer and it should only by calculated by you if you fully understand what is being asked.>],
+            'question : <the text of the question being asked>,
+            'number' : <insert the number of the question in the list>,
+            'value' : <how many points is this question worth.  The point value for a set of questions is mentioned before a set of questions in the form '[number value] each'>
+        }
+    ]
+}

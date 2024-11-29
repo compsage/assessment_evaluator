@@ -25,6 +25,7 @@ def get_file_paths(directory):
 
     return file_paths
 
+
 if __name__ == "__main__":
     image_processor = ImageProcessor()
     student_quiz_image = SourceImage("../data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")
@@ -50,16 +51,20 @@ if __name__ == "__main__":
     with open(file_path, "r", encoding="utf-8") as json_file:
         answer_keys = json.load(json_file)
 
-    answer_keys = {}
+    answers = {}
     for answer_key in answer_keys :
         if answer_key:
-            answer_keys[answer_key['name'].lower()] = answer_key
+            answers[answer_key['name'].lower()] = answer_key
 
     assessment_evaluator = AssessmentEvaluator()
     print("evaluating...")
-    output = assessment_evaluator.check(answer_keys['quiz 1'], student_answers)
+    checked_student_answers = assessment_evaluator.check(answers['quiz 1'], student_answers)
     print("grading...")
-    graded_assessment = assessment_evaluator.grade(output, student_answers)
+
+    # del student_answers['questions']
+    # quiz_metadata = {str(k): str(v) for k, v in student_answers.items()}
+    
+    graded_assessment = assessment_evaluator.grade(checked_student_answers)
     print("formatting...")
     text_summary = assessment_evaluator.format(graded_assessment)
     print(text_summary)

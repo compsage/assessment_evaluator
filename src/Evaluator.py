@@ -67,15 +67,16 @@ class AssessmentEvaluator(Processor) :
             analysis_output = self.call_genai('evaluate_answer', **values)
             output.append({**answer, 'analysis' : analysis_output})
 
-        return output
+        student_assessment['checked_answers'] = output
+        return student_assessment
     
-    def grade(self, answers, student_quiz) :
+    def grade(self, student_assessment) :
         correct_answers = []
         partially_correct_answers = []
         incorrect_answers = []
         overall_points = 0
         total_points = 0
-        for answer in answers:
+        for answer in student_assessment['checked_answers']:
             overall_points += answer['value']
             if answer['answer_match'] :
                 total_points += answer['value']
@@ -95,7 +96,7 @@ class AssessmentEvaluator(Processor) :
                     incorrect_answers.append((answer['number'], answer['value']))
 
         explanations = ''
-        for aq in answers :
+        for aq in student_assessment['checked_answers'] :
             if 'analysis' in aq and aq['analysis'] :
                 explanations += aq['analysis']['explanation']
                 explanations += '\n'
@@ -103,18 +104,17 @@ class AssessmentEvaluator(Processor) :
         kwargs = {'explanations' : explanations}
         performance = self.call_genai('summarize_performance', **kwargs)
 
-        qd = {str(k): str(v) for k, v in student_quiz.items()}
-        del qd['questions']
-
         summary = {
-            **qd,
+            'student_name' : student_assessment['student_name'],
+            'subject' : student_assessment['subject'],
+            'section' : student_assessment['section'],
             'correct' : correct_answers,
             'incorrect' : incorrect_answers,
             'partially_correct' : partially_correct_answers,
             'grade' : (total_points/overall_points) * 100,
             'total_points' : total_points,
             'overall_points' : overall_points,
-            'assessment' : answers,
+            'assessment' : student_assessment['checked_answers'],
             'performance_overview' : performance['overview']   
             }
 
