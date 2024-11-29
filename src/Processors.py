@@ -1,11 +1,11 @@
 import os
-import pprint
 import json
 import urllib.request
 import urllib.error
 import concurrent.futures
-from SourceImage import SourceImage
 from abc import ABC, abstractmethod
+from SourceImage import SourceImage
+
 
 class Processor(ABC):
     """

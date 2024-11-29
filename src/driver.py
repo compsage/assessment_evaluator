@@ -25,7 +25,6 @@ def get_file_paths(directory):
 
     return file_paths
 
-
 if __name__ == "__main__":
     image_processor = ImageProcessor()
     student_quiz_image = SourceImage("../data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")
