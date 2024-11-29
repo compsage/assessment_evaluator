@@ -61,6 +61,6 @@ if __name__ == "__main__":
     output = assessment_evaluator.check(answers['quiz 1'], student_answers)
     print("grading...")
     graded_assessment = assessment_evaluator.grade(output, student_answers)
-
+    print("formatting...")
     text_summary = assessment_evaluator.format(graded_assessment)
     print(text_summary)
