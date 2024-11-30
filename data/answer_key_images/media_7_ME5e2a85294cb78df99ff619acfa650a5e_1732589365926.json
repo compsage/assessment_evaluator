@@ -10,15 +10,8 @@
                 "3.701"
             ],
             "question": "15. 3.461 + 0.24",
+            "description": "Add the numbers",
             "number": 15,
-            "value": 2
-        },
-        {
-            "answer": [
-                "0.240"
-            ],
-            "question": "16. 3.701 - 3.461",
-            "number": 16,
             "value": 2
         },
         {
@@ -26,14 +19,16 @@
                 "358"
             ],
             "question": "16. 743 - 385",
+            "description": "Subtract the numbers",
             "number": 16,
             "value": 2
         },
         {
             "answer": [
-                "70.225"
+                "10,225"
             ],
-            "question": "17. 409 x 0.25",
+            "question": "17. 409 x 25",
+            "description": "Multiply the numbers",
             "number": 17,
             "value": 2
         },
@@ -42,6 +37,7 @@
                 "140.22"
             ],
             "question": "18. 34.2 x 4.1",
+            "description": "Multiply the numbers",
             "number": 18,
             "value": 2
         },
@@ -49,7 +45,8 @@
             "answer": [
                 "400"
             ],
-            "question": "19. 14,560 / 36.4",
+            "question": "19. 14,156 ÷ 56",
+            "description": "Divide the numbers",
             "number": 19,
             "value": 2
         },
@@ -57,7 +54,8 @@
             "answer": [
                 "0"
             ],
-            "question": "20. 22,204.6 - 22,204.6",
+            "question": "20. 22,204.6 ÷ 198",
+            "description": "Divide the numbers",
             "number": 20,
             "value": 2
         },
@@ -66,6 +64,7 @@
                 "12.345"
             ],
             "question": "21. 1.2345 x 10^1",
+            "description": "Multiply by a power of ten",
             "number": 21,
             "value": 2
         },
@@ -74,6 +73,7 @@
                 "455.69"
             ],
             "question": "22. 45,569 ÷ 100",
+            "description": "Divide by a power of ten",
             "number": 22,
             "value": 2
         },
@@ -82,6 +82,7 @@
                 "2"
             ],
             "question": "23. 30 - 2(3^2 + 5)",
+            "description": "Evaluate the expression",
             "number": 23,
             "value": 2
         },
@@ -89,7 +90,8 @@
             "answer": [
                 "28"
             ],
-            "question": "24. 8(4 + 3) - 8(7) - 56 ÷ 2",
+            "question": "24. 8(4 + 3) - 8(7) ÷ 2",
+            "description": "Evaluate the expression",
             "number": 24,
             "value": 2
         }

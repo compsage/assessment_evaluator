@@ -38,7 +38,7 @@ if __name__ == "__main__":
     student_answers = image_processor.call_genai(student_quiz_image, "get_answers_from_student_quiz")
     pprint.pprint(student_answers)
 
-    directory_path = "../data/all_answer_key_images"
+    directory_path = "../data/answer_key_images"
     answer_key_image_paths = get_file_paths(directory_path)
     print(f"Files found in '{directory_path}':")
 

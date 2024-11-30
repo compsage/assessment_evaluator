@@ -6,99 +6,111 @@
     "book_page": 7,
     "questions": [
         {
-            "number": 1,
-            "question": "Write 20/3 as a mixed number.",
             "answer": [
                 "6 2/3"
             ],
+            "question": "Write 20/3 as a mixed number.",
+            "description": "Convert an improper fraction to a mixed number.",
+            "number": 1,
             "value": 10
         },
         {
-            "number": 2,
-            "question": "Write 5 1/5 as an improper fraction.",
             "answer": [
                 "26/5"
             ],
+            "question": "Write 5 1/5 as an improper fraction.",
+            "description": "Convert a mixed number to an improper fraction.",
+            "number": 2,
             "value": 10
         },
         {
-            "number": 3,
-            "question": "What must be the same before two fractions can be added or subtracted?",
             "answer": [
                 "denominator"
             ],
+            "question": "What must be the same before two fractions can be added or subtracted?",
+            "description": "Identify the common requirement for adding or subtracting fractions.",
+            "number": 3,
             "value": 10
         },
         {
-            "number": 4,
-            "question": "Find the LCD for 2/5 and 3/20.",
             "answer": [
                 "20"
             ],
+            "question": "Find the LCD for 5/2 and 3/4.",
+            "description": "Find the least common denominator of two fractions.",
+            "number": 4,
             "value": 10
         },
         {
-            "number": 5,
-            "question": "Reduce 21/63 to lowest terms.",
             "answer": [
                 "1/3"
             ],
+            "question": "Reduce 21/63 to lowest terms.",
+            "description": "Simplify a fraction to its lowest terms.",
+            "number": 5,
             "value": 10
         },
         {
-            "number": 6,
-            "question": "Write the equivalent fraction for 2/3 with a denominator of 15.",
             "answer": [
                 "10/15"
             ],
+            "question": "Write the equivalent fraction for 2/3 with a denominator of 15.",
+            "description": "Find an equivalent fraction with a specified denominator.",
+            "number": 6,
             "value": 10
         },
         {
-            "number": 7,
-            "question": "Identify 7/6 as a proper fraction, an improper fraction, or a mixed number.",
             "answer": [
                 "improper"
             ],
+            "question": "Identify 7/6 as a proper fraction, an improper fraction, or a mixed number.",
+            "description": "Classify a fraction as proper, improper, or mixed.",
+            "number": 7,
             "value": 10
         },
         {
+            "answer": [
+                "1/5"
+            ],
+            "question": "Find the answer.",
+            "description": "Perform the arithmetic operation.",
             "number": 8,
-            "question": "Find the answer: 1/15 + 13/15",
-            "answer": [
-                "14/15"
-            ],
             "value": 6
         },
         {
+            "answer": [
+                "1/9"
+            ],
+            "question": "Find the answer.",
+            "description": "Perform the arithmetic operation.",
             "number": 9,
-            "question": "Find the answer: 4/9 - 2/9",
-            "answer": [
-                "2/9"
-            ],
             "value": 6
         },
         {
+            "answer": [
+                "1/6"
+            ],
+            "question": "Find the answer.",
+            "description": "Perform the arithmetic operation.",
             "number": 10,
-            "question": "Find the answer: 1/3 x 4/1",
-            "answer": [
-                "4/3"
-            ],
             "value": 6
         },
         {
+            "answer": [
+                "1/16"
+            ],
+            "question": "Find the answer.",
+            "description": "Perform the arithmetic operation.",
             "number": 11,
-            "question": "Find the answer: 5/8 x 10/16",
-            "answer": [
-                "5/16"
-            ],
             "value": 6
         },
         {
-            "number": 12,
-            "question": "Find the answer: 5/6 ÷ 2/3",
             "answer": [
-                "5/4"
+                "1/6"
             ],
+            "question": "Find the answer.",
+            "description": "Perform the arithmetic operation.",
+            "number": 12,
             "value": 6
         }
     ]

@@ -10,7 +10,8 @@ The following structure with field explanations is:
     'questions' : [
         {
             'answer' : [<insert the full text of the answer as a single element in a list.  There should only be a single answer and it should only by calculated by you if you fully understand what is being asked.>],
-            'question : <the text of the question being asked>,
+            'question' : <the text of the question being asked>,
+            'description' : <a text description of what the question is example. find the square root of 12>
             'number' : <insert the number of the question in the list>,
             'value' : <how many points is this question worth.  The point value for a set of questions is mentioned before a set of questions in the form '[number value] each'>
         }

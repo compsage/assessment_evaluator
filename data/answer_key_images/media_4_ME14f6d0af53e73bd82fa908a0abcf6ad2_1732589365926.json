@@ -7,10 +7,11 @@
     "questions": [
         {
             "number": 1,
-            "question": "Write the number to which 8 has the greater value: 3.082 or 3.28.",
+            "question": "Write the number to which 8 has the greater value: 0.082 or 0.28.",
             "answer": [
-                "3.28"
+                "0.28"
             ],
+            "description": "Compare the value of 8 in two decimal numbers.",
             "value": 2
         },
         {
@@ -19,6 +20,7 @@
             "answer": [
                 "9"
             ],
+            "description": "Identify the digit in the hundred thousand place.",
             "value": 2
         },
         {
@@ -27,22 +29,25 @@
             "answer": [
                 "integers"
             ],
+            "description": "Identify the number category that includes whole numbers and their opposites.",
             "value": 2
         },
         {
             "number": 4,
-            "question": "Order these numbers from least to greatest: -3, 1.5, -4, 0.",
+            "question": "Order these numbers from least to greatest: -1.3, -3.4, 0, -4.0.",
             "answer": [
-                "-4, -3, 0, 1.5"
+                "-4.0, -3.4, -1.3, 0"
             ],
+            "description": "Arrange the given numbers in ascending order.",
             "value": 2
         },
         {
             "number": 5,
-            "question": "Give the ratio of boys to girls in a class if there are 15 boys and 18 girls: 15:18.",
+            "question": "Give the ratio of boys to girls in a class if there are 15 boys and 18 girls.",
             "answer": [
                 "5:6"
             ],
+            "description": "Calculate the ratio of boys to girls.",
             "value": 2
         },
         {
@@ -51,46 +56,52 @@
             "answer": [
                 "2"
             ],
+            "description": "Identify the only even prime number.",
             "value": 2
         },
         {
             "number": 7,
-            "question": "Identify the base for the number 3².",
+            "question": "Identify the base for the number 7.",
             "answer": [
-                "3"
+                "7"
             ],
+            "description": "Identify the base of the number.",
             "value": 2
         },
         {
             "number": 8,
-            "question": "Expand and multiply: 6 × (3 + 2) = 6 × 5.",
+            "question": "Expand and multiply: 6 x 6^2 + 216.",
             "answer": [
-                "30"
+                "252"
             ],
+            "description": "Calculate the result of the expression.",
             "value": 2
         },
         {
             "number": 9,
-            "question": "Give the decimal equivalent of 3/5.",
+            "question": "Give the decimal equivalent of 0.625.",
             "answer": [
-                "0.6"
+                "0.625"
             ],
+            "description": "Provide the decimal equivalent.",
             "value": 2
         },
         {
             "number": 10,
-            "question": "Write the decimal that is greater: 0.6045 or 0.61.",
+            "question": "Write the decimal that is greater: 0.6045 or 0.601.",
             "answer": [
-                "0.61"
+                "0.6045"
             ],
+            "description": "Compare two decimal numbers to find the greater one.",
             "value": 2
         },
         {
             "number": 11,
             "question": "Write the prime factorization of 16 using division by primes.",
             "answer": [
-                "2 × 2 × 2 × 2"
+                "2 x 2 x 2 x 2"
             ],
+            "description": "Find the prime factorization of 16.",
             "value": 2
         },
         {
@@ -99,6 +110,7 @@
             "answer": [
                 "3 and 11"
             ],
+            "description": "Identify the prime numbers from the list.",
             "value": 2
         },
         {
@@ -107,6 +119,7 @@
             "answer": [
                 "product"
             ],
+            "description": "Identify the term for the result of multiplication.",
             "value": 2
         },
         {
@@ -115,6 +128,7 @@
             "answer": [
                 "12/16"
             ],
+            "description": "Find the equivalent fraction with a specified denominator.",
             "value": 2
         }
     ]

@@ -7,114 +7,128 @@
     "questions": [
         {
             "number": 1,
-            "question": "Complete each unit relationship.",
+            "question": "12 (in.)",
             "answer": [
-                "12"
+                "1 ft. = 12 in."
             ],
+            "description": "Complete the unit relationship for inches to feet",
             "value": 5
         },
         {
             "number": 2,
-            "question": "Complete each unit relationship.",
+            "question": "36 (in.)",
             "answer": [
-                "36"
+                "1 yd. = 36 in."
             ],
+            "description": "Complete the unit relationship for inches to yards",
             "value": 5
         },
         {
             "number": 3,
-            "question": "Complete each unit relationship.",
+            "question": "5,280 (ft.)",
             "answer": [
-                "5,280"
+                "1 mi. = 5,280 ft."
             ],
+            "description": "Complete the unit relationship for feet to miles",
             "value": 5
         },
         {
             "number": 4,
-            "question": "Complete each unit relationship.",
+            "question": "16 (fl. oz.)",
             "answer": [
-                "16"
+                "1 pt. = 16 fl. oz."
             ],
+            "description": "Complete the unit relationship for fluid ounces to pints",
             "value": 5
         },
         {
             "number": 5,
-            "question": "Complete each unit relationship.",
+            "question": "16 (oz.)",
             "answer": [
-                "16"
+                "1 lb. = 16 oz."
             ],
+            "description": "Complete the unit relationship for ounces to pounds",
             "value": 5
         },
         {
             "number": 6,
-            "question": "Complete each unit relationship.",
+            "question": "4 (pk.)",
             "answer": [
-                "4"
+                "1 bu. = 4 pk."
             ],
+            "description": "Complete the unit relationship for pecks to bushels",
             "value": 5
         },
         {
             "number": 7,
-            "question": "Complete each unit relationship.",
+            "question": "2,000 (lb.)",
             "answer": [
-                "2,000"
+                "1 T. = 2,000 lb."
             ],
+            "description": "Complete the unit relationship for pounds to tons",
             "value": 5
         },
         {
             "number": 8,
-            "question": "Complete each unit relationship.",
+            "question": "3 (tsp.)",
             "answer": [
-                "3"
+                "1 tbsp. = 3 tsp."
             ],
+            "description": "Complete the unit relationship for teaspoons to tablespoons",
             "value": 5
         },
         {
             "number": 9,
-            "question": "Convert each measure to the indicated unit.",
+            "question": "21 (ft.)",
             "answer": [
-                "21"
+                "7 yd. = 21 ft."
             ],
+            "description": "Convert feet to yards",
             "value": 10
         },
         {
             "number": 10,
-            "question": "Convert each measure to the indicated unit.",
+            "question": "7 (ft.)",
             "answer": [
-                "7"
+                "84 in. = 7 ft."
             ],
+            "description": "Convert feet to inches",
             "value": 10
         },
         {
             "number": 11,
-            "question": "Convert each measure to the indicated unit.",
+            "question": "2 1/2 (yd.)",
             "answer": [
-                "2 1/2"
+                "90 in. = 2 1/2 yd."
             ],
+            "description": "Convert yards to inches",
             "value": 10
         },
         {
             "number": 12,
-            "question": "Convert each measure to the indicated unit.",
+            "question": "4 (qt.)",
             "answer": [
-                "4"
+                "8 pt. = 4 qt."
             ],
+            "description": "Convert quarts to pints",
             "value": 10
         },
         {
             "number": 13,
-            "question": "Convert each measure to the indicated unit.",
+            "question": "64 (oz.)",
             "answer": [
-                "64"
+                "4 lb. = 64 oz."
             ],
+            "description": "Convert ounces to pounds",
             "value": 10
         },
         {
             "number": 14,
-            "question": "Convert each measure to the indicated unit.",
+            "question": "32 (qt.)",
             "answer": [
-                "32"
+                "8 gal. = 32 qt."
             ],
+            "description": "Convert quarts to gallons",
             "value": 10
         }
     ]
