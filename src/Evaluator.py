@@ -74,6 +74,8 @@ class AssessmentEvaluator(Processor) :
 
         summary = {
             'student_name' : student_assessment['student_name'],
+            'date' : student_assessment['date'],
+            'name' : student_assessment['name'],
             'subject' : student_assessment['subject'],
             'section' : student_assessment['section'],
             'correct' : correct_answers,

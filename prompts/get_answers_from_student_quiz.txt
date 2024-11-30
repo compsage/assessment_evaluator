@@ -5,8 +5,8 @@ next to the answer.
 The JSON structure should be:
 {
     'student_name': <insert the student's name on the top of the page here>,
-    'date': <insert the date that was entered at the top of the page>,
-    'name': <Insert the Name of the quiz/test here>,
+    'date': <insert the date that was entered at the top of the page right after the student name>,
+    'name': <Insert the Name of the quiz/test here.  This is also at the top of the page>,
     'subject': <insert the subject matter of the quiz/test here>,
     'section': <insert the section of the test/quiz here>,
     'page': <insert the page number of the test here. Sometimes it is printed at the top if it is a multi-page test>,
