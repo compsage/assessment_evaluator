@@ -6,7 +6,6 @@ import concurrent.futures
 from abc import ABC, abstractmethod
 from SourceImage import SourceImage
 
-
 class Processor(ABC):
     """
     Abstract base class for processing objects and managing prompts.

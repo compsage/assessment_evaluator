@@ -4,13 +4,7 @@ import math
 
 class AssessmentEvaluator(Processor) :
     def process(self):
-        """
-        Processes a SourceImage object. Placeholder for custom operations.
-
-        :param source_image: The SourceImage object to process.
-        :param kwargs: Additional parameters for processing (optional).
-        :return: None
-        """
+        print("Process Method...")
 
     def check(self, answer_key, student_assessment) :
         ql = []
@@ -43,6 +37,7 @@ class AssessmentEvaluator(Processor) :
     def grade(self, student_assessment) :
         correct_answers = []
         partially_correct_answers = []
+        partially_correct_diffs = []
         incorrect_answers = []
         overall_points = 0
         total_points = 0
@@ -58,8 +53,11 @@ class AssessmentEvaluator(Processor) :
                         total_points += answer['value']
                         correct_answers.append((answer['number'], answer['value']))
                     elif 'partial_credit' in answer['analysis'] and answer['analysis']['partial_credit'] :
-                        total_points += math.ceil(answer['value']/2)
+                        add_value = math.ceil(answer['value']/2)
+                        diff_value = (answer['value'] - add_value)
+                        total_points += add_value
                         partially_correct_answers.append((answer['number'], math.floor(answer['value']/2)))
+                        partially_correct_diffs.append((answer['number'], diff_value))
                     else :
                         incorrect_answers.append((answer['number'], answer['value']))
                 else :
@@ -81,6 +79,7 @@ class AssessmentEvaluator(Processor) :
             'correct' : correct_answers,
             'incorrect' : incorrect_answers,
             'partially_correct' : partially_correct_answers,
+            'partially_correct_diffs' : partially_correct_diffs,
             'grade' : (total_points/overall_points) * 100,
             'total_points' : total_points,
             'overall_points' : overall_points,
@@ -103,6 +102,7 @@ class AssessmentEvaluator(Processor) :
         # Prepare lists for correct, partially correct, and incorrect answers
         correct = data.get('correct', [])
         partial = data.get('partially_correct', [])
+        partial_diff =  data.get('partially_correct_diffs', [])
         incorrect = data.get('incorrect', [])
 
         # Extract question numbers as comma-separated strings
@@ -113,6 +113,7 @@ class AssessmentEvaluator(Processor) :
         # Total points for each category
         correct_points = sum(points for _, points in correct)
         partial_points = sum(points for _, points in partial)
+        partial_diff = sum(points for _, points in partial_diff)
         incorrect_points = -sum(points for _, points in incorrect)  # Negative for incorrect
 
         total_points = correct_points + partial_points
@@ -132,8 +133,9 @@ class AssessmentEvaluator(Processor) :
             f"Assessment Name: {assessment_name}\n\n"
             
             f"Correct Answers: {correct_numbers} ({correct_points} points)\n"
-            f"Partially Correct Answers: {partial_numbers} ({partial_points} points)\n"
+            f"Partially Correct Answers: {partial_numbers} ({partial_points} points, {-partial_diff} points)\n"
             f"Incorrect Answers: {incorrect_numbers} ({incorrect_points} points)\n"
+            f"Points Subtracted: {(incorrect_points + -partial_diff)} points\n"
             f"Total Points: {total_points} points\n\n"
             f"{performance_overview}\n"
         )
