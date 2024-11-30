@@ -42,12 +42,23 @@ def save_json(json_data, save_path):
     """
     Save JSON data to the specified path.
     """
+    print("saving to disk...")
     try:
         with open(save_path, "w", encoding="utf-8") as file:
             json.dump(json_data, file, indent=4)
         st.session_state['json_save_status'] = f"JSON saved successfully to {save_path}"
     except Exception as e:
         st.session_state['json_save_status'] = f"Error saving JSON: {e}"
+
+
+def generate_json_for_image(image_filename):
+    """
+    Generate a JSON structure based on the image filename.
+    """
+    return {
+        "description": f"Generated description for {image_filename}",
+        "tags": ["auto-generated", "example"]
+    }
 
 
 def main():
@@ -75,6 +86,8 @@ def main():
             # Select image to display - moved to the main panel
             selected_index = st.slider("Select Image", 0, len(image_paths) - 1, 0)
             selected_image_path = image_paths[selected_index]
+            json_path = os.path.splitext(selected_image_path)[0] + ".json"
+            st.session_state['last_saved_json'] = json.dumps(load_json(json_path), indent=4) if os.path.exists(json_path) else ""
 
             # Layout for image and JSON editor side by side
             col1, col2 = st.columns(2)
@@ -84,6 +97,12 @@ def main():
                 image = Image.open(selected_image_path)
                 st.image(image, caption=os.path.basename(selected_image_path), use_column_width=True)
 
+                # Generate JSON button
+                # if st.button("Generate JSON", key='generate_json_button'):
+                #     generated_json = generate_json_for_image(os.path.basename(selected_image_path))
+                #     st.session_state['last_saved_json'] = json.dumps(generated_json, indent=4)
+                #     st.session_state['json_save_status'] = "Generated JSON and loaded into editor."
+
             with col2:
                 # Load corresponding JSON (if exists), or create one if not found
                 json_path = os.path.splitext(selected_image_path)[0] + ".json"
@@ -92,11 +111,10 @@ def main():
                     json_data = create_default_json(json_path)
 
                 # JSON Editor
-                json_string = st.text_area('JSON Editor', value=json.dumps(json_data, indent=4), height=300, label_visibility='collapsed', key='json_editor')
+                json_string = st.text_area('JSON Editor', value=st.session_state['last_saved_json'], height=300, label_visibility='collapsed', key='json_editor')
 
                 # Save JSON
                 if st.button("Save JSON", key='save_button'):
-                    print("saving..")
                     try:
                         # Validate and save JSON
                         edited_json = json.loads(json_string)

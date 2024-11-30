@@ -23,6 +23,7 @@ class SourceImage:
         :param auth: Optional authentication for URL (tuple for basic auth, e.g., (username, password)).
         :param additional_metadata: Optional dictionary to add to the metadata.
         """
+        self.source = source
         self.binary_data = None
         self.base64_data = None
         self.metadata = {}
@@ -269,3 +270,8 @@ class SourceImage:
         if self.metadata is None:
             raise RuntimeError("No metadata available.")
         return self.metadata
+
+    def get_source(self):
+        if self.source is None:
+            raise RuntimeError("No source available.")
+        return self.source

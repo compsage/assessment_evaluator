@@ -1,6 +1,7 @@
 import json
 import os
 import pprint
+from pathlib import Path
 
 from SourceImage import SourceImage
 from Processors import Processor
@@ -21,7 +22,8 @@ def get_file_paths(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
             file_path = os.path.join(root, file)
-            file_paths.append(file_path)
+            if file_path.endswith('.jpeg'):
+                file_paths.append(file_path)
 
     return file_paths
 
@@ -43,9 +45,14 @@ if __name__ == "__main__":
         answer_key_images.append(SourceImage(answer_key_image_path))
 
     output = image_processor.call_genai_multi_threaded(answer_key_images, "get_questions_answers_from_key")
-    output_file = "all_answers_output.json"
-    with open(output_file, "w", encoding="utf-8") as json_file:
-        json.dump(output, json_file, indent=4, ensure_ascii=False)
+    
+    for key in output :
+        # Original file path
+        file_path = Path(key)
+        # Replace extension with .json
+        output_file = file_path.with_suffix(".json")
+        with open(output_file, "w", encoding="utf-8") as json_file:
+            json.dump(output[key], json_file, indent=4, ensure_ascii=False)
 
     file_path = '../data/answer_keys.json'
     with open(file_path, "r", encoding="utf-8") as json_file:

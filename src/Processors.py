@@ -88,20 +88,21 @@ class Processor(ABC):
         :param max_workers: Maximum number of concurrent workers (default is 5).
         :return: A dictionary where keys are image indices and values are the results or errors.
         """
-        results = []
+        results = {}
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_index = {
-                executor.submit(self.call_genai, image, key, {}): index for index, image in enumerate(images)
+                executor.submit(self.call_genai, image, key, **{}): image.get_source() for image in images
             }
 
             for future in concurrent.futures.as_completed(future_to_index):
-                index = future_to_index[future]
+                source = future_to_index[future]
                 try:
                     result = future.result()
-                    results.append(result)
+                    results[source] = result
                 except Exception as e:
-                    results.append({f"error_{index}": str(e)})
+                    print(e)
+                    print(f"error -> {source}")
 
         return results
 
