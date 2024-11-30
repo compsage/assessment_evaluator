@@ -1,11 +1,12 @@
 Look at this answer key and convert it into a well formed json structure.  Each question is numbered and has the associated answer with it in blue.  This is the answer we want to extract.  All the answers are underlined and in blue.  
     
-The following structure is:
+The following structure with field explanations is:
 {
     'name' : <Insert the Name of the quiz/test here>,
     'subject' : <insert the subject matter of the quiz/test here>,
     'section' : <insert the section of the test/quiz here>,
-    'page' : <insert the page number of the test here.  sometimes it is printed at the top if it is a multi page test>,
+    'assessment_page' : <Sometimes assessments have multiple pages.  If that is the case, that assessment_page value is printed at the top of the image next to the test name. Insert that value here.  If it is not present at the top of the page just put the number 1 denoting the first and only page.  This value is always at the top of the page and is the number that follows '[name], page'> 
+    'book_page' : <insert the page number the questions are on here. This is the page number in the book and is always at the bottom of the page>,
     'questions' : [
         {
             'answer' : [<insert the full text of the answer as a single element in a list.  There should only be a single answer and it should only by calculated by you if you fully understand what is being asked.>],
