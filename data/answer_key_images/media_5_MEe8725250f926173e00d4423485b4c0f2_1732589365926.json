@@ -1,0 +1,89 @@
+{
+    "name": "QUIZ 3",
+    "subject": "Intermediate Mathematics",
+    "section": "Sections 1.6–1.8",
+    "assessment_page": 1,
+    "book_page": 12,
+    "questions": [
+        {
+            "number": 1,
+            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 1. 6 and 96",
+            "answer": [
+                "GCF = 6"
+            ],
+            "value": 10
+        },
+        {
+            "number": 2,
+            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 2. 6 and 96",
+            "answer": [
+                "LCM = 96"
+            ],
+            "value": 10
+        },
+        {
+            "number": 3,
+            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 3. 3 and 17",
+            "answer": [
+                "GCF = 1"
+            ],
+            "value": 10
+        },
+        {
+            "number": 4,
+            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 4. 3 and 17",
+            "answer": [
+                "LCM = 51"
+            ],
+            "value": 10
+        },
+        {
+            "number": 5,
+            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 5. 14 and 49",
+            "answer": [
+                "GCF = 7"
+            ],
+            "value": 10
+        },
+        {
+            "number": 6,
+            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 6. 14 and 49",
+            "answer": [
+                "LCM = 98"
+            ],
+            "value": 10
+        },
+        {
+            "number": 7,
+            "question": "Simplify using the order of operations. 7. 2 + 3 ÷ 4 + 9",
+            "answer": [
+                "10"
+            ],
+            "value": 10
+        },
+        {
+            "number": 8,
+            "question": "Simplify using the order of operations. 8. 6 ÷ 3 + 27 ÷ 3",
+            "answer": [
+                "12"
+            ],
+            "value": 10
+        },
+        {
+            "number": 9,
+            "question": "Simplify using the order of operations. 9. 54 ÷ 3² + (4 - 1)",
+            "answer": [
+                "57"
+            ],
+            "value": 10
+        },
+        {
+            "number": 10,
+            "question": "Simplify using the order of operations. 10. 9 + 6(6)",
+            "answer": [
+                "45"
+            ],
+            "value": 10
+        }
+    ]
+}

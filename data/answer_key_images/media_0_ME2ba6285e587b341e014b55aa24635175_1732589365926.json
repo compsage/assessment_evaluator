@@ -1,0 +1,137 @@
+{
+    "name": "QUIZ 2",
+    "subject": "Intermediate Mathematics",
+    "section": "Sections 1.3-1.5",
+    "assessment_page": 1,
+    "book_page": 3,
+    "questions": [
+        {
+            "number": 1,
+            "question": "Identify the base for the number 23^1.",
+            "answer": [
+                "23"
+            ],
+            "value": 5
+        },
+        {
+            "number": 2,
+            "question": "Expand and multiply 4^1. 4 x 4 x 4 = 64",
+            "answer": [
+                "64"
+            ],
+            "value": 5
+        },
+        {
+            "number": 3,
+            "question": "Write one of the two numbers that are neither prime nor composite.",
+            "answer": [
+                "0 or 1"
+            ],
+            "value": 5
+        },
+        {
+            "number": 4,
+            "question": "Is the number 27 prime, composite, or neither?",
+            "answer": [
+                "composite"
+            ],
+            "value": 5
+        },
+        {
+            "number": 5,
+            "question": "What is the only even number that is prime?",
+            "answer": [
+                "2"
+            ],
+            "value": 5
+        },
+        {
+            "number": 6,
+            "question": "Which of the following numbers are prime? 12, 13, 14, 15?",
+            "answer": [
+                "13"
+            ],
+            "value": 5
+        },
+        {
+            "number": 7,
+            "question": "What are the common factors of 4 and 14?",
+            "answer": [
+                "1 and 2"
+            ],
+            "value": 5
+        },
+        {
+            "number": 8,
+            "question": "Rewrite the following using exponents: 2 x 2 x 3 x 3 x 3.",
+            "answer": [
+                "2^2 x 3^3"
+            ],
+            "value": 5
+        },
+        {
+            "number": 9,
+            "question": "Find the prime factorization of 24 using division by primes.",
+            "answer": [
+                "2 x 2 x 2 x 3 or 2^3 x 3"
+            ],
+            "value": 10
+        },
+        {
+            "number": 10,
+            "question": "Find the prime factorization of 105 using division by primes.",
+            "answer": [
+                "3 x 5 x 7"
+            ],
+            "value": 10
+        },
+        {
+            "number": 11,
+            "question": "Find the prime factorization of 312 using division by primes.",
+            "answer": [
+                "2^3 x 3 x 13"
+            ],
+            "value": 10
+        },
+        {
+            "number": 12,
+            "question": "Find the prime factorization of 510 using division by primes.",
+            "answer": [
+                "2 x 3 x 5 x 17"
+            ],
+            "value": 10
+        },
+        {
+            "number": 13,
+            "question": "Find the answer to 12,560.",
+            "answer": [
+                "12,560"
+            ],
+            "value": 10
+        },
+        {
+            "number": 14,
+            "question": "Find the answer to 0.5567 x 10^0.",
+            "answer": [
+                "0.5567"
+            ],
+            "value": 10
+        },
+        {
+            "number": 15,
+            "question": "Find the answer to 7.89 x 10^2.",
+            "answer": [
+                "789"
+            ],
+            "value": 10
+        },
+        {
+            "number": 16,
+            "question": "Find the answer to 19.787 x 10^1.",
+            "answer": [
+                "197.87"
+            ],
+            "value": 10
+        }
+    ]
+}

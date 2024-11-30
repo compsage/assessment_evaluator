@@ -19,10 +19,12 @@ def get_file_paths(directory):
         print(f"Directory '{directory}' does not exist.")
         return file_paths
 
+    target_extensions = ('.jpeg', '.png', '.jpg')
+
     for root, dirs, files in os.walk(directory):
         for file in files:
             file_path = os.path.join(root, file)
-            if file_path.endswith('.jpeg'):
+            if file_path.endswith(target_extensions):
                 file_paths.append(file_path)
 
     return file_paths
@@ -36,7 +38,7 @@ if __name__ == "__main__":
     student_answers = image_processor.call_genai(student_quiz_image, "get_answers_from_student_quiz")
     pprint.pprint(student_answers)
 
-    directory_path = "../data/answer_key_images"
+    directory_path = "../data/all_answer_key_images"
     answer_key_image_paths = get_file_paths(directory_path)
     print(f"Files found in '{directory_path}':")
 
@@ -44,7 +46,7 @@ if __name__ == "__main__":
     for answer_key_image_path in answer_key_image_paths :
         answer_key_images.append(SourceImage(answer_key_image_path))
 
-    output = image_processor.call_genai_multi_threaded(answer_key_images, "get_questions_answers_from_key")
+    output = image_processor.call_genai_multi_threaded(answer_key_images, "get_questions_answers_from_key", )
     
     for key in output :
         # Original file path

@@ -1,0 +1,121 @@
+{
+    "name": "TEST 1",
+    "subject": "Intermediate Mathematics",
+    "section": "Chapter 1",
+    "assessment_page": 1,
+    "book_page": 9,
+    "questions": [
+        {
+            "number": 1,
+            "question": "Write the number to which 8 has the greater value: 3.082 or 3.28.",
+            "answer": [
+                "3.28"
+            ],
+            "value": 2
+        },
+        {
+            "number": 2,
+            "question": "In the number 987,654.126, which digit is in the hundred thousand place?",
+            "answer": [
+                "9"
+            ],
+            "value": 2
+        },
+        {
+            "number": 3,
+            "question": "What number category includes whole numbers as well as their opposites?",
+            "answer": [
+                "integers"
+            ],
+            "value": 2
+        },
+        {
+            "number": 4,
+            "question": "Order these numbers from least to greatest: -3, 1.5, -4, 0.",
+            "answer": [
+                "-4, -3, 0, 1.5"
+            ],
+            "value": 2
+        },
+        {
+            "number": 5,
+            "question": "Give the ratio of boys to girls in a class if there are 15 boys and 18 girls: 15:18.",
+            "answer": [
+                "5:6"
+            ],
+            "value": 2
+        },
+        {
+            "number": 6,
+            "question": "What is the only even number that is prime?",
+            "answer": [
+                "2"
+            ],
+            "value": 2
+        },
+        {
+            "number": 7,
+            "question": "Identify the base for the number 3².",
+            "answer": [
+                "3"
+            ],
+            "value": 2
+        },
+        {
+            "number": 8,
+            "question": "Expand and multiply: 6 × (3 + 2) = 6 × 5.",
+            "answer": [
+                "30"
+            ],
+            "value": 2
+        },
+        {
+            "number": 9,
+            "question": "Give the decimal equivalent of 3/5.",
+            "answer": [
+                "0.6"
+            ],
+            "value": 2
+        },
+        {
+            "number": 10,
+            "question": "Write the decimal that is greater: 0.6045 or 0.61.",
+            "answer": [
+                "0.61"
+            ],
+            "value": 2
+        },
+        {
+            "number": 11,
+            "question": "Write the prime factorization of 16 using division by primes.",
+            "answer": [
+                "2 × 2 × 2 × 2"
+            ],
+            "value": 2
+        },
+        {
+            "number": 12,
+            "question": "Which of the following numbers are prime: 3, 4, 9, 11, 15?",
+            "answer": [
+                "3 and 11"
+            ],
+            "value": 2
+        },
+        {
+            "number": 13,
+            "question": "What is the term for the answer to a multiplication problem?",
+            "answer": [
+                "product"
+            ],
+            "value": 2
+        },
+        {
+            "number": 14,
+            "question": "Write the equivalent fraction for 3/4 with a denominator of 16.",
+            "answer": [
+                "12/16"
+            ],
+            "value": 2
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "name": "Test 1",
+    "subject": "Intermediate Mathematics",
+    "section": "Follow the directions. Show all work.",
+    "assessment_page": 1,
+    "book_page": 12,
+    "questions": [
+        {
+            "answer": [
+                "6"
+            ],
+            "question": "Find the greatest common factor of 12 and 18.",
+            "number": 39,
+            "value": 2
+        },
+        {
+            "answer": [
+                "56"
+            ],
+            "question": "Find the least common multiple of 14 and 56.",
+            "number": 40,
+            "value": 2
+        },
+        {
+            "answer": [
+                "$454"
+            ],
+            "question": "Colin's grandparents sent him a check for $1,000. He gave $150 to his church, and he spent $396 on school clothes, books, and supplies. How much of the money does he have left?",
+            "number": 41,
+            "value": 4
+        },
+        {
+            "answer": [
+                "512 miles"
+            ],
+            "question": "Jeremy's car can travel 32 miles per gallon of gasoline. How many miles can he travel on 16 gallons of gas?",
+            "number": 42,
+            "value": 4
+        },
+        {
+            "answer": [
+                "5 bags"
+            ],
+            "question": "Megan made 3 1/3 pounds of fudge. She divided it into bags with 2/3 of a pound in each bag. How many bags of fudge did she make?",
+            "number": 43,
+            "value": 4
+        }
+    ]
+}

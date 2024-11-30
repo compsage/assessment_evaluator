@@ -1,0 +1,97 @@
+{
+    "name": "Test 1",
+    "subject": "Intermediate Mathematics",
+    "section": "Find the answers",
+    "assessment_page": 2,
+    "book_page": 10,
+    "questions": [
+        {
+            "answer": [
+                "3.701"
+            ],
+            "question": "15. 3.461 + 0.24",
+            "number": 15,
+            "value": 2
+        },
+        {
+            "answer": [
+                "0.240"
+            ],
+            "question": "16. 3.701 - 3.461",
+            "number": 16,
+            "value": 2
+        },
+        {
+            "answer": [
+                "358"
+            ],
+            "question": "16. 743 - 385",
+            "number": 16,
+            "value": 2
+        },
+        {
+            "answer": [
+                "70.225"
+            ],
+            "question": "17. 409 x 0.25",
+            "number": 17,
+            "value": 2
+        },
+        {
+            "answer": [
+                "140.22"
+            ],
+            "question": "18. 34.2 x 4.1",
+            "number": 18,
+            "value": 2
+        },
+        {
+            "answer": [
+                "400"
+            ],
+            "question": "19. 14,560 / 36.4",
+            "number": 19,
+            "value": 2
+        },
+        {
+            "answer": [
+                "0"
+            ],
+            "question": "20. 22,204.6 - 22,204.6",
+            "number": 20,
+            "value": 2
+        },
+        {
+            "answer": [
+                "12.345"
+            ],
+            "question": "21. 1.2345 x 10^1",
+            "number": 21,
+            "value": 2
+        },
+        {
+            "answer": [
+                "455.69"
+            ],
+            "question": "22. 45,569 ÷ 100",
+            "number": 22,
+            "value": 2
+        },
+        {
+            "answer": [
+                "2"
+            ],
+            "question": "23. 30 - 2(3^2 + 5)",
+            "number": 23,
+            "value": 2
+        },
+        {
+            "answer": [
+                "28"
+            ],
+            "question": "24. 8(4 + 3) - 8(7) - 56 ÷ 2",
+            "number": 24,
+            "value": 2
+        }
+    ]
+}

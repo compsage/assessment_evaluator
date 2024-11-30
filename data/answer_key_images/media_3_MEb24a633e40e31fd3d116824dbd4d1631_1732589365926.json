@@ -1,0 +1,105 @@
+{
+    "name": "QUIZ 4",
+    "subject": "Intermediate Mathematics",
+    "section": "Sections 1.9-1.10",
+    "assessment_page": 1,
+    "book_page": 7,
+    "questions": [
+        {
+            "number": 1,
+            "question": "Write 20/3 as a mixed number.",
+            "answer": [
+                "6 2/3"
+            ],
+            "value": 10
+        },
+        {
+            "number": 2,
+            "question": "Write 5 1/5 as an improper fraction.",
+            "answer": [
+                "26/5"
+            ],
+            "value": 10
+        },
+        {
+            "number": 3,
+            "question": "What must be the same before two fractions can be added or subtracted?",
+            "answer": [
+                "denominator"
+            ],
+            "value": 10
+        },
+        {
+            "number": 4,
+            "question": "Find the LCD for 2/5 and 3/20.",
+            "answer": [
+                "20"
+            ],
+            "value": 10
+        },
+        {
+            "number": 5,
+            "question": "Reduce 21/63 to lowest terms.",
+            "answer": [
+                "1/3"
+            ],
+            "value": 10
+        },
+        {
+            "number": 6,
+            "question": "Write the equivalent fraction for 2/3 with a denominator of 15.",
+            "answer": [
+                "10/15"
+            ],
+            "value": 10
+        },
+        {
+            "number": 7,
+            "question": "Identify 7/6 as a proper fraction, an improper fraction, or a mixed number.",
+            "answer": [
+                "improper"
+            ],
+            "value": 10
+        },
+        {
+            "number": 8,
+            "question": "Find the answer: 1/15 + 13/15",
+            "answer": [
+                "14/15"
+            ],
+            "value": 6
+        },
+        {
+            "number": 9,
+            "question": "Find the answer: 4/9 - 2/9",
+            "answer": [
+                "2/9"
+            ],
+            "value": 6
+        },
+        {
+            "number": 10,
+            "question": "Find the answer: 1/3 x 4/1",
+            "answer": [
+                "4/3"
+            ],
+            "value": 6
+        },
+        {
+            "number": 11,
+            "question": "Find the answer: 5/8 x 10/16",
+            "answer": [
+                "5/16"
+            ],
+            "value": 6
+        },
+        {
+            "number": 12,
+            "question": "Find the answer: 5/6 ÷ 2/3",
+            "answer": [
+                "5/4"
+            ],
+            "value": 6
+        }
+    ]
+}
