@@ -6,93 +6,103 @@
     "book_page": 10,
     "questions": [
         {
+            "number": 15,
+            "question": "3.461 + 0.24",
+            "question_description": "Add 3.461 and 0.24",
             "answer": [
                 "3.701"
             ],
-            "question": "15. 3.461 + 0.24",
-            "description": "Add the numbers",
-            "number": 15,
+            "answer_description": "The sum of 3.461 and 0.24 is 3.701",
             "value": 2
         },
         {
+            "number": 16,
+            "question": "743 - 385",
+            "question_description": "Subtract 385 from 743",
             "answer": [
                 "358"
             ],
-            "question": "16. 743 - 385",
-            "description": "Subtract the numbers",
-            "number": 16,
+            "answer_description": "The difference between 743 and 385 is 358",
             "value": 2
         },
         {
+            "number": 17,
+            "question": "409 x 25",
+            "question_description": "Multiply 409 by 25",
             "answer": [
                 "10,225"
             ],
-            "question": "17. 409 x 25",
-            "description": "Multiply the numbers",
-            "number": 17,
+            "answer_description": "The product of 409 and 25 is 10,225",
             "value": 2
         },
         {
+            "number": 18,
+            "question": "34.2 x 4.1",
+            "question_description": "Multiply 34.2 by 4.1",
             "answer": [
                 "140.22"
             ],
-            "question": "18. 34.2 x 4.1",
-            "description": "Multiply the numbers",
-            "number": 18,
+            "answer_description": "The product of 34.2 and 4.1 is 140.22",
             "value": 2
         },
         {
-            "answer": [
-                "400"
-            ],
-            "question": "19. 14,156 ÷ 56",
-            "description": "Divide the numbers",
             "number": 19,
+            "question": "400 ÷ 56",
+            "question_description": "Divide 400 by 56",
+            "answer": [
+                "7.142857"
+            ],
+            "answer_description": "The quotient of 400 divided by 56 is approximately 7.142857",
             "value": 2
         },
         {
-            "answer": [
-                "0"
-            ],
-            "question": "20. 22,204.6 ÷ 198",
-            "description": "Divide the numbers",
             "number": 20,
+            "question": "9.3 ÷ 2204.6",
+            "question_description": "Divide 9.3 by 2204.6",
+            "answer": [
+                "0.004217"
+            ],
+            "answer_description": "The quotient of 9.3 divided by 2204.6 is approximately 0.004217",
             "value": 2
         },
         {
-            "answer": [
-                "12.345"
-            ],
-            "question": "21. 1.2345 x 10^1",
-            "description": "Multiply by a power of ten",
             "number": 21,
-            "value": 2
-        },
-        {
+            "question": "1.2345 x 10^4",
+            "question_description": "Multiply 1.2345 by 10 to the power of 4",
             "answer": [
-                "455.69"
+                "12,345"
             ],
-            "question": "22. 45,569 ÷ 100",
-            "description": "Divide by a power of ten",
-            "number": 22,
+            "answer_description": "1.2345 multiplied by 10,000 is 12,345",
             "value": 2
         },
         {
+            "number": 22,
+            "question": "455.69 + 100",
+            "question_description": "Add 455.69 and 100",
+            "answer": [
+                "555.69"
+            ],
+            "answer_description": "The sum of 455.69 and 100 is 555.69",
+            "value": 2
+        },
+        {
+            "number": 23,
+            "question": "30 - 2(3^2 + 5)",
+            "question_description": "Calculate 30 minus 2 times the sum of 3 squared and 5",
             "answer": [
                 "2"
             ],
-            "question": "23. 30 - 2(3^2 + 5)",
-            "description": "Evaluate the expression",
-            "number": 23,
+            "answer_description": "The result of 30 minus 2 times the sum of 9 and 5 is 2",
             "value": 2
         },
         {
+            "number": 24,
+            "question": "8(4 + 3) ÷ 2",
+            "question_description": "Calculate 8 times the sum of 4 and 3, divided by 2",
             "answer": [
                 "28"
             ],
-            "question": "24. 8(4 + 3) - 8(7) ÷ 2",
-            "description": "Evaluate the expression",
-            "number": 24,
+            "answer_description": "The result of 8 times 7 divided by 2 is 28",
             "value": 2
         }
     ]

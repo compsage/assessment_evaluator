@@ -6,129 +6,143 @@
     "book_page": 9,
     "questions": [
         {
+            "answer": [
+                "3.082"
+            ],
+            "answer_description": "The number with the greater value between 3.082 and 3.08.",
+            "question": "Write the number to which 8 has the greater value: 3.082 or 3.08.",
+            "question_description": "Determine which number has the greater value.",
             "number": 1,
-            "question": "Write the number to which 8 has the greater value: 0.082 or 0.28.",
-            "answer": [
-                "0.28"
-            ],
-            "description": "Compare the value of 8 in two decimal numbers.",
             "value": 2
         },
         {
+            "answer": [
+                "5"
+            ],
+            "answer_description": "The digit in the hundred thousand place of the number 987,654,321.",
+            "question": "In the number 987,654,321, which digit is in the hundred thousand place?",
+            "question_description": "Identify the digit in the hundred thousand place.",
             "number": 2,
-            "question": "In the number 987,654.126, which digit is in the hundred thousand place?",
-            "answer": [
-                "9"
-            ],
-            "description": "Identify the digit in the hundred thousand place.",
             "value": 2
         },
         {
-            "number": 3,
-            "question": "What number category includes whole numbers as well as their opposites?",
             "answer": [
                 "integers"
             ],
-            "description": "Identify the number category that includes whole numbers and their opposites.",
+            "answer_description": "The number category that includes whole numbers as well as their opposites.",
+            "question": "What number category includes whole numbers as well as their opposites?",
+            "question_description": "Identify the number category that includes whole numbers and their opposites.",
+            "number": 3,
             "value": 2
         },
         {
-            "number": 4,
-            "question": "Order these numbers from least to greatest: -1.3, -3.4, 0, -4.0.",
             "answer": [
-                "-4.0, -3.4, -1.3, 0"
+                "-4, -3, 0, 3"
             ],
-            "description": "Arrange the given numbers in ascending order.",
+            "answer_description": "The order of the numbers from least to greatest.",
+            "question": "Order these numbers from least to greatest: -3, 3, 0, -4.",
+            "question_description": "Arrange the numbers in ascending order.",
+            "number": 4,
             "value": 2
         },
         {
-            "number": 5,
-            "question": "Give the ratio of boys to girls in a class if there are 15 boys and 18 girls.",
             "answer": [
                 "5:6"
             ],
-            "description": "Calculate the ratio of boys to girls.",
+            "answer_description": "The ratio of boys to girls in a class with 15 boys and 18 girls.",
+            "question": "Give the ratio of boys to girls in a class if there are 15 boys and 18 girls.",
+            "question_description": "Calculate the ratio of boys to girls.",
+            "number": 5,
             "value": 2
         },
         {
-            "number": 6,
-            "question": "What is the only even number that is prime?",
-            "answer": [
-                "2"
-            ],
-            "description": "Identify the only even prime number.",
-            "value": 2
-        },
-        {
-            "number": 7,
-            "question": "Identify the base for the number 7.",
             "answer": [
                 "7"
             ],
-            "description": "Identify the base of the number.",
+            "answer_description": "The only even number that is prime.",
+            "question": "What is the only even number that is prime?",
+            "question_description": "Identify the only even prime number.",
+            "number": 6,
             "value": 2
         },
         {
-            "number": 8,
-            "question": "Expand and multiply: 6 x 6^2 + 216.",
             "answer": [
-                "252"
+                "7"
             ],
-            "description": "Calculate the result of the expression.",
+            "answer_description": "The base for the number 7.",
+            "question": "Identify the base for the number 7.",
+            "question_description": "Determine the base of the number.",
+            "number": 7,
             "value": 2
         },
         {
-            "number": 9,
-            "question": "Give the decimal equivalent of 0.625.",
+            "answer": [
+                "6x^2 + 6"
+            ],
+            "answer_description": "The result of expanding and multiplying 6(x^2 + 1).",
+            "question": "Expand and multiply: 6(x^2 + 1).",
+            "question_description": "Expand and multiply the expression.",
+            "number": 8,
+            "value": 2
+        },
+        {
             "answer": [
                 "0.625"
             ],
-            "description": "Provide the decimal equivalent.",
+            "answer_description": "The decimal equivalent of 5/8.",
+            "question": "Give the decimal equivalent of 5/8.",
+            "question_description": "Convert the fraction to a decimal.",
+            "number": 9,
             "value": 2
         },
         {
+            "answer": [
+                "0.401"
+            ],
+            "answer_description": "The decimal that is greater between 0.045 and 0.401.",
+            "question": "Give the decimal that is greater: 0.045 or 0.401.",
+            "question_description": "Determine which decimal is greater.",
             "number": 10,
-            "question": "Write the decimal that is greater: 0.6045 or 0.601.",
-            "answer": [
-                "0.6045"
-            ],
-            "description": "Compare two decimal numbers to find the greater one.",
             "value": 2
         },
         {
-            "number": 11,
+            "answer": [
+                "2 x 2 x 2 x 3"
+            ],
+            "answer_description": "The prime factorization of 16 using division by primes.",
             "question": "Write the prime factorization of 16 using division by primes.",
-            "answer": [
-                "2 x 2 x 2 x 2"
-            ],
-            "description": "Find the prime factorization of 16.",
+            "question_description": "Find the prime factorization of 16.",
+            "number": 11,
             "value": 2
         },
         {
+            "answer": [
+                "3, 9, 11, 15"
+            ],
+            "answer_description": "The numbers that are prime from the list: 3, 9, 11, 15.",
+            "question": "Which of the following numbers are prime: 3, 9, 11, 15?",
+            "question_description": "Identify the prime numbers from the list.",
             "number": 12,
-            "question": "Which of the following numbers are prime: 3, 4, 9, 11, 15?",
-            "answer": [
-                "3 and 11"
-            ],
-            "description": "Identify the prime numbers from the list.",
             "value": 2
         },
         {
-            "number": 13,
-            "question": "What is the term for the answer to a multiplication problem?",
             "answer": [
                 "product"
             ],
-            "description": "Identify the term for the result of multiplication.",
+            "answer_description": "The term for the answer to a multiplication problem.",
+            "question": "What is the term for the answer to a multiplication problem?",
+            "question_description": "Identify the term used for the result of multiplication.",
+            "number": 13,
             "value": 2
         },
         {
-            "number": 14,
-            "question": "Write the equivalent fraction for 3/4 with a denominator of 16.",
             "answer": [
-                "12/16"
+                "4/12"
             ],
-            "description": "Find the equivalent fraction with a specified denominator.",
+            "answer_description": "The equivalent fraction for 8/24 with a denominator of 6.",
+            "question": "Write the equivalent fraction for 8/24 with a denominator of 6.",
+            "question_description": "Find the equivalent fraction with a specified denominator.",
+            "number": 14,
             "value": 2
         }
     ]

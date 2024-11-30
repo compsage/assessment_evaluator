@@ -9,8 +9,9 @@
             "answer": [
                 "6"
             ],
+            "answer_description": "The greatest common factor of 12 and 18 is 6.",
             "question": "Find the greatest common factor of 12 and 18.",
-            "description": "Calculate the greatest common factor of two numbers.",
+            "question_description": "Find the greatest common factor of 12 and 18.",
             "number": 39,
             "value": 2
         },
@@ -18,8 +19,9 @@
             "answer": [
                 "56"
             ],
+            "answer_description": "The least common multiple of 14 and 56 is 56.",
             "question": "Find the least common multiple of 14 and 56.",
-            "description": "Calculate the least common multiple of two numbers.",
+            "question_description": "Find the least common multiple of 14 and 56.",
             "number": 40,
             "value": 2
         },
@@ -27,8 +29,9 @@
             "answer": [
                 "$454"
             ],
+            "answer_description": "Colin has $454 left after spending $150 on church and $396 on supplies.",
             "question": "Colin's grandparents sent him a check for $1,000. He gave $150 to his church, and he spent $396 on school clothes, books, and supplies. How much of the money does he have left?",
-            "description": "Subtract expenses from a total amount to find the remaining balance.",
+            "question_description": "Calculate the remaining money after spending $150 and $396 from $1,000.",
             "number": 41,
             "value": 4
         },
@@ -36,8 +39,9 @@
             "answer": [
                 "512 miles"
             ],
+            "answer_description": "Jeremy's car can travel 512 miles on 16 gallons of gasoline.",
             "question": "Jeremy's car can travel 32 miles per gallon of gasoline. How many miles can he travel on 16 gallons of gas?",
-            "description": "Multiply miles per gallon by the number of gallons to find total miles.",
+            "question_description": "Calculate the total miles Jeremy can travel on 16 gallons of gasoline.",
             "number": 42,
             "value": 4
         },
@@ -45,8 +49,9 @@
             "answer": [
                 "5 bags"
             ],
+            "answer_description": "Megan made 5 bags of fudge.",
             "question": "Megan made 3 1/3 pounds of fudge. She divided it into bags with 2/3 of a pound in each bag. How many bags of fudge did she make?",
-            "description": "Divide the total pounds of fudge by the weight per bag to find the number of bags.",
+            "question_description": "Calculate the number of bags Megan can make with 3 1/3 pounds of fudge, dividing each bag into 2/3 pound.",
             "number": 43,
             "value": 4
         }
