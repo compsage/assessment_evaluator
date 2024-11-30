@@ -67,10 +67,6 @@ if __name__ == "__main__":
     print("evaluating...")
     checked_student_answers = assessment_evaluator.check(answers['quiz 1'], student_answers)
     print("grading...")
-
-    # del student_answers['questions']
-    # quiz_metadata = {str(k): str(v) for k, v in student_answers.items()}
-    
     graded_assessment = assessment_evaluator.grade(checked_student_answers)
     print("formatting...")
     text_summary = assessment_evaluator.format(graded_assessment)
