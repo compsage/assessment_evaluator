@@ -48,13 +48,16 @@ class Processor(ABC):
     @staticmethod
     def _process_chatgpt_response(raw_response):
         try:
+            if not raw_response :
+                print(f"Response from Chatgpt Empty: {raw_response}")
+                return None
             if raw_response.startswith("```json"):
                 raw_response = raw_response[len("```json"):].strip()
             if raw_response.endswith("```"):
                 raw_response = raw_response[:-len("```")].strip()
             return json.loads(raw_response)
         except json.JSONDecodeError as e:
-            print(f"Error decoding JSON: {e}")
+            print(f"Error decoding JSON: {e}\n raw_response: {raw_response}")
             return None
       
     @abstractmethod
@@ -112,6 +115,7 @@ class Processor(ABC):
         if source_image and not isinstance(source_image, SourceImage):
             raise ValueError("Input must be an instance of SourceImage.")
         elif source_image and isinstance(source_image, SourceImage):
+            print(f"Sending {source_image.get_source()} to genai: {key}")
             image_url = f"data:image/jpeg;base64,{source_image.get_base64()}"
             image_url_payload = {
                     "type": "image_url",
@@ -142,6 +146,7 @@ class Processor(ABC):
                     ]
                 }
             ],
+            "response_format" : {"type": "json_object"},
             "max_tokens": 2500,
             "temperature": 0
         }

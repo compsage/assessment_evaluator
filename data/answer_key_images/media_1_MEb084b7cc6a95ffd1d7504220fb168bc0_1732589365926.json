@@ -6,143 +6,143 @@
     "book_page": 1,
     "questions": [
         {
-            "number": 1,
-            "question": "In which number does the 6 have a greater value: 7,685 or 6,785?",
-            "question_description": "Determine in which number the digit 6 has a greater value.",
             "answer": [
-                "6,785"
+                "6785"
             ],
-            "answer_description": "The number where the digit 6 has a greater value.",
+            "answer_description": "The number in which the 6 has a greater value.",
+            "question": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+            "question_description": "Determine which number has a greater value for the digit 6.",
+            "number": 1,
             "value": 6
         },
         {
-            "number": 2,
-            "question": "In the number 243,107,569, which digit is in the ten thousands place?",
-            "question_description": "Identify the digit in the ten thousands place of the given number.",
             "answer": [
                 "0"
             ],
             "answer_description": "The digit in the ten thousands place.",
+            "question": "In the number 243,107,569, which digit is in the ten thousands place?",
+            "question_description": "Identify the digit in the ten thousands place of a given number.",
+            "number": 2,
             "value": 6
         },
         {
-            "number": 3,
-            "question": "Round 4,482,186 to the tens place.",
-            "question_description": "Round the given number to the nearest tens place.",
             "answer": [
                 "4,482,190"
             ],
             "answer_description": "The number rounded to the tens place.",
+            "question": "Round 4,482,186 to the tens place.",
+            "question_description": "Round a given number to the nearest tens.",
+            "number": 3,
             "value": 6
         },
         {
-            "number": 4,
-            "question": "What is the answer to a subtraction problem called?",
-            "question_description": "Identify the term used for the result of a subtraction problem.",
             "answer": [
                 "difference"
             ],
             "answer_description": "The term for the result of a subtraction problem.",
+            "question": "What is the answer to a subtraction problem called?",
+            "question_description": "Identify the term used for the result of subtraction.",
+            "number": 4,
             "value": 6
         },
         {
-            "number": 5,
-            "question": "What is the value of |-36|?",
-            "question_description": "Find the absolute value of -36.",
             "answer": [
                 "36"
             ],
-            "answer_description": "The absolute value of -36.",
+            "answer_description": "The value of the absolute of -36.",
+            "question": "What is the value of |-36|?",
+            "question_description": "Find the absolute value of a negative number.",
+            "number": 5,
             "value": 6
         },
         {
-            "number": 6,
-            "question": "What number category includes whole numbers as well as their opposites?",
-            "question_description": "Identify the number category that includes whole numbers and their opposites.",
             "answer": [
                 "integers"
             ],
-            "answer_description": "The number category that includes whole numbers and their opposites.",
+            "answer_description": "The category of numbers including whole numbers and their opposites.",
+            "question": "What number category includes whole numbers as well as their opposites?",
+            "question_description": "Identify the category of numbers that includes whole numbers and negatives.",
+            "number": 6,
             "value": 6
         },
         {
-            "number": 7,
-            "question": "0.233 __ 0.33",
-            "question_description": "Compare the two numbers and fill in the blank with the correct symbol (>, <, or =).",
-            "answer": [
-                "<"
-            ],
-            "answer_description": "The correct symbol to compare the two numbers.",
-            "value": 7
-        },
-        {
-            "number": 8,
-            "question": "-2 __ -11",
-            "question_description": "Compare the two numbers and fill in the blank with the correct symbol (>, <, or =).",
             "answer": [
                 ">"
             ],
-            "answer_description": "The correct symbol to compare the two numbers.",
+            "answer_description": "The correct symbol to compare 0.233 and 0.33.",
+            "question": "Compare 0.233 and 0.33.",
+            "question_description": "Determine the correct comparison symbol between two decimal numbers.",
+            "number": 7,
             "value": 7
         },
         {
+            "answer": [
+                "<"
+            ],
+            "answer_description": "The correct symbol to compare -2 and -11.",
+            "question": "Compare -2 and -11.",
+            "question_description": "Determine the correct comparison symbol between two negative numbers.",
+            "number": 8,
+            "value": 7
+        },
+        {
+            "answer": [
+                "<"
+            ],
+            "answer_description": "The correct symbol to compare |-7| and |-10|.",
+            "question": "Compare |-7| and |-10|.",
+            "question_description": "Determine the correct comparison symbol between two absolute values.",
             "number": 9,
-            "question": "-7 __ |-10|",
-            "question_description": "Compare the number -7 with the absolute value of -10 and fill in the blank with the correct symbol (>, <, or =).",
-            "answer": [
-                "<"
-            ],
-            "answer_description": "The correct symbol to compare the two numbers.",
             "value": 7
         },
         {
+            "answer": [
+                ">"
+            ],
+            "answer_description": "The correct symbol to compare 25.19 and 25.2.",
+            "question": "Compare 25.19 and 25.2.",
+            "question_description": "Determine the correct comparison symbol between two decimal numbers.",
             "number": 10,
-            "question": "25.19 __ 25.2",
-            "question_description": "Compare the two numbers and fill in the blank with the correct symbol (>, <, or =).",
-            "answer": [
-                "<"
-            ],
-            "answer_description": "The correct symbol to compare the two numbers.",
             "value": 7
         },
         {
-            "number": 11,
-            "question": "22,658",
-            "question_description": "Find the sum of 12,719 and 9,939.",
             "answer": [
                 "22,658"
             ],
-            "answer_description": "The sum of the two numbers.",
+            "answer_description": "The sum of 12,179 and 2,574.",
+            "question": "Find the sum of 12,179 and 2,574.",
+            "question_description": "Calculate the sum of two numbers.",
+            "number": 11,
             "value": 9
         },
         {
-            "number": 12,
-            "question": "14.56 - 3.054",
-            "question_description": "Subtract 3.054 from 14.56.",
             "answer": [
-                "11.506"
+                "11,506"
             ],
-            "answer_description": "The result of the subtraction.",
+            "answer_description": "The difference between 14,560 and 3,054.",
+            "question": "Find the difference between 14,560 and 3,054.",
+            "question_description": "Calculate the difference between two numbers.",
+            "number": 12,
             "value": 9
         },
         {
-            "number": 13,
-            "question": "47.8 x 1.2",
-            "question_description": "Multiply 47.8 by 1.2.",
             "answer": [
                 "57.36"
             ],
-            "answer_description": "The product of the multiplication.",
+            "answer_description": "The product of 4.78 and 12.",
+            "question": "Find the product of 4.78 and 12.",
+            "question_description": "Calculate the product of two numbers.",
+            "number": 13,
             "value": 9
         },
         {
-            "number": 14,
-            "question": "0.6 ÷ 1/4",
-            "question_description": "Divide 0.6 by 1/4.",
             "answer": [
-                "2.4"
+                "3.24"
             ],
-            "answer_description": "The result of the division.",
+            "answer_description": "The quotient of 0.61 and 0.18.",
+            "question": "Find the quotient of 0.61 and 0.18.",
+            "question_description": "Calculate the quotient of two numbers.",
+            "number": 14,
             "value": 9
         }
     ]

@@ -3,106 +3,106 @@
     "subject": "Intermediate Mathematics",
     "section": "Sections 1.6–1.8",
     "assessment_page": 1,
-    "book_page": 12,
+    "book_page": 10,
     "questions": [
         {
-            "number": 1,
-            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 1. 6 and 96",
-            "question_description": "Find the GCF and LCM of 6 and 96.",
             "answer": [
                 "6"
             ],
-            "answer_description": "The greatest common factor of 6 and 96 is 6.",
+            "answer_description": "The greatest common factor of 6 and 96.",
+            "question": "Find the greatest common factor (GCF) for the pair of numbers 6 and 96.",
+            "question_description": "Find the greatest common factor of 6 and 96.",
+            "number": 1,
             "value": 10
         },
         {
-            "number": 2,
-            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. LCM =",
-            "question_description": "Find the LCM of 6 and 96.",
             "answer": [
                 "96"
             ],
-            "answer_description": "The least common multiple of 6 and 96 is 96.",
+            "answer_description": "The least common multiple of 6 and 96.",
+            "question": "Find the least common multiple (LCM) for the pair of numbers 6 and 96.",
+            "question_description": "Find the least common multiple of 6 and 96.",
+            "number": 2,
             "value": 10
         },
         {
-            "number": 3,
-            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 3. 3 and 17",
-            "question_description": "Find the GCF of 3 and 17.",
             "answer": [
                 "1"
             ],
-            "answer_description": "The greatest common factor of 3 and 17 is 1.",
+            "answer_description": "The greatest common factor of 3 and 17.",
+            "question": "Find the greatest common factor (GCF) for the pair of numbers 3 and 17.",
+            "question_description": "Find the greatest common factor of 3 and 17.",
+            "number": 3,
             "value": 10
         },
         {
-            "number": 4,
-            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. LCM =",
-            "question_description": "Find the LCM of 3 and 17.",
             "answer": [
                 "51"
             ],
-            "answer_description": "The least common multiple of 3 and 17 is 51.",
+            "answer_description": "The least common multiple of 3 and 17.",
+            "question": "Find the least common multiple (LCM) for the pair of numbers 3 and 17.",
+            "question_description": "Find the least common multiple of 3 and 17.",
+            "number": 4,
             "value": 10
         },
         {
-            "number": 5,
-            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. 5. 14 and 49",
-            "question_description": "Find the GCF of 14 and 49.",
             "answer": [
                 "7"
             ],
-            "answer_description": "The greatest common factor of 14 and 49 is 7.",
+            "answer_description": "The greatest common factor of 14 and 49.",
+            "question": "Find the greatest common factor (GCF) for the pair of numbers 14 and 49.",
+            "question_description": "Find the greatest common factor of 14 and 49.",
+            "number": 5,
             "value": 10
         },
         {
-            "number": 6,
-            "question": "Find the greatest common factor (GCF) and least common multiple (LCM) for each pair of numbers. LCM =",
-            "question_description": "Find the LCM of 14 and 49.",
             "answer": [
                 "98"
             ],
-            "answer_description": "The least common multiple of 14 and 49 is 98.",
+            "answer_description": "The least common multiple of 14 and 49.",
+            "question": "Find the least common multiple (LCM) for the pair of numbers 14 and 49.",
+            "question_description": "Find the least common multiple of 14 and 49.",
+            "number": 6,
             "value": 10
         },
         {
-            "number": 7,
-            "question": "Simplify using the order of operations. 7. 2 + 3 ÷ 4 + 9",
-            "question_description": "Simplify the expression 2 + 3 ÷ 4 + 9 using order of operations.",
             "answer": [
                 "10"
             ],
-            "answer_description": "The simplified result of 2 + 3 ÷ 4 + 9 is 10.",
+            "answer_description": "The result of simplifying the expression 2 + 3 * 4 + 9 using the order of operations.",
+            "question": "Simplify the expression 2 + 3 * 4 + 9 using the order of operations.",
+            "question_description": "Simplify using the order of operations: 2 + 3 * 4 + 9.",
+            "number": 7,
             "value": 10
         },
         {
-            "number": 8,
-            "question": "Simplify using the order of operations. 8. 6 ÷ 3 + 27 ÷ 3",
-            "question_description": "Simplify the expression 6 ÷ 3 + 27 ÷ 3 using order of operations.",
             "answer": [
                 "12"
             ],
-            "answer_description": "The simplified result of 6 ÷ 3 + 27 ÷ 3 is 12.",
+            "answer_description": "The result of simplifying the expression 3 + 27 ÷ 3 using the order of operations.",
+            "question": "Simplify the expression 3 + 27 ÷ 3 using the order of operations.",
+            "question_description": "Simplify using the order of operations: 3 + 27 ÷ 3.",
+            "number": 8,
             "value": 10
         },
         {
-            "number": 9,
-            "question": "Simplify using the order of operations. 9. 54 ÷ 3² + (4 - 1)",
-            "question_description": "Simplify the expression 54 ÷ 3² + (4 - 1) using order of operations.",
             "answer": [
                 "57"
             ],
-            "answer_description": "The simplified result of 54 ÷ 3² + (4 - 1) is 57.",
+            "answer_description": "The result of simplifying the expression 54 + 3² + (4 - 1) using the order of operations.",
+            "question": "Simplify the expression 54 + 3² + (4 - 1) using the order of operations.",
+            "question_description": "Simplify using the order of operations: 54 + 3² + (4 - 1).",
+            "number": 9,
             "value": 10
         },
         {
-            "number": 10,
-            "question": "Simplify using the order of operations. 10. 9 + 6(6)",
-            "question_description": "Simplify the expression 9 + 6(6) using order of operations.",
             "answer": [
-                "45"
+                "5"
             ],
-            "answer_description": "The simplified result of 9 + 6(6) is 45.",
+            "answer_description": "The result of simplifying the expression 9 + 6(6) using the order of operations.",
+            "question": "Simplify the expression 9 + 6(6) using the order of operations.",
+            "question_description": "Simplify using the order of operations: 9 + 6(6).",
+            "number": 10,
             "value": 10
         }
     ]

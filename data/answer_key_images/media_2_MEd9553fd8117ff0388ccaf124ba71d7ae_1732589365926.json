@@ -6,143 +6,143 @@
     "book_page": 63,
     "questions": [
         {
-            "number": 1,
+            "answer": [
+                "12"
+            ],
+            "answer_description": "The answer to the conversion of 1 ft. to inches.",
             "question": "12 (in.)",
-            "question_description": "Convert 12 inches to feet.",
-            "answer": [
-                "1 ft."
-            ],
-            "answer_description": "12 inches is equal to 1 foot.",
+            "question_description": "Convert 1 ft. to inches.",
+            "number": 1,
             "value": 5
         },
         {
-            "number": 2,
+            "answer": [
+                "36"
+            ],
+            "answer_description": "The answer to the conversion of 1 yd. to inches.",
             "question": "36 (in.)",
-            "question_description": "Convert 36 inches to yards.",
-            "answer": [
-                "1 yd."
-            ],
-            "answer_description": "36 inches is equal to 1 yard.",
+            "question_description": "Convert 1 yd. to inches.",
+            "number": 2,
             "value": 5
         },
         {
-            "number": 3,
+            "answer": [
+                "5,280"
+            ],
+            "answer_description": "The answer to the conversion of 1 mi. to feet.",
             "question": "5,280 (ft.)",
-            "question_description": "Convert 5,280 feet to miles.",
-            "answer": [
-                "1 mi."
-            ],
-            "answer_description": "5,280 feet is equal to 1 mile.",
+            "question_description": "Convert 1 mi. to feet.",
+            "number": 3,
             "value": 5
         },
         {
-            "number": 4,
+            "answer": [
+                "16"
+            ],
+            "answer_description": "The answer to the conversion of 1 pt. to fluid ounces.",
             "question": "16 (fl. oz.)",
-            "question_description": "Convert 16 fluid ounces to pints.",
-            "answer": [
-                "1 pt."
-            ],
-            "answer_description": "16 fluid ounces is equal to 1 pint.",
+            "question_description": "Convert 1 pt. to fluid ounces.",
+            "number": 4,
             "value": 5
         },
         {
-            "number": 5,
+            "answer": [
+                "16"
+            ],
+            "answer_description": "The answer to the conversion of 1 lb. to ounces.",
             "question": "16 (oz.)",
-            "question_description": "Convert 16 ounces to pounds.",
-            "answer": [
-                "1 lb."
-            ],
-            "answer_description": "16 ounces is equal to 1 pound.",
+            "question_description": "Convert 1 lb. to ounces.",
+            "number": 5,
             "value": 5
         },
         {
-            "number": 6,
+            "answer": [
+                "4"
+            ],
+            "answer_description": "The answer to the conversion of 1 bu. to pecks.",
             "question": "4 (pk.)",
-            "question_description": "Convert 4 pecks to bushels.",
-            "answer": [
-                "1 bu."
-            ],
-            "answer_description": "4 pecks is equal to 1 bushel.",
+            "question_description": "Convert 1 bu. to pecks.",
+            "number": 6,
             "value": 5
         },
         {
-            "number": 7,
+            "answer": [
+                "2,000"
+            ],
+            "answer_description": "The answer to the conversion of 1 t. to pounds.",
             "question": "2,000 (lb.)",
-            "question_description": "Convert 2,000 pounds to tons.",
-            "answer": [
-                "1 t."
-            ],
-            "answer_description": "2,000 pounds is equal to 1 ton.",
+            "question_description": "Convert 1 t. to pounds.",
+            "number": 7,
             "value": 5
         },
         {
-            "number": 8,
+            "answer": [
+                "3"
+            ],
+            "answer_description": "The answer to the conversion of 1 tbsp. to teaspoons.",
             "question": "3 (tsp.)",
-            "question_description": "Convert 3 teaspoons to tablespoons.",
-            "answer": [
-                "1 tbsp."
-            ],
-            "answer_description": "3 teaspoons is equal to 1 tablespoon.",
+            "question_description": "Convert 1 tbsp. to teaspoons.",
+            "number": 8,
             "value": 5
         },
         {
-            "number": 9,
+            "answer": [
+                "21"
+            ],
+            "answer_description": "The answer to the conversion of 7 yd. to feet.",
             "question": "21 (ft.)",
-            "question_description": "Convert 21 feet to yards.",
-            "answer": [
-                "7 yd."
-            ],
-            "answer_description": "21 feet is equal to 7 yards.",
+            "question_description": "Convert 7 yd. to feet.",
+            "number": 9,
             "value": 10
         },
         {
-            "number": 10,
+            "answer": [
+                "7"
+            ],
+            "answer_description": "The answer to the conversion of 84 in. to feet.",
             "question": "7 (ft.)",
-            "question_description": "Convert 7 feet to inches.",
-            "answer": [
-                "84 in."
-            ],
-            "answer_description": "7 feet is equal to 84 inches.",
+            "question_description": "Convert 84 in. to feet.",
+            "number": 10,
             "value": 10
         },
         {
-            "number": 11,
+            "answer": [
+                "2 1/2"
+            ],
+            "answer_description": "The answer to the conversion of 90 in. to yards.",
             "question": "2 1/2 (yd.)",
-            "question_description": "Convert 2 1/2 yards to feet.",
-            "answer": [
-                "90 in."
-            ],
-            "answer_description": "2 1/2 yards is equal to 90 inches.",
+            "question_description": "Convert 90 in. to yards.",
+            "number": 11,
             "value": 10
         },
         {
-            "number": 12,
+            "answer": [
+                "4"
+            ],
+            "answer_description": "The answer to the conversion of 8 pt. to quarts.",
             "question": "4 (qt.)",
-            "question_description": "Convert 4 quarts to gallons.",
-            "answer": [
-                "1 gal."
-            ],
-            "answer_description": "4 quarts is equal to 1 gallon.",
+            "question_description": "Convert 8 pt. to quarts.",
+            "number": 12,
             "value": 10
         },
         {
-            "number": 13,
+            "answer": [
+                "64"
+            ],
+            "answer_description": "The answer to the conversion of 4 lb. to ounces.",
             "question": "64 (oz.)",
-            "question_description": "Convert 64 ounces to pounds.",
-            "answer": [
-                "4 lb."
-            ],
-            "answer_description": "64 ounces is equal to 4 pounds.",
+            "question_description": "Convert 4 lb. to ounces.",
+            "number": 13,
             "value": 10
         },
         {
-            "number": 14,
-            "question": "32 (qt.)",
-            "question_description": "Convert 32 quarts to gallons.",
             "answer": [
-                "8 gal."
+                "32"
             ],
-            "answer_description": "32 quarts is equal to 8 gallons.",
+            "answer_description": "The answer to the conversion of 4 gal. to quarts.",
+            "question": "32 (qt.)",
+            "question_description": "Convert 4 gal. to quarts.",
+            "number": 14,
             "value": 10
         }
     ]

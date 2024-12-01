@@ -9,9 +9,9 @@
             "answer": [
                 "23"
             ],
-            "answer_description": "The base for the number 23^1 is 23.",
+            "answer_description": "The base for the number 23^1",
             "question": "Identify the base for the number 23^1.",
-            "question_description": "Identify the base for the number 23^1.",
+            "question_description": "Identify the base for the number 23^1",
             "number": 1,
             "value": 5
         },
@@ -19,9 +19,9 @@
             "answer": [
                 "64"
             ],
-            "answer_description": "4 multiplied by 4 multiplied by 4 equals 64.",
+            "answer_description": "The result of expanding and multiplying 4^3",
             "question": "Expand and multiply 4^3.",
-            "question_description": "Expand and multiply 4^3.",
+            "question_description": "Expand and multiply 4^3",
             "number": 2,
             "value": 5
         },
@@ -29,9 +29,9 @@
             "answer": [
                 "0 or 1"
             ],
-            "answer_description": "The numbers 0 and 1 are neither prime nor composite.",
+            "answer_description": "One of the two numbers that are neither prime nor composite",
             "question": "Write one of the two numbers that are neither prime nor composite.",
-            "question_description": "Write one of the two numbers that are neither prime nor composite.",
+            "question_description": "Write one of the two numbers that are neither prime nor composite",
             "number": 3,
             "value": 5
         },
@@ -39,9 +39,9 @@
             "answer": [
                 "composite"
             ],
-            "answer_description": "The number 27 is composite.",
+            "answer_description": "The classification of the number 27 as prime, composite, or neither",
             "question": "Is the number 27 prime, composite, or neither?",
-            "question_description": "Determine if the number 27 is prime, composite, or neither.",
+            "question_description": "Is the number 27 prime, composite, or neither",
             "number": 4,
             "value": 5
         },
@@ -49,9 +49,9 @@
             "answer": [
                 "2"
             ],
-            "answer_description": "The only even number that is prime is 2.",
+            "answer_description": "The only even number that is prime",
             "question": "What is the only even number that is prime?",
-            "question_description": "Identify the only even number that is prime.",
+            "question_description": "What is the only even number that is prime",
             "number": 5,
             "value": 5
         },
@@ -59,9 +59,9 @@
             "answer": [
                 "13"
             ],
-            "answer_description": "Among the numbers 12, 13, 14, 15, the number 13 is prime.",
+            "answer_description": "The prime number among 12, 13, 14, 15",
             "question": "Which of the following numbers are prime? 12, 13, 14, 15.",
-            "question_description": "Identify the prime number among 12, 13, 14, 15.",
+            "question_description": "Which of the following numbers are prime: 12, 13, 14, 15",
             "number": 6,
             "value": 5
         },
@@ -69,19 +69,19 @@
             "answer": [
                 "1 and 2"
             ],
-            "answer_description": "The common factors of 4 and 14 are 1 and 2.",
+            "answer_description": "The common factors of 4 and 14",
             "question": "What are the common factors of 4 and 14?",
-            "question_description": "Find the common factors of 4 and 14.",
+            "question_description": "What are the common factors of 4 and 14",
             "number": 7,
             "value": 5
         },
         {
             "answer": [
-                "2^3 x 3^3"
+                "2^3 x 3"
             ],
-            "answer_description": "Rewrite 2 x 2 x 2 x 3 x 3 x 3 using exponents.",
-            "question": "Rewrite the following using exponents: 2 x 2 x 2 x 3 x 3 x 3.",
-            "question_description": "Rewrite the multiplication of numbers using exponents.",
+            "answer_description": "The expression using exponents for 2 x 2 x 2 x 3",
+            "question": "Rewrite the following using exponents: 2 x 2 x 2 x 3.",
+            "question_description": "Rewrite the following using exponents: 2 x 2 x 2 x 3",
             "number": 8,
             "value": 5
         },
@@ -89,9 +89,9 @@
             "answer": [
                 "2 x 2 x 2 x 3 or 2^3 x 3"
             ],
-            "answer_description": "The prime factorization of 24 is 2 x 2 x 2 x 3 or 2^3 x 3.",
+            "answer_description": "The prime factorization of 24",
             "question": "Find the prime factorization of 24.",
-            "question_description": "Find the prime factorization of 24 using division by primes.",
+            "question_description": "Find the prime factorization of 24",
             "number": 9,
             "value": 10
         },
@@ -99,9 +99,9 @@
             "answer": [
                 "3 x 5 x 7"
             ],
-            "answer_description": "The prime factorization of 105 is 3 x 5 x 7.",
+            "answer_description": "The prime factorization of 105",
             "question": "Find the prime factorization of 105.",
-            "question_description": "Find the prime factorization of 105 using division by primes.",
+            "question_description": "Find the prime factorization of 105",
             "number": 10,
             "value": 10
         },
@@ -109,9 +109,9 @@
             "answer": [
                 "12,560"
             ],
-            "answer_description": "The answer to the calculation is 12,560.",
-            "question": "Find the answer to 12,560.",
-            "question_description": "Calculate the given number.",
+            "answer_description": "The result of 12,560",
+            "question": "Find the answer for 12,560.",
+            "question_description": "Find the answer for 12,560",
             "number": 11,
             "value": 10
         },
@@ -119,9 +119,9 @@
             "answer": [
                 "0.5567"
             ],
-            "answer_description": "The answer to the calculation is 0.5567.",
-            "question": "Find the answer to 0.5567.",
-            "question_description": "Calculate the given number.",
+            "answer_description": "The result of 0.5567 x 100",
+            "question": "Find the answer for 0.5567 x 100.",
+            "question_description": "Find the answer for 0.5567 x 100",
             "number": 12,
             "value": 10
         },
@@ -129,19 +129,19 @@
             "answer": [
                 "0.7894"
             ],
-            "answer_description": "The answer to the calculation is 0.7894.",
-            "question": "Find the answer to 0.7894.",
-            "question_description": "Calculate the given number.",
+            "answer_description": "The result of 7.894 x 10",
+            "question": "Find the answer for 7.894 x 10.",
+            "question_description": "Find the answer for 7.894 x 10",
             "number": 13,
             "value": 10
         },
         {
             "answer": [
-                "1.9787"
+                "1978"
             ],
-            "answer_description": "The answer to the calculation is 1.9787.",
-            "question": "Find the answer to 1.9787.",
-            "question_description": "Calculate the given number.",
+            "answer_description": "The result of 1978",
+            "question": "Find the answer for 1978.",
+            "question_description": "Find the answer for 1978",
             "number": 14,
             "value": 10
         }

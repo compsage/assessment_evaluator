@@ -30,6 +30,7 @@ def get_file_paths(directory):
     return file_paths
 
 def generate_answer_keys(directory_path) :
+    image_processor = Processor()
     answer_key_image_paths = get_file_paths(directory_path)
 
     #You only need to run this once because onece the answers are extracted you can just use the json to check
@@ -49,7 +50,7 @@ def generate_answer_keys(directory_path) :
 
 if __name__ == "__main__":
     #Get the answer key images to check the students answers.  No need to call this everytime
-    #generate_answer_keys("../data/answer_key_images")
+    generate_answer_keys("../data/all_answer_key_images")
     
     #This is the 'Master Key' of answers
     file_path = '../data/answer_keys.json'

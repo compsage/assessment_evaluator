@@ -6,103 +6,103 @@
     "book_page": 10,
     "questions": [
         {
-            "number": 15,
-            "question": "3.461 + 0.24",
-            "question_description": "Add 3.461 and 0.24",
             "answer": [
                 "3.701"
             ],
-            "answer_description": "The sum of 3.461 and 0.24 is 3.701",
+            "answer_description": "The result of the division 3.461 ÷ 0.24",
+            "question": "15. 3.461 ÷ 0.24",
+            "question_description": "Divide 3.461 by 0.24",
+            "number": 15,
             "value": 2
         },
         {
-            "number": 16,
-            "question": "743 - 385",
-            "question_description": "Subtract 385 from 743",
             "answer": [
                 "358"
             ],
-            "answer_description": "The difference between 743 and 385 is 358",
+            "answer_description": "The result of the division 3.401 ÷ 0.24",
+            "question": "16. 3.401 ÷ 0.24",
+            "question_description": "Divide 3.401 by 0.24",
+            "number": 16,
             "value": 2
         },
         {
-            "number": 17,
-            "question": "409 x 25",
-            "question_description": "Multiply 409 by 25",
             "answer": [
-                "10,225"
+                "70.225"
             ],
-            "answer_description": "The product of 409 and 25 is 10,225",
+            "answer_description": "The result of the multiplication 409 × 0.25",
+            "question": "17. 409 × 0.25",
+            "question_description": "Multiply 409 by 0.25",
+            "number": 17,
             "value": 2
         },
         {
-            "number": 18,
-            "question": "34.2 x 4.1",
-            "question_description": "Multiply 34.2 by 4.1",
             "answer": [
                 "140.22"
             ],
-            "answer_description": "The product of 34.2 and 4.1 is 140.22",
+            "answer_description": "The result of the multiplication 34.2 × 4.1",
+            "question": "18. 34.2 × 4.1",
+            "question_description": "Multiply 34.2 by 4.1",
+            "number": 18,
             "value": 2
         },
         {
-            "number": 19,
-            "question": "400 ÷ 56",
+            "answer": [
+                "400"
+            ],
+            "answer_description": "The result of the division 400 ÷ 56",
+            "question": "19. 400 ÷ 56",
             "question_description": "Divide 400 by 56",
-            "answer": [
-                "7.142857"
-            ],
-            "answer_description": "The quotient of 400 divided by 56 is approximately 7.142857",
+            "number": 19,
             "value": 2
         },
         {
-            "number": 20,
-            "question": "9.3 ÷ 2204.6",
+            "answer": [
+                "0"
+            ],
+            "answer_description": "The result of the division 9.3 ÷ 2204.6",
+            "question": "20. 9.3 ÷ 2204.6",
             "question_description": "Divide 9.3 by 2204.6",
-            "answer": [
-                "0.004217"
-            ],
-            "answer_description": "The quotient of 9.3 divided by 2204.6 is approximately 0.004217",
+            "number": 20,
             "value": 2
         },
         {
-            "number": 21,
-            "question": "1.2345 x 10^4",
+            "answer": [
+                "12.345"
+            ],
+            "answer_description": "The result of the multiplication 1.2345 × 10^4",
+            "question": "21. 1.2345 × 10^4",
             "question_description": "Multiply 1.2345 by 10 to the power of 4",
-            "answer": [
-                "12,345"
-            ],
-            "answer_description": "1.2345 multiplied by 10,000 is 12,345",
+            "number": 21,
             "value": 2
         },
         {
+            "answer": [
+                "455.69"
+            ],
+            "answer_description": "The result of the addition 45,569 + 100",
+            "question": "22. 45,569 + 100",
+            "question_description": "Add 45,569 and 100",
             "number": 22,
-            "question": "455.69 + 100",
-            "question_description": "Add 455.69 and 100",
-            "answer": [
-                "555.69"
-            ],
-            "answer_description": "The sum of 455.69 and 100 is 555.69",
             "value": 2
         },
         {
-            "number": 23,
-            "question": "30 - 2(3^2 + 5)",
-            "question_description": "Calculate 30 minus 2 times the sum of 3 squared and 5",
             "answer": [
                 "2"
             ],
-            "answer_description": "The result of 30 minus 2 times the sum of 9 and 5 is 2",
+            "answer_description": "The result of the expression 30 - 2(3^2 + 5)",
+            "question": "23. 30 - 2(3^2 + 5)",
+            "question_description": "Calculate the expression 30 minus 2 times the sum of 3 squared and 5",
+            "number": 23,
             "value": 2
         },
         {
-            "number": 24,
-            "question": "8(4 + 3) ÷ 2",
-            "question_description": "Calculate 8 times the sum of 4 and 3, divided by 2",
             "answer": [
                 "28"
             ],
-            "answer_description": "The result of 8 times 7 divided by 2 is 28",
+            "answer_description": "The result of the expression 8(4 + 3) - 8(7) ÷ 2",
+            "question": "24. 8(4 + 3) - 8(7) ÷ 2",
+            "question_description": "Calculate the expression 8 times the sum of 4 and 3 minus 8 times 7 divided by 2",
+            "number": 24,
             "value": 2
         }
     ]
