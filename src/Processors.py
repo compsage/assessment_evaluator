@@ -11,18 +11,20 @@ class Processor(ABC):
     Abstract base class for processing objects and managing prompts.
     """
     api_endpoint = "https://api.openai.com/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
-        "Content-Type": "application/json"
-    }
+    
 
-    def __init__(self, prompts_directory="../prompts"):
+    def __init__(self, prompts_directory="./prompts", openai_api_key=None):
         """
         Initializes the Processor and loads prompt files from the specified directory.
 
         :param prompts_directory: Path to the directory containing .txt prompt files.
         """
         self.prompts = self._load_prompts(prompts_directory)
+
+        self.headers = {
+        "Authorization": f"Bearer {openai_api_key}",
+        "Content-Type": "application/json"
+    }
 
     def _load_prompts(self, directory):
         """
