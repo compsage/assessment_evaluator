@@ -67,7 +67,8 @@ def send_email(fn, body):
     #Construct the email content
     header = f"Here is a summary of the data you submitted, now stored in Assessor.ai ({fn})"
     subject = "Assessor.ai: Data Submission Summary"
-    body_text = f"{header} {body}"
+    body_text = f"{header} {body}\n"
+    body_text = body_text.replace('\n', '<br>')
     body_html = f"""
     <html>
     <head></head>
