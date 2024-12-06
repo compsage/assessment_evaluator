@@ -90,31 +90,21 @@ def handler(event, context):
             print("No media URLs in the payload.")
             return {}
 
-        files = {}
-        
+        sourceImages = []
         for i in range(num_media):
             media_url = event_body.get(f'MediaUrl{i}')
             media_type = event_body.get(f'MediaContentType{i}', 'unknown')
             tail = media_url.split('/')[-1]
             file_type = media_type.split('/')[-1]
-            sourceImage = SourceImage(media_url, auth=(account_sid, auth_token))
+
+            sourceImage = SourceImage(media_url, auth=(account_sid, auth_token), additional_metadata=event_body)
             bucket_path = f"s3://{bucket_name}/{current_date}/{current_time_millis}"
             filename = f"media_{i}_{tail}_{current_time_millis}.{file_type}"
             sourceImage.write(bucket_path, filename)
-            
+            sourceImages.append(sourceImage)
+
             if not media_url:
                 continue
-
-        # # Process media and save original files
-        # files = download_and_save_original_media(event_body)
-
-        # event_body['current_date'] = current_date
-        # event_body['current_time_millis'] = current_time_millis
-        # event_body['bucket_name'] = bucket_name
-        # event_body['files_uploaded'] = list(files.keys())
-        # #event_body['files'] = files
-        # file_name = f"{current_date}/{current_time_millis}/twilio_event_base64_files_{current_time_millis}.json"
-        # save_event_json(file_name, files)
 
     except Exception as e:
         print(f"Error in Lambda handler: {e}")
@@ -125,7 +115,8 @@ def handler(event, context):
         answers = json.load(json_file)
 
     #Get the image of the student quiz
-    student_quiz_image = SourceImage("./data/quiz1_sample.jpeg")
+    #student_quiz_image = SourceImage("./data/quiz1_sample.jpeg")
+    student_quiz_image = sourceImages[0]
 
     image_processor = Processor(prompts_directory="./prompts", openai_api_key=openai_api_key)
     #Call ChatGPT with the image to get the students answers in JSON format
@@ -166,7 +157,7 @@ def send_email(fn, subject, body):
 
     #Construct the email content
     header = f"Here is a summary of the data you submitted, now stored in Assessor.ai ({fn})"
-    subject = f"Assessor.ai Grader: {subject}"
+    subject = f"Grader.ai: {subject}"
     body_text = f"{header} {body}\n"
     body_text = body_text.replace('\n', '<br>')
     body_html = f"""
