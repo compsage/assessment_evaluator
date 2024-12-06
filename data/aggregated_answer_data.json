@@ -7329,11 +7329,13 @@
             }
         ]
     },
+    
     "quiz 1": {
         "questions": [
             {
                 "answer": [
-                    "6,785"
+                    "6,785",
+                    "6785"
                 ],
                 "answer_description": "The number in which the 6 has a greater value.",
                 "question": "In which number does the 6 have a greater value: 7,685 or 6,785?",
@@ -7353,7 +7355,8 @@
             },
             {
                 "answer": [
-                    "4,482,190"
+                    "4,482,190",
+                    "4482190"
                 ],
                 "answer_description": "The number rounded to the tens place.",
                 "question": "Round 4,482,186 to the tens place.",
@@ -7363,7 +7366,8 @@
             },
             {
                 "answer": [
-                    "difference"
+                    "difference",
+                    "diff"
                 ],
                 "answer_description": "The term for the result of a subtraction problem.",
                 "question": "What is the answer to a subtraction problem called?",
@@ -7383,7 +7387,8 @@
             },
             {
                 "answer": [
-                    "integers"
+                    "integers",
+                    "int"
                 ],
                 "answer_description": "The category of numbers that includes whole numbers and their opposites.",
                 "question": "What number category includes whole numbers as well as their opposites?",
@@ -7433,7 +7438,8 @@
             },
             {
                 "answer": [
-                    "22,658"
+                    "22,658",
+                    "22658"
                 ],
                 "answer_description": "The sum of the numbers.",
                 "question": "11, 7,365 + 12,719 + 2,574",
@@ -7443,7 +7449,8 @@
             },
             {
                 "answer": [
-                    "11.506"
+                    "11,506",
+                    "11506"
                 ],
                 "answer_description": "The result of the subtraction.",
                 "question": "14.56 - 3.054",
