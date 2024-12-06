@@ -1,12 +1,58 @@
 import boto3
 import json
+import base64
+import re
 from datetime import datetime
 import time
+from urllib.parse import parse_qs
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
 from SourceImage import SourceImage
 from Processors import Processor
 from Evaluator import AssessmentEvaluator
+
+def detect_double_exclamation_commands(text):
+    """
+    Detects and extracts commands prefixed with !! from the input text.
+    
+    Args:
+        text (str): The input string containing commands.
+    
+    Returns:
+        list: A list of detected commands (excluding arguments).
+    """
+    # Regex to match the !! prefix followed by a command
+    command_pattern = r"!!(\w+)"
+    commands = re.findall(command_pattern, text)
+    return commands
+
+def validate_twilio_request(event):
+
+    # Extract data from the event
+    twilio_signature = event["headers"].get("x-twilio-signature")
+    print(twilio_signature)
+    request_url = "https://4yaapzlnl5d7lax72bxgn6bemq0aqjbb.lambda-url.us-east-1.on.aws/"
+    
+    query_params = event.get("queryStringParameters", {})
+
+    # Parse the body as form parameters (for application/x-www-form-urlencoded)
+    event_body = event.get('body', '{}')
+
+    if event.get('isBase64Encoded', False):
+        body_params = parse_qs(base64.b64decode(event_body).decode('utf-8'))
+    else:
+        body_params = parse_qs(event_body)
+
+    #print(body_params)
+    
+    # Validate the signature
+    #validator = RequestValidator(auth_token)
+    #is_valid = validator.validate(request_url, body_params, twilio_signature)
+    
+    if twilio_signature and body_params['MessagingServiceSid'][0] == 'MG20131941589f8a718941c56a9111b6fe' and body_params['From'][0] == '+12025283496' :
+        return True
+    else :
+        return False
 
 # Main Lambda handler
 def handler(event, context):
@@ -21,6 +67,58 @@ def handler(event, context):
     auth_token = get_parameter(ssm_client, 'twillio_auth_token')
     bucket_name = get_parameter(ssm_client, 'from_twillio_bucket_name')
     openai_api_key = get_parameter(ssm_client, 'openai_api_key')
+
+    if not validate_twilio_request(event) :
+        print("Not Validated")
+        return 
+    else :
+        print("Valid Request")
+
+    try:
+        # Parse and decode the event body
+        event_body = event.get('body', {})
+        if event.get('isBase64Encoded', False):
+            event_body = parse_qs(base64.b64decode(event_body).decode('utf-8'))
+        else:
+            event_body = parse_qs(event_body)
+
+        # Convert all values to strings
+        event_body = {key: value[0] for key, value in event_body.items()}
+
+        num_media = int(event_body.get('NumMedia', 0))
+        if num_media == 0:
+            print("No media URLs in the payload.")
+            return {}
+
+        files = {}
+        
+        for i in range(num_media):
+            media_url = event_body.get(f'MediaUrl{i}')
+            media_type = event_body.get(f'MediaContentType{i}', 'unknown')
+            tail = media_url.split('/')[-1]
+            file_type = media_type.split('/')[-1]
+            sourceImage = SourceImage(media_url, auth=(account_sid, auth_token))
+            bucket_path = f"s3://{bucket_name}/{current_date}/{current_time_millis}"
+            filename = f"media_{i}_{tail}_{current_time_millis}.{file_type}"
+            sourceImage.write(bucket_path, filename)
+            
+            if not media_url:
+                continue
+
+        # # Process media and save original files
+        # files = download_and_save_original_media(event_body)
+
+        # event_body['current_date'] = current_date
+        # event_body['current_time_millis'] = current_time_millis
+        # event_body['bucket_name'] = bucket_name
+        # event_body['files_uploaded'] = list(files.keys())
+        # #event_body['files'] = files
+        # file_name = f"{current_date}/{current_time_millis}/twilio_event_base64_files_{current_time_millis}.json"
+        # save_event_json(file_name, files)
+
+    except Exception as e:
+        print(f"Error in Lambda handler: {e}")
+        return {'statusCode': 500, 'body': 'Error processing media'}
 
     file_path = './data/answer_keys.json'
     with open(file_path, "r", encoding="utf-8") as json_file:
@@ -47,7 +145,9 @@ def handler(event, context):
     text_summary = assessment_evaluator.format(graded_assessment)
     #print(text_summary)
 
-    send_email('None', text_summary)
+    subject = graded_assessment['name'] + " | " + graded_assessment['student_name'] + " | Grade: " + str(graded_assessment['grade']) 
+
+    send_email('None', subject, text_summary)
 
     return {'status_code' : 201, 'body' : text_summary}
 
@@ -60,13 +160,13 @@ def get_parameter(ssm_client, name):
         print(f"Failed to retrieve parameter {name}: {e}")
         return None
 
-def send_email(fn, body):
+def send_email(fn, subject, body):
     # Initialize the SES client
     ses_client = boto3.client('ses', region_name='us-east-1')  # Adjust region if necessary
 
     #Construct the email content
     header = f"Here is a summary of the data you submitted, now stored in Assessor.ai ({fn})"
-    subject = "Assessor.ai: Data Submission Summary"
+    subject = f"Assessor.ai Grader: {subject}"
     body_text = f"{header} {body}\n"
     body_text = body_text.replace('\n', '<br>')
     body_html = f"""
