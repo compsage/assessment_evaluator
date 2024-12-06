@@ -38,7 +38,7 @@ def handler(event, context):
     assessment_evaluator = AssessmentEvaluator(prompts_directory="./prompts", openai_api_key=openai_api_key)
 
     #Perform the initial check of the student's quiz against the answer key
-    checked_student_answers = assessment_evaluator.check(answers['quiz 1'], student_answers)
+    checked_student_answers = assessment_evaluator.check(answers[student_answers['name'].lower()], student_answers)
     
     #No2 that it's been checked let's grade the exam
     graded_assessment = assessment_evaluator.grade(checked_student_answers)

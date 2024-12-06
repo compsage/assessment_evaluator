@@ -716,7 +716,7 @@
             },
             {
                 "answer": [
-                    "<"
+                    ">"
                 ],
                 "question": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =): -2 ___ -11",
                 "number": 8,
@@ -749,7 +749,8 @@
             },
             {
                 "answer": [
-                    "11.506"
+                    "11,506",
+                    "11506"
                 ],
                 "question": "Find the answers: 14.56 - 3.054",
                 "number": 12,
@@ -765,7 +766,8 @@
             },
             {
                 "answer": [
-                    "3.2"
+                    "3.2",
+                    "3.24"
                 ],
                 "question": "Find the answers: 1.944 / 0.6",
                 "number": 14,
