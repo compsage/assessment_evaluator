@@ -42,12 +42,6 @@ def validate_twilio_request(event):
         body_params = parse_qs(base64.b64decode(event_body).decode('utf-8'))
     else:
         body_params = parse_qs(event_body)
-
-    #print(body_params)
-    
-    # Validate the signature
-    #validator = RequestValidator(auth_token)
-    #is_valid = validator.validate(request_url, body_params, twilio_signature)
     
     if twilio_signature and body_params['MessagingServiceSid'][0] == 'MG20131941589f8a718941c56a9111b6fe' and body_params['From'][0] == '+12025283496' :
         return True
@@ -114,31 +108,41 @@ def handler(event, context):
     with open(file_path, "r", encoding="utf-8") as json_file:
         answers = json.load(json_file)
 
+    all_student_answers_dict = {}
     #Get the image of the student quiz
     #student_quiz_image = SourceImage("./data/quiz1_sample.jpeg")
-    student_quiz_image = sourceImages[0]
+    for student_assessment_image in sourceImages :
+        image_processor = Processor(prompts_directory="./prompts", openai_api_key=openai_api_key)
+        #Call ChatGPT with the image to get the students answers in JSON format
+        student_answers = image_processor.call_genai(student_assessment_image, "get_answers_from_student_quiz")
 
-    image_processor = Processor(prompts_directory="./prompts", openai_api_key=openai_api_key)
-    #Call ChatGPT with the image to get the students answers in JSON format
-    student_answers = image_processor.call_genai(student_quiz_image, "get_answers_from_student_quiz")
-    #pprint.pprint(student_answers)
+        key = student_answers['name'].lower() + student_answers['student_name'].lower()
+        if key not in all_student_answers_dict :
+            all_student_answers_dict[key] = student_answers
+        else :
+            questions = student_answers.get("questions", [])
+            all_student_answers_dict[key]['questions'].extend(questions)
 
     #Now that we have the Students answers and the Keys Loaded lets grade it
     assessment_evaluator = AssessmentEvaluator(prompts_directory="./prompts", openai_api_key=openai_api_key)
 
-    #Perform the initial check of the student's quiz against the answer key
-    checked_student_answers = assessment_evaluator.check(answers[student_answers['name'].lower()], student_answers)
+    #Need to combine test pages 
+    for key in all_student_answers_dict :
+        student_answers = all_student_answers_dict[key]
+        
+        #Perform the initial check of the student's quiz against the answer key
+        checked_student_answers = assessment_evaluator.check(answers[student_answers['name'].lower()], student_answers)
     
-    #No2 that it's been checked let's grade the exam
-    graded_assessment = assessment_evaluator.grade(checked_student_answers)
+        #No2 that it's been checked let's grade the exam
+        graded_assessment = assessment_evaluator.grade(checked_student_answers)
     
-    #Now output the text summary
-    text_summary = assessment_evaluator.format(graded_assessment)
-    #print(text_summary)
+        #Now output the text summary
+        text_summary = assessment_evaluator.format(graded_assessment)
+        #print(text_summary)
 
-    subject = graded_assessment['name'] + " | " + graded_assessment['student_name'] + " | Grade: " + str(graded_assessment['grade']) 
+        subject = graded_assessment['name'] + " | " + graded_assessment['student_name'] + " | Grade: " + str(graded_assessment['grade']) 
 
-    send_email('None', subject, text_summary)
+        send_email('None', subject, text_summary)
 
     return {'status_code' : 201, 'body' : text_summary}
 
