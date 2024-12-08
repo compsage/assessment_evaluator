@@ -27,6 +27,8 @@ COPY ../src/Evaluator.py ./Evaluator.py
 
 # Copy additional directories and files
 COPY ../prompts ./prompts
+
+# Copy these file ins to test functionality in the cloud
 COPY ../data/aggregated_answer_data.json ./data/answer_keys.json
 COPY ../data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg ./data/quiz1_sample.jpeg
 
