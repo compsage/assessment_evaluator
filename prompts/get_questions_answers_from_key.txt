@@ -2,19 +2,66 @@ Look at this answer key and convert it into a well formed json structure.  Each 
     
 The following structure with field explanations is:
 {
-    'name' : <Insert the Name of the quiz/test here>,
-    'subject' : <insert the subject matter of the quiz/test here>,
-    'section' : <insert the section of the test/quiz here>,
-    'assessment_page' : <Sometimes assessments have multiple pages.  If that is the case, that assessment_page value is printed at the top of the image next to the test name. Insert that value here.  If it is not present at the top of the page just put the number 1 denoting the first and only page.  This value is always at the top of the page and is the number that follows '[name], page'> 
-    'book_page' : <insert the page number the questions are on here. This is the page number in the book and is always at the bottom of the page>,
-    'questions' : [
-        {
-            'answer' : [<insert the full text of the answer as a single element in a list.  There should only be a single answer and it should only by calculated by you if you fully understand what is being asked.>],
-            'answer_description' : <'a detailed text description of what the exact question is'>,
-            'question' : <the text of the question being asked>,
-            'question_description' : <a detailed text description of what the exact question is. examples: find the square root of 12, find the unit relationship of 1 year to days, is 3 a prime number?>
-            'number' : <insert the number of the question in the list>,
-            'value' : <how many points is this question worth.  The point value for a set of questions is mentioned before a set of questions in the form '[number value] each'>
-        }
-    ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the quiz/test"
+    },
+    "subject": {
+      "type": "string",
+      "description": "The subject matter of the quiz/test"
+    },
+    "section": {
+      "type": "string",
+      "description": "The section of the quiz/test"
+    },
+    "assessment_page": {
+      "type": "integer",
+      "description": "The page number of the assessment as printed next to the test name, or 1 if not present"
+    },
+    "book_page": {
+      "type": "integer",
+      "description": "The page number from the book, printed at the bottom of the page"
+    },
+    "questions": {
+      "type": "array",
+      "description": "List of questions in the assessment",
+      "items": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A single element array containing the full text of the answer"
+          },
+          "answer_description": {
+            "type": "string",
+            "description": "A detailed text description of the exact answer"
+          },
+          "question": {
+            "type": "string",
+            "description": "The text of the question being asked"
+          },
+          "question_description": {
+            "type": "string",
+            "description": "A detailed text description of the question, such as calculations or relationships"
+          },
+          "number": {
+            "type": "integer",
+            "description": "The number of the question in the list"
+          },
+          "value": {
+            "type": "number",
+            "description": "The point value of the question as mentioned before a set of questions"
+          }
+        },
+        "required": ["answer", "question", "number", "value"]
+      }
+    }
+  },
+  "required": ["name", "subject", "assessment_page", "book_page", "questions"]
 }

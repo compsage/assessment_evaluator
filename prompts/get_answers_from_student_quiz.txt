@@ -2,22 +2,72 @@ Look at this test by a student and convert it into a well-formed JSON structure.
 in the student's handwriting and written in the underlined blank space. Associated work may or may not be 
 next to the answer.  
 
-The JSON structure should be:
+The JSON structure should follow the schema below:
 {
-    'student_name': <insert the student's name on the top of the page here>,
-    'date': <insert the date that was entered at the top of the page right after the student name>,
-    'name': <Insert the Name of the quiz/test here.  This is also at the top of the page>,
-    'subject': <insert the subject matter of the quiz/test here>,
-    'section': <insert the section of the test/quiz here>,
-    'page': <insert the page number of the test here. Sometimes it is printed at the top if it is a multi-page test>,
-    'questions': [
-        {
-            'text': <insert the full text of the question here>,
-            'student_answer': <insert the full text of the extracted answer the student entered here>,
-            'generated answer': <determine what you think the answer is and insert it here>,
-            'number': <insert the number of the question here>,
-            'correct_value': <fully_correct | partially_correct | incorrect | undetermined>,
-            'assessment': <one sentence explaining what the student did>
-        }
-    ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "description": "The name of the student from the top of the page"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date from the top of the page"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the quiz/test"
+    },
+    "subject": {
+      "type": "string",
+      "description": "The subject matter of the quiz/test"
+    },
+    "section": {
+      "type": "string",
+      "description": "The section of the test/quiz"
+    },
+    "page": {
+      "type": "integer",
+      "description": "The page number of the test, if applicable"
+    },
+    "questions": {
+      "type": "array",
+      "description": "List of questions in the quiz/test",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The full text of the question"
+          },
+          "student_answer": {
+            "type": "string",
+            "description": "The full text of the student's answer"
+          },
+          "generated_answer": {
+            "type": "string",
+            "description": "The generated answer based on the question"
+          },
+          "number": {
+            "type": "integer",
+            "description": "The number of the question"
+          },
+          "correct_value": {
+            "type": "string",
+            "enum": ["fully_correct", "partially_correct", "incorrect", "undetermined"],
+            "description": "Evaluation of the student's answer"
+          },
+          "assessment": {
+            "type": "string",
+            "description": "One-sentence explanation of the student's performance"
+          }
+        },
+        "required": ["text", "student_answer", "number", "correct_value", "assessment"]
+      }
+    }
+  },
+  "required": ["student_name", "date", "name", "subject", "questions"]
 }
+
