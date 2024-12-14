@@ -8,7 +8,6 @@ from SourceImage import SourceImage
 from Processors import Processor
 from Evaluator import AssessmentEvaluator
 
-# Load the OpenAI API key from the environment
 load_dotenv()
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
