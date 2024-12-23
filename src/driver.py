@@ -41,7 +41,7 @@ def generate_answer_keys(directory_path) :
     #You only need to run this once because onece the answers are extracted you can just use the json to check
     answer_key_images = []
     for answer_key_image_path in answer_key_image_paths :
-        answer_key_images.append(SourceImage(answer_key_image_path))
+        answer_key_images.append(SourceImage(answer_key_image_path)) 
 
     answers = image_processor.call_genai_multi_threaded(answer_key_images, "get_questions_answers_from_key", )
     
@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     #Load each answer key into a dictionary for lookup
     answers = {}
-    for answer_key in answer_keys :
+    for answer_key in answer_keys:
         if answer_key:
             answers[answer_key['name'].lower()] = answer_key
 
