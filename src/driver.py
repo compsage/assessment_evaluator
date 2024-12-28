@@ -2,6 +2,7 @@ import json
 import os
 import pprint
 from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
 
 from SourceImage import SourceImage
 from Processors import Processor
@@ -30,6 +31,66 @@ def get_file_paths(directory):
                 file_paths.append(file_path)
 
     return file_paths
+
+def annotate_grade(image_path, graded_data):
+    annotated_image = Image.open(image_path)
+    draw = ImageDraw.Draw(annotated_image)
+
+    # Define font for annotations and grade
+    font_path = "/System/Library/Fonts/Supplemental/Bradley Hand Bold.ttf"  # Adjust for macOS
+    font = ImageFont.truetype(font_path, size=40)
+    grade_font = ImageFont.truetype(font_path, size=100)  # Larger font for overall grade
+
+    # Add overall grade to the top-right corner
+    overall_grade = graded_data.get("grade", 0)
+    if overall_grade > 80:
+        grade_color = "darkgreen"
+    elif 65 <= overall_grade <= 80:
+        grade_color = "yellow"
+    else:
+        grade_color = "red"
+
+    # Calculate position for the grade
+    image_width, image_height = annotated_image.size
+    text_x = image_width - 150  # Adjust closer to the right edge
+    text_y = 50  # Top padding for the grade
+    draw.text((text_x, text_y), f"{overall_grade}", fill=grade_color, font=grade_font)
+
+    # Write list of numbers with annotations directly under the grade
+    start_y = text_y + 120  # Move the list closer to the grade
+    line_height = 50  # Spacing between lines
+
+    # Add annotations for each number
+    annotations = {}
+
+    # Add correct answers
+    for correct in graded_data["correct"]:
+        number = f"{correct[0]}"
+        annotations[number] = ("c", "darkgreen")
+
+    # Add incorrect answers
+    for incorrect in graded_data["incorrect"]:
+        number = f"{incorrect[0]}"
+        diff = next((item[1] for item in graded_data["incorrect"] if item[0] == int(number)), 0)
+        annotations[number] = (f"x -{diff}", "red")
+
+    # Add partially correct answers
+    for partial in graded_data["partially_correct"]:
+        number = f"{partial[0]}"
+        diff = next((diff[1] for diff in graded_data["partially_correct_diffs"] if diff[0] == partial[0]), 0)
+        annotations[number] = (f"x -{diff}", "yellow")
+
+    # Write annotations to the image in order
+    for idx, number in enumerate(sorted(annotations.keys(), key=lambda x: int(x))):
+        annotation, color = annotations[number]
+        text = f"{number}: {annotation}"
+        draw.text((text_x, start_y + idx * line_height), text, fill=color, font=font)
+
+    # Save the annotated image with a modified name
+    base, ext = os.path.splitext(image_path)
+    output_path = f"{base}_annotations.png"
+    annotated_image.save(output_path)
+    print(f"Annotated worksheet saved as {output_path}!")
 
 def generate_answer_keys(directory_path) :
     image_processor = Processor("../prompts", openai_api_key=openai_api_key)
@@ -82,11 +143,8 @@ if __name__ == "__main__":
     #No2 that it's been checked let's grade the exam
     graded_assessment = assessment_evaluator.grade(checked_student_answers)
     
-    file_path = "graded.json"
-    # Write the dictionary to the file
-    with open(file_path, "w") as file:
-        json.dump(graded_assessment, file, indent=4)  # 'indent' makes the JSON pretty-printed
-
+    annotate_grade(student_quiz_image.get_source(), graded_assessment)
+    
     #Now output the text summary
     text_summary = assessment_evaluator.format(graded_assessment)
     print(text_summary)
