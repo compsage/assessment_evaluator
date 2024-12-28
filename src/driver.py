@@ -82,6 +82,11 @@ if __name__ == "__main__":
     #No2 that it's been checked let's grade the exam
     graded_assessment = assessment_evaluator.grade(checked_student_answers)
     
+    file_path = "graded.json"
+    # Write the dictionary to the file
+    with open(file_path, "w") as file:
+        json.dump(graded_assessment, file, indent=4)  # 'indent' makes the JSON pretty-printed
+
     #Now output the text summary
     text_summary = assessment_evaluator.format(graded_assessment)
     print(text_summary)
