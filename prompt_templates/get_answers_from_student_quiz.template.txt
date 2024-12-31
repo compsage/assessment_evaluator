@@ -1,3 +1,2 @@
-Look at this test by a student and convert it into a well-formed JSON structure. The answers are
-in the student's handwriting and written in the underlined blank space. Associated work may or may not be 
-next to the answer.  
+Convert this student's test into a well-formed JSON structure. The answers are
+in the student's handwriting and written over the underlined blank space. Associated work may or may not be next to the answer. These answers are provided by the student so evaluate them as handwriting so there is a little room for imperfections. Be careful to interpret > and < signs correctly.

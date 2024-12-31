@@ -40,7 +40,7 @@
             },
             "student_answer": {
               "type": "string",
-              "description": "The full text of the student's answer"
+              "description": "The exact text of the student's answer. May be different from generated answer"
             },
             "generated_answer": {
               "type": "string",

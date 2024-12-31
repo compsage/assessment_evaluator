@@ -119,10 +119,10 @@ class Processor(ABC):
         payload = {
             "model": model,
             "messages": [
-                {
-                    "role": "system",
-                    "content": "You are a helpful teacher's assistant that always responds using JSON."
-                },
+                # {
+                #     "role": "system",
+                #     "content": "You are a helpful teacher's assistant that always responds using JSON."
+                # },
                 {
                     "role": "user",
                     "content": [
@@ -138,7 +138,7 @@ class Processor(ABC):
         }
 
         if image_url_payload:
-            payload['messages'][1]['content'].append(image_url_payload)
+            payload['messages'][0]['content'].append(image_url_payload)
 
         if json_schema:
             payload["response_format"] =  {"type": "json_schema", "json_schema" : json.loads(json_schema)}
