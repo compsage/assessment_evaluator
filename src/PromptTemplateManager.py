@@ -42,7 +42,6 @@ class PromptTemplateManager:
                     if filename.endswith(".template.txt"):
                         templates[key]["template"] = content
                     elif filename.endswith(".schema.json"):
-                        print(content)
                         templates[key]["schema"] = content
 
         return templates
