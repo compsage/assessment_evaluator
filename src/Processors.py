@@ -5,53 +5,32 @@ import urllib.error
 import concurrent.futures
 from abc import ABC, abstractmethod
 from SourceImage import SourceImage
+from PromptTemplateManager import PromptTemplateManager
 
 class Processor(ABC):
     """
     Abstract base class for processing objects and managing prompts.
     """
     api_endpoint = "https://api.openai.com/v1/chat/completions"
-    
 
-    def __init__(self, prompts_directory="./prompts", openai_api_key=None):
+    def __init__(self, templates_directory="../prompt_templates", openai_api_key=None):
         """
-        Initializes the Processor and loads prompt files from the specified directory.
+        Initializes the Processor and loads templates using PromptTemplateManager.
 
-        :param prompts_directory: Path to the directory containing .txt prompt files.
+        :param templates_directory: Path to the directory containing .template and .json-schema files.
+        :param openai_api_key: The OpenAI API key for authorization.
         """
-        self.prompts = self._load_prompts(prompts_directory)
-
+        self.template_manager = PromptTemplateManager(templates_directory)
         self.headers = {
-        "Authorization": f"Bearer {openai_api_key}",
-        "Content-Type": "application/json"
-    }
-
-    def _load_prompts(self, directory):
-        """
-        Loads all .txt files from the given directory into a dictionary.
-
-        :param directory: Path to the directory containing .txt files.
-        :return: Dictionary with filenames (without extension) as keys and file content as values.
-        """
-        prompts = {}
-        if not os.path.exists(directory):
-            print(f"Directory '{directory}' does not exist. No prompts loaded.")
-            return prompts
-
-        for filename in os.listdir(directory):
-            if filename.endswith(".txt"):
-                filepath = os.path.join(directory, filename)
-                with open(filepath, "r", encoding="utf-8") as file:
-                    key = os.path.splitext(filename)[0]  # Remove the .txt extension
-                    prompts[key] = file.read()
-
-        return prompts
+            "Authorization": f"Bearer {openai_api_key}",
+            "Content-Type": "application/json"
+        }
 
     @staticmethod
     def _process_chatgpt_response(raw_response):
         try:
-            if not raw_response :
-                print(f"Response from Chatgpt Empty: {raw_response}")
+            if not raw_response:
+                print(f"Response from ChatGPT Empty: {raw_response}")
                 return None
             if raw_response.startswith("```json"):
                 raw_response = raw_response[len("```json"):].strip()
@@ -61,7 +40,7 @@ class Processor(ABC):
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON: {e}\n raw_response: {raw_response}")
             return None
-      
+
     @abstractmethod
     def process(self, *args, **kwargs):
         """
@@ -81,7 +60,7 @@ class Processor(ABC):
             raise ValueError("Input must be an instance of SourceImage.")
 
         print(f"Processing SourceImage: {source_image.get_metadata()}")
-        print(f"Available Prompts: {list(self.prompts.keys())}")
+        print(f"Available Templates: {self.template_manager.list_templates()}")
         print(f"Additional parameters: {kwargs}")
 
     def call_genai_multi_threaded(self, images, key, max_workers=5):
@@ -89,7 +68,7 @@ class Processor(ABC):
         Processes a list of SourceImage objects concurrently and extracts data from them.
 
         :param images: List of SourceImage objects to process.
-        :param key: The key to fetch the prompt for processing.
+        :param key: The key to fetch the template for processing.
         :param max_workers: Maximum number of concurrent workers (default is 5).
         :return: A dictionary where keys are image indices and values are the results or errors.
         """
@@ -111,8 +90,7 @@ class Processor(ABC):
 
         return results
 
-    def call_genai(self, source_image, key, **kwargs):
-        
+    def call_genai(self, source_image, key, model="gpt-4o", **kwargs):
         image_url_payload = None
         if source_image and not isinstance(source_image, SourceImage):
             raise ValueError("Input must be an instance of SourceImage.")
@@ -120,19 +98,26 @@ class Processor(ABC):
             print(f"Sending {source_image.get_source()} to genai: {key}")
             image_url = f"data:image/jpeg;base64,{source_image.get_base64()}"
             image_url_payload = {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": image_url
-                    }
+                "type": "image_url",
+                "image_url": {
+                    "url": image_url
                 }
+            }
 
-        if kwargs :
-            formatted_template = self.prompts[key].format(**kwargs)
-        else :
-            formatted_template = self.prompts[key]
+        try:
+            template_data = self.template_manager.get_template(key)
+            if not template_data or not template_data.get("template"):
+                print(f"Template with key '{key}' not found or missing.")
+                return None
+
+            formatted_template = self.template_manager.format_template(key, **kwargs)
+            json_schema = template_data.get("schema")
+        except Exception as e:
+            print(f"Error retrieving or formatting template: {e}")
+            return None
 
         payload = {
-            "model": "gpt-4o",
+            "model": model,
             "messages": [
                 {
                     "role": "system",
@@ -148,13 +133,15 @@ class Processor(ABC):
                     ]
                 }
             ],
-            "response_format" : {"type": "json_object"},
             "max_tokens": 2500,
             "temperature": 0
         }
 
-        if image_url_payload :
+        if image_url_payload:
             payload['messages'][1]['content'].append(image_url_payload)
+
+        if json_schema:
+            payload["response_format"] =  {"type": "json_schema", "json_schema" : json_schema}
 
         try:
             # Convert the payload to JSON and encode as bytes for urllib

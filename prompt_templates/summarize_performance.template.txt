@@ -1,0 +1,3 @@
+Summarize this student's performance on this assessment and provide major but succinct tips for improvement.  
+
+Here are all the question assessments: {explanations}

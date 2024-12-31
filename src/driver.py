@@ -129,10 +129,12 @@ if __name__ == "__main__":
     #Get the image of the student quiz
     student_quiz_image = SourceImage("../data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")
 
-    image_processor = Processor("../prompts", openai_api_key=openai_api_key)
+    image_processor = Processor(openai_api_key=openai_api_key)
     #Call ChatGPT with the image to get the students answers in JSON format
     student_answers = image_processor.call_genai(student_quiz_image, "get_answers_from_student_quiz")
     pprint.pprint(student_answers)
+
+    exit(1)
 
     #Now that we have the Students answers and the Keys Loaded lets grade it
     assessment_evaluator = AssessmentEvaluator("../prompts", openai_api_key=openai_api_key)

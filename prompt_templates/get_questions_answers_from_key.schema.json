@@ -1,0 +1,66 @@
+{
+  "name" : "get_answers_from_student_quiz",
+  "schema" : {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the quiz/test"
+      },
+      "subject": {
+        "type": "string",
+        "description": "The subject matter of the quiz/test"
+      },
+      "section": {
+        "type": "string",
+        "description": "The section of the quiz/test"
+      },
+      "assessment_page": {
+        "type": "integer",
+        "description": "The page number of the assessment as printed next to the test name, or 1 if not present"
+      },
+      "book_page": {
+        "type": "integer",
+        "description": "The page number from the book, printed at the bottom of the page"
+      },
+      "questions": {
+        "type": "array",
+        "description": "List of questions in the assessment",
+        "items": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "A single element array containing the full text of the answer"
+            },
+            "answer_description": {
+              "type": "string",
+              "description": "A detailed text description of the exact answer"
+            },
+            "question": {
+              "type": "string",
+              "description": "The text of the question being asked"
+            },
+            "question_description": {
+              "type": "string",
+              "description": "A detailed text description of the question, such as calculations or relationships"
+            },
+            "number": {
+              "type": "integer",
+              "description": "The number of the question in the list"
+            },
+            "value": {
+              "type": "number",
+              "description": "The point value of the question as mentioned before a set of questions"
+            }
+          },
+          "required": ["answer", "question", "number", "value"]
+        }
+      }
+    },
+    "required": ["name", "subject", "assessment_page", "book_page", "questions"]
+  }
+}

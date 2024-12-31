@@ -1,0 +1,14 @@
+{
+  "name" : "get_questions_answers_from_key",
+  "schema" : {
+    "type": "object",
+    "properties": {
+      "overview": {
+        "type": "string",
+        "description": "A 2-sentence summary of the student's performance, including areas of improvement."
+      }
+    },
+    "required": ["overview"],
+    "additionalProperties": false
+  }
+}

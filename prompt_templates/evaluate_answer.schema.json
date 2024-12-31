@@ -1,0 +1,22 @@
+{
+  "name": "evaluate_answer",
+  "schema" : {
+    "type": "object",
+    "properties": {
+      "correct": {
+        "type": "boolean",
+        "description": "Indicates if the student's answer is correct."
+      },
+      "explanation": {
+        "type": "string",
+        "description": "Assessment of why the student supplied this answer."
+      },
+      "partial_credit": {
+        "type": "boolean",
+        "description": "Indicates if the student received partial credit for the answer."
+      }
+    },
+    "required": ["correct", "explanation", "partial_credit"],
+    "additionalProperties": false
+  }
+}
