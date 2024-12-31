@@ -134,10 +134,8 @@ if __name__ == "__main__":
     student_answers = image_processor.call_genai(student_quiz_image, "get_answers_from_student_quiz")
     pprint.pprint(student_answers)
 
-    exit(1)
-
     #Now that we have the Students answers and the Keys Loaded lets grade it
-    assessment_evaluator = AssessmentEvaluator("../prompts", openai_api_key=openai_api_key)
+    assessment_evaluator = AssessmentEvaluator(openai_api_key=openai_api_key)
 
     #Perform the initial check of the student's quiz against the answer key
     checked_student_answers = assessment_evaluator.check(answers['quiz 1'], student_answers)

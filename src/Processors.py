@@ -128,7 +128,7 @@ class Processor(ABC):
                     "content": [
                         {
                             "type": "text",
-                            "text": formatted_template
+                            "text": formatted_template,
                         }
                     ]
                 }
@@ -141,7 +141,7 @@ class Processor(ABC):
             payload['messages'][1]['content'].append(image_url_payload)
 
         if json_schema:
-            payload["response_format"] =  {"type": "json_schema", "json_schema" : json_schema}
+            payload["response_format"] =  {"type": "json_schema", "json_schema" : json.loads(json_schema)}
 
         try:
             # Convert the payload to JSON and encode as bytes for urllib

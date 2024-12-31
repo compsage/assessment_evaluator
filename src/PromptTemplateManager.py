@@ -1,5 +1,4 @@
 import os
-import json
 
 class TemplateFormatException(Exception):
     """
@@ -32,13 +31,8 @@ class PromptTemplateManager:
             for filename in files:
                 if filename.endswith(".template.txt") or filename.endswith(".schema.json"):
                     filepath = os.path.join(root, filename)
+                    key = os.path.relpath(filepath, directory).replace(os.sep, "/").rsplit(".", 2)[0]
                     
-                    # Keep .schema.json but strip .template.txt
-                    if filename.endswith(".template.txt"):
-                        key = os.path.relpath(filepath, directory).replace(os.sep, "/").rsplit(".", 2)[0]
-                    else:
-                        key = os.path.relpath(filepath, directory).replace(os.sep, "/")
-
                     if key not in templates:
                         templates[key] = {"template": None, "schema": None}
 
@@ -48,7 +42,8 @@ class PromptTemplateManager:
                     if filename.endswith(".template.txt"):
                         templates[key]["template"] = content
                     elif filename.endswith(".schema.json"):
-                        templates[key]["schema"] = json.loads(content)
+                        print(content)
+                        templates[key]["schema"] = content
 
         return templates
 
