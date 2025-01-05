@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import pprint
 from pathlib import Path
 
-from SourceImage import SourceImage
+from source_image import SourceImage
 from Processors import Processor
 from Evaluator import AssessmentEvaluator
 

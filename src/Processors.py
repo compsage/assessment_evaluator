@@ -4,7 +4,7 @@ import urllib.request
 import urllib.error
 import concurrent.futures
 from abc import ABC, abstractmethod
-from SourceImage import SourceImage
+from source_image import SourceImage
 
 class Processor(ABC):
     """
