@@ -55,7 +55,7 @@ def make_json_serializable(value):
     if isinstance(value, Fraction):
         return float(value)
     elif isinstance(value, bytes):
-        return value.decode('utf-8', errors='replace')
+        return value.decode("utf-8", errors="replace")
     elif isinstance(value, (tuple, list)):
         return [make_json_serializable(v) for v in value]
     elif isinstance(value, dict):

@@ -2,8 +2,7 @@ import json
 import os
 import pprint
 from image_handling import SourceImage
-from Processors import Processor
-from Evaluator import AssessmentEvaluator
+from processors import AssessmentProcessor, Processor
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -35,7 +34,7 @@ if __name__ == "__main__":
     pprint.pprint(student_answers)
 
     # Now that we have the Students answers and the Keys Loaded lets grade it
-    assessment_evaluator = AssessmentEvaluator("../prompts", openai_api_key=openai_api_key)
+    assessment_evaluator = AssessmentProcessor("../prompts", openai_api_key=openai_api_key)
 
     # Perform the initial check of the student's quiz against the answer key
     checked_student_answers = assessment_evaluator.check(answers['quiz 1'], student_answers)

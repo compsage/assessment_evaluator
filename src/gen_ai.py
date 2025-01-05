@@ -33,10 +33,10 @@ class GenAI:
                     else:
                         return response_content
                 else:
-                    print(f"Error: {response.status}, {response.read().decode('utf-8')}")
+                    print(f"Error: {response.status}, {response.read().decode("utf-8")}")
                     return None
         except urllib.error.HTTPError as e:
-            print(f"HTTPError: {e.code}, {e.read().decode('utf-8')}")
+            print(f"HTTPError: {e.code}, {e.read().decode("utf-8")}")
             return None
         except urllib.error.URLError as e:
             print(f"URLError: {e.reason}")
