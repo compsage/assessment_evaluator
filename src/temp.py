@@ -1,7 +1,7 @@
 import json
 import os
 import pprint
-from source_image import SourceImage
+from image_handling import SourceImage
 from Processors import Processor
 from Evaluator import AssessmentEvaluator
 from dotenv import load_dotenv

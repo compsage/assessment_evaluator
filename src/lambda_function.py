@@ -7,7 +7,7 @@ import time
 from urllib.parse import parse_qs
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
-from source_image import SourceImage
+from image_handling import SourceImage
 from Processors import Processor
 from Evaluator import AssessmentEvaluator
 

@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 import urllib.request
 import urllib.error
-from source_image import SourceImage
+from image_handling import SourceImage
 
 class GenAI:
     def request(self, endpoint: str, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
@@ -19,7 +19,6 @@ class GenAI:
                 headers=headers,
                 method="POST"
             )
-
         
             # Make the request
             with urllib.request.urlopen(request) as response:
@@ -81,7 +80,6 @@ class GenAI:
     def request_for_image_json(self, source_image: SourceImage, endpoint: str, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
         self._add_image_to_payload(source_image=source_image, payload=payload)
         return self.request_json(endpoint=endpoint, payload=payload, headers=headers)
-
         
 if __name__ == "__main__":
     load_dotenv()
