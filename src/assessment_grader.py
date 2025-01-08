@@ -3,51 +3,42 @@ import math
 from typing import Any, Dict, List
 from gen_ai import GenAI
 
-class AssessmentHandler:
+class AssessmentGrader:
     def __init__(self, gen_ai: GenAI):
         self.gen_ai = gen_ai
     
-    def evaluate(self, answer_key_file: str, quiz_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
+    def _evaluate_assessment(self, answer_key_questions: Dict[str, Any], assessment_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Evaluate the student's quiz against the answer key
+        Evaluate the student's assessment against the answer key
         
         Args:
-            answer_key_file (str): The path to the answer key file
-            quiz_name (str): The name of the quiz
+            questions (Dict[str, Any]): The questions in the assessment
+            assessment_name (str): The name of the assessment
             student_answers (Dict[str, Any]): The student's answers
         
         Returns:
-            Dict[str, Any]: The evaluated quiz
+            Dict[str, Any]: The evaluated assessment
         """
-        
-        # Load answer key file
-        with open(answer_key_file, "r", encoding="utf-8") as f:
-            answer_keys = json.load(f)
             
         # Load the prompt for the Gen AI to check if the student's answer is equal to the correct answer
         with open("prompts/evaluate_answer.txt", "r", encoding="utf-8") as f:
             answer_evaluation_prompt = f.read()
         
-        # Get the specific quiz answer key
-        quiz_key = answer_keys.get(quiz_name.lower())
-        if quiz_key is None:
-            raise ValueError(f"Quiz '{quiz_name}' not found in answer key")
-        
-        # Retrieve data about the quiz and student
-        quiz_name = student_answers.get("name")
-        quiz_subject = student_answers.get("subject")
-        quiz_section = student_answers.get("section")
-        quiz_date = student_answers.get("date")
+        # Retrieve data about the assessment and student
+        student_assessment_name = student_answers.get("name")
+        student_assessment_subject = student_answers.get("subject")
+        student_assessment_section = student_answers.get("section")
+        student_assessment_date = student_answers.get("date")
         student_name = student_answers.get("student_name")
         if student_name is None:
             raise ValueError(f"Student name not found in student answers")
         
-        evaluated_quiz = {
+        evaluated_assessment = {
             "student_name": student_name,
-            "date": quiz_date,
-            "name": quiz_name,
-            "subject": quiz_subject,
-            "section": quiz_section,
+            "date": student_assessment_date,
+            "name": student_assessment_name,
+            "subject": student_assessment_subject,
+            "section": student_assessment_section,
             "questions": {}
         }
         
@@ -57,23 +48,23 @@ class AssessmentHandler:
             question_text = student_answers_question_data.get("text")
             student_answer = student_answers_question_data.get("student_answer")
             
-            answer_key_question_data = quiz_key.get("questions").get(question_number)
+            answer_key_question_data = answer_key_questions.get(question_number)
             if answer_key_question_data is None:
-                raise ValueError(f"Question '{question_number}' not found in answer key for quiz '{quiz_name}'")
+                raise ValueError(f"Question '{question_number}' not found in answer key for assessment '{assessment_name}'")
                 # TODO: Consider handling this even when the question is not found in the answer key
             
             correct_answers = answer_key_question_data.get("answer")
             if correct_answers is None:
-                raise ValueError(f"Answer for question '{question_number}' not found in answer key for quiz '{quiz_name}'")
+                raise ValueError(f"Answer for question '{question_number}' not found in answer key for assessment '{assessment_name}'")
             
             # Check if the question has already been evaluated
-            if question_number in evaluated_quiz:
+            if question_number in evaluated_assessment:
                 # TODO: Currently, a ValueError is raised even though it halts the program; In the future, this should be handled more gracefully
                 raise ValueError(f"Question '{question_number}' already evaluated")
             
             # Check if the student's answer is in the correct answers; If not, use Gen AI to check if the student's answer is equal
             if student_answer.strip() in correct_answers:
-                    evaluated_quiz["questions"][question_number] = {
+                    evaluated_assessment["questions"][question_number] = {
                         "answer_match": True,
                         "value": answer_key_question_data.get("value"),
                         "correct": True,
@@ -112,80 +103,25 @@ class AssessmentHandler:
                 correct = response.get("correct")
                 if correct is None:
                     # TODO: In the future, this should be handled more gracefully so that the program doesn't halt
-                    raise ValueError(f"'correct' is not in the response for question '{question_number}' in quiz '{quiz_name}'\nRaw response: {response}")
+                    raise ValueError(f"'correct' is not in the response for question '{question_number}' in assessment '{assessment_name}'\nRaw response: {response}")
                 
                 # Append the evaluated answer
-                evaluated_quiz["questions"][question_number] = {
+                evaluated_assessment["questions"][question_number] = {
                     "answer_match": False,
                     "value": answer_key_question_data.get("value"),
                     "correct": correct,
                     "partial_credit": response.get("partial_credit"),
                     "comments": response.get("explanation")
                 }
-        return evaluated_quiz
+        return evaluated_assessment
+    
+    def _grade_assessment(self, evaluated_assessment: Dict[str, Any]) -> Dict[str, Any]:
+        pass
+        # TODO: Implement this
         
-    # TODO: REFACTOR
-    def grade(self, student_assessment):
-        correct_answers = []
-        partially_correct_answers = []
-        partially_correct_diffs = []
-        incorrect_answers = []
-        overall_points = 0
-        total_points = 0
-        for answer in student_assessment["checked_answers"]:
-            overall_points += answer["value"]
-            if answer["answer_match"] :
-                total_points += answer["value"]
-                correct_answers.append((answer["number"], answer["value"]))
-            else :
-                #pprint.pprint(answer)
-                if "analysis" in answer and answer["analysis"]:
-                    if "correct" in answer["analysis"] and answer["analysis"]["correct"] :
-                        total_points += answer["value"]
-                        correct_answers.append((answer["number"], answer["value"]))
-                    elif "partial_credit" in answer["analysis"] and answer["analysis"]["partial_credit"] :
-                        add_value = math.ceil(answer["value"]/2)
-                        diff_value = (answer["value"] - add_value)
-                        total_points += add_value
-                        partially_correct_answers.append((answer["number"], math.floor(answer["value"]/2)))
-                        partially_correct_diffs.append((answer["number"], diff_value))
-                    else :
-                        incorrect_answers.append((answer["number"], answer["value"]))
-                else :
-                    incorrect_answers.append((answer["number"], answer["value"]))
+        
 
-        explanations = ""
-        for aq in student_assessment["checked_answers"]:
-            if "analysis" in aq and aq["analysis"]:
-                explanations += aq["analysis"]["explanation"]
-                explanations += "\n"
-
-        kwargs = {"explanations" : explanations}
-        performance = self.call_genai(None, "summarize_performance", **kwargs)
-
-        summary = {
-            "student_name" : student_assessment["student_name"],
-            "date" : student_assessment["date"],
-            "name" : student_assessment["name"],
-            "subject" : student_assessment["subject"],
-            "section" : student_assessment["section"],
-            "correct" : correct_answers,
-            "incorrect" : incorrect_answers,
-            "partially_correct" : partially_correct_answers,
-            "partially_correct_diffs" : partially_correct_diffs,
-            "grade" : (total_points/overall_points) * 100,
-            "total_points" : total_points,
-            "overall_points" : overall_points,
-            "assessment" : student_assessment["checked_answers"],
-            "performance_overview" : performance["overview"]   
-            }
-
-        text_summary = self.format(summary)
-        summary["text_summary"] = text_summary
-
-        return summary
-
-    def format(self, data):
+    def _format_assessment_output(self, data):
         # Extract relevant fields from the JSON
         student_name = data.get("student_name", "Unknown")
         assessment_name = data.get("name", "Unknown")
@@ -234,3 +170,29 @@ class AssessmentHandler:
         )
 
         return formatted_output
+    
+    def grade(self, answer_key_file: str, assessment_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
+        # Load answer key file
+        with open(answer_key_file, "r", encoding="utf-8") as f:
+            answer_keys = json.load(f)
+            
+        # Get the specific assessment answer key
+        assessment_key_data = answer_keys.get(assessment_name.lower())
+        if assessment_key_data is None:
+            raise ValueError(f"Assessment '{assessment_name}' not found in answer key")
+        answer_key_questions = assessment_key_data.get("questions")
+        
+        # Evaluate the student's assessment
+        evaluated_assessment = self._evaluate_assessment(answer_key_questions=answer_key_questions,
+                                                         assessment_name=assessment_name, 
+                                                         student_answers=student_answers)
+        
+        return evaluated_assessment
+        
+        # Grade the student's assessment
+        # graded_assessment = self._grade_assessment(evaluated_assessment=evaluated_assessment)
+        
+        # Format the student's assessment
+        # formatted_assessment = self._format_assessment_output(graded_assessment)
+        
+        # return formatted_assessment

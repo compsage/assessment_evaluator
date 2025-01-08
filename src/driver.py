@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 from image_handling import SourceImage
-from assessment_handler import AssessmentHandler, Evaluator
+from assessment_grader import AssessmentGrader
 from gen_ai import GenAI
 
 def get_file_paths(directory):
@@ -154,9 +154,9 @@ if __name__ == "__main__":
     print(f"\nStudent Quiz Answer: {response}")
     
     # Evaluate the student's quiz against the answer key
-    assessment_evaluator = AssessmentHandler(gen_ai=gen_ai)
+    assessment_evaluator = AssessmentGrader(gen_ai=gen_ai)
     print("\nEvaluating Quiz...")
-    evaluated_quiz = assessment_evaluator.evaluate("data/transformed_answer_keys.json", "quiz 1", response) # NOTE: It's only returning only the correct answers like this temporarily
+    evaluated_quiz = assessment_evaluator.grade("data/transformed_answer_keys.json", "quiz 1", response) # NOTE: It's only returning only the correct answers like this temporarily
     print(f"\nEvaluated Quiz: {evaluated_quiz}")
     
     # Grade the student's quiz
