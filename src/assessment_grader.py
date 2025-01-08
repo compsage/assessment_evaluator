@@ -69,7 +69,7 @@ class AssessmentGrader:
                         "value": answer_key_question_data.get("value"),
                         "correct": True,
                         "partial_credit": False,
-                        "comments": "The student's answer correct"
+                        "comments": "The student's answer correct" # TODO: Consider adding explanation from Gen AI
                     }
             else:
                 # Use Gen AI to check if the student's answer is equal to the correct answer
@@ -125,30 +125,64 @@ class AssessmentGrader:
         Returns:
             Dict[str, Any]: The graded assessment with score and percentage
         """
+        
+        # Load the prompt for the Gen AI to provide an overview of the student's assessment
+        with open("prompts/summarize_performance.txt", "r", encoding="utf-8") as f:
+            performance_summary_prompt = f.read()
+        
         total_points = 0
         earned_points = 0
         
-        # Calculate points for each question
+        # Calculate points for each question and build the explanation for the Gen AI
+        questions_overview = ""
         for question_number, question_data in evaluated_assessment["questions"].items():
             question_value = question_data.get("value", 0)
             total_points += question_value
             
-            # Award full points if correct
+            # Award points based on correctness
             if question_data.get("correct", False):
                 earned_points += question_value
-            # Award partial credit if applicable
-            elif question_data.get("partial_credit", False):
+            elif question_data.get("partial_credit", False): 
                 earned_points += question_value / 2  # Award 50% for partial credit
+                
+            questions_overview += f"Question {question_number}: {question_data.get('comments')}\n"
         
         # Calculate percentage grade
         grade_percentage = (earned_points / total_points * 100) if total_points > 0 else 0
+        
+        # Build the payload for the Gen AI to provide an overview of the student's assessment
+        payload = {
+            "model": "gpt-4o",
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are a helpful teacher's assistant that always responds using JSON."
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": performance_summary_prompt.format(questions_overview=questions_overview)
+                        }
+                    ]
+                }
+            ],
+            "response_format" : {"type": "json_object"},
+            "max_tokens": 2500,
+            "temperature": 0
+        }
+
+        # Use Gen AI to provide an overview of the student's assessment
+        response = self.gen_ai.request_json(payload=payload)
         
         # Add grade information to the assessment
         graded_assessment = evaluated_assessment.copy()
         graded_assessment.update({
             "total_points": total_points,
             "earned_points": earned_points,
-            "grade": round(grade_percentage, 1)  # Round to 1 decimal place
+            "grade": round(grade_percentage, 1),
+            "overview": response.get("overview")
         })
         
         return graded_assessment
