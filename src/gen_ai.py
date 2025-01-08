@@ -94,12 +94,12 @@ class GenAI:
         payload["messages"][1]["content"].append(image_url_payload)
 
     def request_for_image_text(self, source_image: SourceImage, payload: Dict[str, str]) -> Dict[str, Any]:
-        print(f"Sending {source_image.get_source()} to: {endpoint}")
+        print(f"Sending {source_image.get_source()} to: {self.endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
         return self.request(payload=payload)
     
     def request_for_image_json(self, source_image: SourceImage, payload: Dict[str, str]) -> Dict[str, Any]:
-        print(f"Sending {source_image.get_source()} to: {endpoint}")
+        print(f"Sending {source_image.get_source()} to: {self.endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
         return self.request_json(payload=payload)
         
@@ -137,6 +137,6 @@ if __name__ == "__main__":
         }
 
     source_image = SourceImage("data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")
-    response = gen_ai.request_for_image_json(source_image=source_image, 
-                                        payload=payload)
+    response = gen_ai.request_for_image_json(source_image=source_image,
+                                             payload=payload)
     print(response)

@@ -24,40 +24,56 @@ class AssessmentEvaluator(Evaluator) :
         
         # Get the specific quiz answer key
         quiz_key = answer_keys.get(quiz_name.lower())
-        if not quiz_key:
+        if quiz_key is None:
             raise ValueError(f"Quiz '{quiz_name}' not found in answer key")
         
-        evaluated_answers = {}
+        # Retrieve data about the quiz and student
+        quiz_name = student_answers.get("name")
+        quiz_subject = student_answers.get("subject")
+        quiz_section = student_answers.get("section")
+        quiz_date = student_answers.get("date")
+        student_name = student_answers.get("student_name")
+        if student_name is None:
+            raise ValueError(f"Student name not found in student answers")
+        
+        evaluated_quiz = {
+            "student_name": student_name,
+            "date": quiz_date,
+            "name": quiz_name,
+            "subject": quiz_subject,
+            "section": quiz_section,
+            "questions": {}
+        }
         
         # Iterate through each question in the student's answers and compare the student's answer to the correct answer
         for student_answers_question_data in student_answers["questions"]:
             question_number = str(student_answers_question_data.get("number"))
-            print(f"Question Number: {question_number}")
             question_text = student_answers_question_data.get("text")
             student_answer = student_answers_question_data.get("student_answer")
             
             answer_key_question_data = quiz_key.get("questions").get(question_number)
-            if not answer_key_question_data:
+            if answer_key_question_data is None:
                 raise ValueError(f"Question '{question_number}' not found in answer key for quiz '{quiz_name}'")
                 # TODO: Consider handling this even when the question is not found in the answer key
             
             correct_answers = answer_key_question_data.get("answer")
-            if not correct_answers:
+            if correct_answers is None:
                 raise ValueError(f"Answer for question '{question_number}' not found in answer key for quiz '{quiz_name}'")
+            
+            # Check if the question has already been evaluated
+            if question_number in evaluated_quiz:
+                # TODO: Currently, a ValueError is raised even though it halts the program; In the future, this should be handled more gracefully
+                raise ValueError(f"Question '{question_number}' already evaluated")
             
             # Check if the student's answer is in the correct answers; If not, use Gen AI to check if the student's answer is equal
             if student_answer.strip() in correct_answers:
-                if question_number not in evaluated_answers:
-                    evaluated_answers[question_number] = {
+                    evaluated_quiz["questions"][question_number] = {
                         "answer_match": True,
                         "value": answer_key_question_data.get("value"),
                         "correct": True,
                         "partial_credit": False,
                         "comments": "The student's answer correct"
                     }
-                else:
-                    # TODO: Currently, a ValueError is raised even though it halts the program; In the future, this should be handled more gracefully
-                    raise ValueError(f"Question '{question_number}' already evaluated")
             else:
                 # Use Gen AI to check if the student's answer is equal to the correct answer
                 payload = {
@@ -84,6 +100,7 @@ class AssessmentEvaluator(Evaluator) :
                     "temperature": 0
                 }
     
+                # Check if the student's answer is equal to the correct answer using Gen AI
                 response = self.gen_ai.request_json(payload=payload)
                 
                 correct = response.get("correct")
@@ -91,14 +108,15 @@ class AssessmentEvaluator(Evaluator) :
                     # TODO: In the future, this should be handled more gracefully so that the program doesn't halt
                     raise ValueError(f"'correct' is not in the response for question '{question_number}' in quiz '{quiz_name}'\nRaw response: {response}")
                 
-                evaluated_answers[question_number] = {
+                # Append the evaluated answer
+                evaluated_quiz["questions"][question_number] = {
                     "answer_match": False,
                     "value": answer_key_question_data.get("value"),
                     "correct": correct,
                     "partial_credit": response.get("partial_credit"),
                     "comments": response.get("explanation")
                 }
-        return evaluated_answers
+        return evaluated_quiz
         
     # TODO: REFACTOR
     def grade(self, student_assessment):
