@@ -7,14 +7,17 @@ import urllib.error
 from image_handling import SourceImage
 
 class GenAI:
-    def request(self, endpoint: str, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    # NOTE: This will be the default endpoint until other endpoints and/or AI providers are added
+    endpoint = "https://api.openai.com/v1/chat/completions"
+    
+    def request(self, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
         try:
             # Convert the payload to JSON and encode as bytes for urllib
             json_data = json.dumps(payload).encode("utf-8")
 
             # Create the request
             request = urllib.request.Request(
-                endpoint,
+                self.endpoint,
                 data=json_data,
                 headers=headers,
                 method="POST"
@@ -33,10 +36,10 @@ class GenAI:
                     else:
                         return response_content
                 else:
-                    print(f"Error: {response.status}, {response.read().decode("utf-8")}")
+                    print(f"Error: {response.status}, {response.read().decode('utf-8')}")
                     return None
         except urllib.error.HTTPError as e:
-            print(f"HTTPError: {e.code}, {e.read().decode("utf-8")}")
+            print(f"HTTPError: {e.code}, {e.read().decode('utf-8')}")
             return None
         except urllib.error.URLError as e:
             print(f"URLError: {e.reason}")
@@ -45,8 +48,19 @@ class GenAI:
             print(f"Error while calling ChatGPT: {e}")
             return None
         
-    def request_json(self, endpoint: str, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
-        response_content = self.request(endpoint=endpoint, payload=payload, headers=headers)
+    def request_json(self, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+        """
+        Makes a request to the Gen AI endpoint and returns the parsed JSON response.
+
+        Args:
+            payload (Dict[str, str]): The request payload/body as a dictionary
+            headers (Dict[str, str]): Headers to include in the request
+
+        Returns:
+            Dict[str, Any]: The parsed JSON response from the API, or None if there was an error
+        """
+        
+        response_content = self.request(payload=payload, headers=headers)
         if not response_content:
             return None
         
@@ -63,7 +77,6 @@ class GenAI:
             return None
         
     def _add_image_to_payload(self, source_image: SourceImage, payload: Dict[str, str]) -> None:
-        print(f"Sending {source_image.get_source()} to: {endpoint}")
         image_url = f"data:image/jpeg;base64,{source_image.get_base64()}"
         image_url_payload = {
                 "type": "image_url",
@@ -73,13 +86,15 @@ class GenAI:
             }
         payload["messages"][1]["content"].append(image_url_payload)
 
-    def request_for_image_text(self, source_image: SourceImage, endpoint: str, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    def request_for_image_text(self, source_image: SourceImage, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+        print(f"Sending {source_image.get_source()} to: {endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
-        return self.request(endpoint=endpoint, payload=payload, headers=headers)
+        return self.request(payload=payload, headers=headers)
     
-    def request_for_image_json(self, source_image: SourceImage, endpoint: str, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    def request_for_image_json(self, source_image: SourceImage, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+        print(f"Sending {source_image.get_source()} to: {endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
-        return self.request_json(endpoint=endpoint, payload=payload, headers=headers)
+        return self.request_json(payload=payload, headers=headers)
         
 if __name__ == "__main__":
     load_dotenv()

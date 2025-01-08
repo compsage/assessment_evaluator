@@ -8,7 +8,7 @@ from urllib.parse import parse_qs
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
 from image_handling import SourceImage
-from processors import AssessmentProcessor, Processor
+from evaluators import AssessmentEvaluator, Evaluator
 
 def detect_double_exclamation_commands(text):
     """
@@ -111,7 +111,7 @@ def handler(event, context):
     #Get the image of the student quiz
     #student_quiz_image = SourceImage("./data/quiz1_sample.jpeg")
     for student_assessment_image in sourceImages :
-        image_processor = Processor(prompts_directory="./prompts", openai_api_key=openai_api_key)
+        image_processor = Evaluator(prompts_directory="./prompts", openai_api_key=openai_api_key)
         #Call ChatGPT with the image to get the students answers in JSON format
         student_answers = image_processor.call_genai(student_assessment_image, "get_answers_from_student_quiz")
 
@@ -123,14 +123,14 @@ def handler(event, context):
             all_student_answers_dict[key]['questions'].extend(questions)
 
     #Now that we have the Students answers and the Keys Loaded lets grade it
-    assessment_evaluator = AssessmentProcessor(prompts_directory="./prompts", openai_api_key=openai_api_key)
+    assessment_evaluator = AssessmentEvaluator(prompts_directory="./prompts", openai_api_key=openai_api_key)
 
     #Need to combine test pages 
     for key in all_student_answers_dict :
         student_answers = all_student_answers_dict[key]
         
         #Perform the initial check of the student's quiz against the answer key
-        checked_student_answers = assessment_evaluator.check(answers[student_answers['name'].lower()], student_answers)
+        checked_student_answers = assessment_evaluator.evaluate(answers[student_answers['name'].lower()], student_answers)
     
         #No2 that it's been checked let's grade the exam
         graded_assessment = assessment_evaluator.grade(checked_student_answers)
