@@ -8,7 +8,7 @@ from urllib.parse import parse_qs
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
 from image_handling import SourceImage
-from evaluators import AssessmentEvaluator, Evaluator
+from assessment_handler import AssessmentHandler, Evaluator
 
 def detect_double_exclamation_commands(text):
     """
@@ -123,7 +123,7 @@ def handler(event, context):
             all_student_answers_dict[key]['questions'].extend(questions)
 
     #Now that we have the Students answers and the Keys Loaded lets grade it
-    assessment_evaluator = AssessmentEvaluator(prompts_directory="./prompts", openai_api_key=openai_api_key)
+    assessment_evaluator = AssessmentHandler(prompts_directory="./prompts", openai_api_key=openai_api_key)
 
     #Need to combine test pages 
     for key in all_student_answers_dict :

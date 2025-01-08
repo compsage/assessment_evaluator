@@ -2,18 +2,24 @@ import json
 import math
 from typing import Any, Dict, List
 from gen_ai import GenAI
-from abc import ABC, abstractmethod
 
-class Evaluator(ABC):
+class AssessmentHandler:
     def __init__(self, gen_ai: GenAI):
         self.gen_ai = gen_ai
     
-    @abstractmethod
-    def evaluate(self, answer_key_file: str, quiz_name: str, student_answers: Dict[str, Any]) -> List[str]:
-        pass
-
-class AssessmentEvaluator(Evaluator) :
-    def evaluate(self, answer_key_file: str, quiz_name: str, student_answers: Dict[str, Any]) -> List[str]:
+    def evaluate(self, answer_key_file: str, quiz_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Evaluate the student's quiz against the answer key
+        
+        Args:
+            answer_key_file (str): The path to the answer key file
+            quiz_name (str): The name of the quiz
+            student_answers (Dict[str, Any]): The student's answers
+        
+        Returns:
+            Dict[str, Any]: The evaluated quiz
+        """
+        
         # Load answer key file
         with open(answer_key_file, "r", encoding="utf-8") as f:
             answer_keys = json.load(f)

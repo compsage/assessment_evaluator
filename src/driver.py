@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 from image_handling import SourceImage
-from evaluators import AssessmentEvaluator, Evaluator
+from assessment_handler import AssessmentHandler, Evaluator
 from gen_ai import GenAI
 
 def get_file_paths(directory):
@@ -150,13 +150,11 @@ if __name__ == "__main__":
     print("\nConverting Student Quiz Image to JSON...")
     # response = gen_ai.request_for_image_json(source_image=source_image,
     #                                          payload=payload)
-    
     response = {'student_name': 'Jon Luther White', 'date': '2024-10-06', 'name': 'Quiz 1', 'subject': 'Intermediate Mathematics', 'section': '1.1–1.2', 'page': 1, 'questions': [{'text': 'In which number does the 6 have a greater value: 7,685 or 6,785?', 'student_answer': '6,785', 'generated_answer': '6,785', 'number': 1, 'correct_value': 'fully_correct', 'assessment': 'The student correctly identified the number with the greater value of 6.'}, {'text': 'In the number 243,107,569, which digit is in the ten thousands place?', 'student_answer': '0', 'generated_answer': '0', 'number': 2, 'correct_value': 'fully_correct', 'assessment': 'The student correctly identified the digit in the ten thousands place.'}, {'text': 'Round 4,482,186 to the tens place.', 'student_answer': '4,482,190', 'generated_answer': '4,482,190', 'number': 3, 'correct_value': 'fully_correct', 'assessment': 'The student correctly rounded the number to the tens place.'}, {'text': 'What is the answer to a subtraction problem called?', 'student_answer': 'difference', 'generated_answer': 'difference', 'number': 4, 'correct_value': 'fully_correct', 'assessment': 'The student correctly named the result of a subtraction problem.'}, {'text': 'What is the value of |-36|?', 'student_answer': '36', 'generated_answer': '36', 'number': 5, 'correct_value': 'fully_correct', 'assessment': 'The student correctly calculated the absolute value.'}, {'text': 'What number category includes whole numbers as well as their opposites?', 'student_answer': 'integers', 'generated_answer': 'integers', 'number': 6, 'correct_value': 'fully_correct', 'assessment': 'The student correctly identified the number category.'}, {'text': 'Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33', 'student_answer': '<', 'generated_answer': '<', 'number': 7, 'correct_value': 'fully_correct', 'assessment': 'The student correctly compared the numbers.'}, {'text': '8. -2 ___ -11', 'student_answer': '>', 'generated_answer': '>', 'number': 8, 'correct_value': 'fully_correct', 'assessment': 'The student correctly compared the numbers.'}, {'text': '9. |-7| ___ 10', 'student_answer': '<', 'generated_answer': '<', 'number': 9, 'correct_value': 'fully_correct', 'assessment': 'The student correctly compared the absolute value.'}, {'text': '10. 25.19 ___ 25.2', 'student_answer': '<', 'generated_answer': '<', 'number': 10, 'correct_value': 'fully_correct', 'assessment': 'The student correctly compared the numbers.'}, {'text': 'Find the answers. 11. 7,365 + 12,719 + 2,574', 'student_answer': '22,658', 'generated_answer': '22,658', 'number': 11, 'correct_value': 'fully_correct', 'assessment': 'The student correctly calculated the sum.'}, {'text': '12. 14.56 - 3.054', 'student_answer': '11.57', 'generated_answer': '11.506', 'number': 12, 'correct_value': 'partially_correct', 'assessment': 'The student made a small error in subtraction.'}, {'text': '13. 47.8 × 1.2', 'student_answer': '57.36', 'generated_answer': '57.36', 'number': 13, 'correct_value': 'fully_correct', 'assessment': 'The student correctly calculated the product.'}, {'text': '14. 0.6 ÷ 1.944', 'student_answer': '0.3', 'generated_answer': '0.3086', 'number': 14, 'correct_value': 'partially_correct', 'assessment': 'The student made a small error in division.'}]}
-
-    print(f"Student Quiz Answer: {response}")
+    print(f"\nStudent Quiz Answer: {response}")
     
     # Evaluate the student's quiz against the answer key
-    assessment_evaluator = AssessmentEvaluator(gen_ai=gen_ai)
+    assessment_evaluator = AssessmentHandler(gen_ai=gen_ai)
     print("\nEvaluating Quiz...")
     evaluated_quiz = assessment_evaluator.evaluate("data/transformed_answer_keys.json", "quiz 1", response) # NOTE: It's only returning only the correct answers like this temporarily
     print(f"\nEvaluated Quiz: {evaluated_quiz}")
