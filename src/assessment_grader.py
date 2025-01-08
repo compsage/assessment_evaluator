@@ -116,60 +116,45 @@ class AssessmentGrader:
         return evaluated_assessment
     
     def _grade_assessment(self, evaluated_assessment: Dict[str, Any]) -> Dict[str, Any]:
-        pass
-        # TODO: Implement this
+        """
+        Grade the evaluated assessment by calculating points earned and total percentage
         
+        Args:
+            evaluated_assessment (Dict[str, Any]): The evaluated assessment containing questions and their results
+            
+        Returns:
+            Dict[str, Any]: The graded assessment with score and percentage
+        """
+        total_points = 0
+        earned_points = 0
         
+        # Calculate points for each question
+        for question_number, question_data in evaluated_assessment["questions"].items():
+            question_value = question_data.get("value", 0)
+            total_points += question_value
+            
+            # Award full points if correct
+            if question_data.get("correct", False):
+                earned_points += question_value
+            # Award partial credit if applicable
+            elif question_data.get("partial_credit", False):
+                earned_points += question_value / 2  # Award 50% for partial credit
+        
+        # Calculate percentage grade
+        grade_percentage = (earned_points / total_points * 100) if total_points > 0 else 0
+        
+        # Add grade information to the assessment
+        graded_assessment = evaluated_assessment.copy()
+        graded_assessment.update({
+            "total_points": total_points,
+            "earned_points": earned_points,
+            "grade": round(grade_percentage, 1)  # Round to 1 decimal place
+        })
+        
+        return graded_assessment
 
     def _format_assessment_output(self, data):
-        # Extract relevant fields from the JSON
-        student_name = data.get("student_name", "Unknown")
-        assessment_name = data.get("name", "Unknown")
-        assessment_subject = data.get("subject", "Unknown")
-        date = data.get("date", "Unknown")
-
-        # Prepare lists for correct, partially correct, and incorrect answers
-        correct = data.get("correct", [])
-        partial = data.get("partially_correct", [])
-        partial_diff =  data.get("partially_correct_diffs", [])
-        incorrect = data.get("incorrect", [])
-
-        # Extract question numbers as comma-separated strings
-        correct_numbers = ", ".join(str(question) for question, _ in correct)
-        partial_numbers = ", ".join(str(question) for question, _ in partial)
-        incorrect_numbers = ", ".join(str(question) for question, _ in incorrect)
-
-        # Total points for each category
-        correct_points = sum(points for _, points in correct)
-        partial_points = sum(points for _, points in partial)
-        partial_diff = sum(points for _, points in partial_diff)
-        incorrect_points = -sum(points for _, points in incorrect)  # Negative for incorrect
-
-        total_points = correct_points + partial_points
-        # Overall points and performance overview
-        overall_points = data.get("overall_points", 0)
-        total_possible_points = correct_points + partial_points - incorrect_points
-        performance_percentage = (overall_points / total_possible_points) * 100 if total_possible_points else 0
-
-        # Performance overview
-        performance_overview = data.get("performance_overview")
-
-        # Format the output string
-        formatted_output = (
-            f"Student Name: {student_name}\n"
-            f"Date: {date}\n"
-            f"Assessment Subject: {assessment_subject}\n"
-            f"Assessment Name: {assessment_name}\n\n"
-            
-            f"Correct Answers: {correct_numbers} ({correct_points} points)\n"
-            f"Partially Correct Answers: {partial_numbers} ({partial_points} points, {-partial_diff} points)\n"
-            f"Incorrect Answers: {incorrect_numbers} ({incorrect_points} points)\n"
-            f"Points Subtracted: {(incorrect_points + -partial_diff)} points\n"
-            f"Total Points: {total_points} points\n\n"
-            f"{performance_overview}\n"
-        )
-
-        return formatted_output
+        pass
     
     def grade(self, answer_key_file: str, assessment_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
         # Load answer key file
@@ -186,13 +171,11 @@ class AssessmentGrader:
         evaluated_assessment = self._evaluate_assessment(answer_key_questions=answer_key_questions,
                                                          assessment_name=assessment_name, 
                                                          student_answers=student_answers)
-        
-        return evaluated_assessment
-        
+                
         # Grade the student's assessment
-        # graded_assessment = self._grade_assessment(evaluated_assessment=evaluated_assessment)
+        graded_assessment = self._grade_assessment(evaluated_assessment=evaluated_assessment)
         
         # Format the student's assessment
         # formatted_assessment = self._format_assessment_output(graded_assessment)
         
-        # return formatted_assessment
+        return graded_assessment
