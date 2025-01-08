@@ -6,11 +6,19 @@ import urllib.request
 import urllib.error
 from image_handling import SourceImage
 
+load_dotenv()
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 class GenAI:
-    # NOTE: This will be the default endpoint until other endpoints and/or AI providers are added
+    # NOTE: This will be the default endpoint and headers until others and/or AI providers are added
     endpoint = "https://api.openai.com/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {openai_api_key}",
+        "Content-Type": "application/json"
+    }
     
-    def request(self, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    def request(self, payload: Dict[str, str]) -> Dict[str, Any]:
         try:
             # Convert the payload to JSON and encode as bytes for urllib
             json_data = json.dumps(payload).encode("utf-8")
@@ -19,7 +27,7 @@ class GenAI:
             request = urllib.request.Request(
                 self.endpoint,
                 data=json_data,
-                headers=headers,
+                headers=self.headers,
                 method="POST"
             )
         
@@ -48,19 +56,18 @@ class GenAI:
             print(f"Error while calling ChatGPT: {e}")
             return None
         
-    def request_json(self, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    def request_json(self, payload: Dict[str, str]) -> Dict[str, Any]:
         """
         Makes a request to the Gen AI endpoint and returns the parsed JSON response.
 
         Args:
             payload (Dict[str, str]): The request payload/body as a dictionary
-            headers (Dict[str, str]): Headers to include in the request
 
         Returns:
             Dict[str, Any]: The parsed JSON response from the API, or None if there was an error
         """
         
-        response_content = self.request(payload=payload, headers=headers)
+        response_content = self.request(payload=payload)
         if not response_content:
             return None
         
@@ -86,15 +93,15 @@ class GenAI:
             }
         payload["messages"][1]["content"].append(image_url_payload)
 
-    def request_for_image_text(self, source_image: SourceImage, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    def request_for_image_text(self, source_image: SourceImage, payload: Dict[str, str]) -> Dict[str, Any]:
         print(f"Sending {source_image.get_source()} to: {endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
-        return self.request(payload=payload, headers=headers)
+        return self.request(payload=payload)
     
-    def request_for_image_json(self, source_image: SourceImage, payload: Dict[str, str], headers: Dict[str, str]) -> Dict[str, Any]:
+    def request_for_image_json(self, source_image: SourceImage, payload: Dict[str, str]) -> Dict[str, Any]:
         print(f"Sending {source_image.get_source()} to: {endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
-        return self.request_json(payload=payload, headers=headers)
+        return self.request_json(payload=payload)
         
 if __name__ == "__main__":
     load_dotenv()
@@ -128,15 +135,8 @@ if __name__ == "__main__":
             "max_tokens": 2500,
             "temperature": 0
         }
-    
-    headers = {
-        "Authorization": f"Bearer {openai_api_key}",
-        "Content-Type": "application/json"
-    }
 
     source_image = SourceImage("data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")
     response = gen_ai.request_for_image_json(source_image=source_image, 
-                                        endpoint=endpoint, 
-                                        payload=payload, 
-                                        headers=headers)
+                                        payload=payload)
     print(response)

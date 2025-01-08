@@ -7,10 +7,6 @@ from image_handling import SourceImage
 from evaluators import AssessmentEvaluator, Evaluator
 from gen_ai import GenAI
 
-load_dotenv()
-
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
 def get_file_paths(directory):
     """
     Retrieves all file paths from a specific directory.
@@ -33,24 +29,24 @@ def get_file_paths(directory):
 
     return file_paths
 
-def generate_answer_keys(directory_path) :
-    image_processor = Evaluator("../prompts", openai_api_key=openai_api_key)
-    answer_key_image_paths = get_file_paths(directory_path)
+# def generate_answer_keys(directory_path) :
+#     image_processor = Evaluator("../prompts", openai_api_key=openai_api_key)
+#     answer_key_image_paths = get_file_paths(directory_path)
 
-    #You only need to run this once because onece the answers are extracted you can just use the json to check
-    answer_key_images = []
-    for answer_key_image_path in answer_key_image_paths :
-        answer_key_images.append(SourceImage(answer_key_image_path)) 
+#     #You only need to run this once because onece the answers are extracted you can just use the json to check
+#     answer_key_images = []
+#     for answer_key_image_path in answer_key_image_paths :
+#         answer_key_images.append(SourceImage(answer_key_image_path)) 
 
-    answers = image_processor.call_genai_multi_threaded(answer_key_images, "get_questions_answers_from_key", )
+#     answers = image_processor.call_genai_multi_threaded(answer_key_images, "get_questions_answers_from_key", )
     
-    for key in answers :
-        # Original file path
-        file_path = Path(key)
-        # Replace extension with .json
-        output_file = file_path.with_suffix(".json")
-        with open(output_file, "w", encoding="utf-8") as json_file:
-            json.dump(answers[key], json_file, indent=4, ensure_ascii=False)
+#     for key in answers :
+#         # Original file path
+#         file_path = Path(key)
+#         # Replace extension with .json
+#         output_file = file_path.with_suffix(".json")
+#         with open(output_file, "w", encoding="utf-8") as json_file:
+#             json.dump(answers[key], json_file, indent=4, ensure_ascii=False)
      
 # NOTE: OLD AND WILL NEED REWORK; HERE FOR REFERENCE       
 # def call_genai_multi_threaded(self, images, key, max_workers=5):
@@ -115,8 +111,9 @@ if __name__ == "__main__":
     #Now output the text summary
     text_summary = assessment_evaluator.format(graded_assessment)
     print(text_summary)'''
-        
-        
+
+
+
         
         
     # Retrieve the prompt used to get the questions and answers from a student quiz
@@ -145,11 +142,6 @@ if __name__ == "__main__":
             "max_tokens": 2500,
             "temperature": 0
         }
-    
-    headers = {
-        "Authorization": f"Bearer {openai_api_key}",
-        "Content-Type": "application/json"
-    }
 
     # Get the image of the student quiz
     source_image = SourceImage("data/student_assessment_images/media_0_MEc26c0f087a170ee977e9126f27c2de1a_1732593820049.jpeg")

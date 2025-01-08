@@ -1,19 +1,8 @@
 import json
 import math
-import os
 from typing import Any, Dict, List
 from gen_ai import GenAI
 from abc import ABC, abstractmethod
-from dotenv import load_dotenv
-
-load_dotenv()
-
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
-headers = {
-    "Authorization": f"Bearer {openai_api_key}",
-    "Content-Type": "application/json"
-}
 
 class Evaluator(ABC):
     def __init__(self, gen_ai: GenAI):
@@ -95,7 +84,7 @@ class AssessmentEvaluator(Evaluator) :
                     "temperature": 0
                 }
     
-                response = self.gen_ai.request_json(payload=payload, headers=headers)
+                response = self.gen_ai.request_json(payload=payload)
                 
                 correct = response.get("correct")
                 if correct is None:
