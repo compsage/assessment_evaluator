@@ -100,26 +100,26 @@ if __name__ == "__main__":
             
     gen_ai = GenAI()
     payload = {
-            "model": "gpt-4o",
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You are a helpful teacher's assistant that always responds using JSON."
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": image_prompt
-                        }
-                    ]
-                }
-            ],
-            "response_format" : {"type": "json_object"},
-            "max_tokens": 2500,
-            "temperature": 0
-        }
+        "model": "gpt-4o",
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a helpful teacher's assistant that always responds using JSON."
+            },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": image_prompt
+                    }
+                ]
+            }
+        ],
+        "response_format" : {"type": "json_object"},
+        "max_tokens": 2500,
+        "temperature": 0
+    }
 
     # Get the image of the student quiz
     print("\nGetting Student Quiz Image...")
@@ -132,9 +132,9 @@ if __name__ == "__main__":
     # print(f"\nStudent Quiz Answer: {response}")
     
     # Evaluate and grade the student's quiz against the answer key
-    assessment_evaluator = AssessmentGrader(gen_ai=gen_ai)
+    assessment_grader = AssessmentGrader(gen_ai=gen_ai)
     print("\nGrading Quiz...")
-    graded_quiz = assessment_evaluator.grade(answer_key_file="data/transformed_answer_keys.json", 
+    graded_quiz = assessment_grader.grade(answer_key_file="data/transformed_answer_keys.json", 
                                                  assessment_name="quiz 1", 
                                                  student_answers=response)
     
