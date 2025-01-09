@@ -18,18 +18,45 @@ AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
 
 # Common functions
 def extract_file_suffix(source):
-    """Extracts the file suffix from the source path or URL."""
+    """
+    Extracts the file suffix from the source path or URL.
+    
+    Args:
+        source (str): The source path or URL
+    
+    Returns:
+        str: The file suffix
+    """
+    
     return Path(source).suffix.lower()
 
 def parse_s3_url(s3_url):
-    """Parses an S3 URL into bucket name and key."""
+    """
+    Parses an S3 URL into bucket name and key.
+    
+    Args:
+        s3_url (str): The S3 URL
+    
+    Returns:
+        tuple: The bucket name and key
+    """
+    
     parsed = urlparse(s3_url)
     if not parsed.netloc or not parsed.path:
         raise ValueError("Invalid S3 URL format. Expected 's3://bucket/key'.")
     return parsed.netloc, parsed.path.lstrip("/")
 
 def extract_image_metadata(binary_data):
-    """Extracts metadata from image binary data."""
+    """
+    Extracts metadata from image binary data.
+    
+    Args:
+        binary_data (bytes): The binary data of the image
+    
+    Returns:
+        dict: The metadata of the image
+    """
+    
     try:
         image = Image.open(io.BytesIO(binary_data))
         metadata = {
@@ -51,7 +78,16 @@ def extract_image_metadata(binary_data):
         return {}
 
 def make_json_serializable(value):
-    """Converts non-serializable objects to JSON-serializable formats."""
+    """
+    Converts non-serializable objects to JSON-serializable formats.
+    
+    Args:
+        value (Any): The value to convert
+    
+    Returns:
+        Any: The converted value
+    """
+    
     if isinstance(value, Fraction):
         return float(value)
     elif isinstance(value, bytes):
@@ -69,13 +105,19 @@ def make_json_serializable(value):
 
 # Object to handle the image
 class SourceImage:
-    def __init__(self, source, auth=None, additional_metadata=None):
+    def __init__(self, source, auth=None, additional_metadata=None) -> None:
         """
         Initializes the SourceImage by detecting the source type and loading data accordingly.
-        :param source: File path, S3 URL (s3://bucket/key), or HTTP/HTTPS URL
-        :param auth: Optional authentication for URL
-        :param additional_metadata: Optional dictionary to add to the metadata
+        
+        Args:
+            source (str): File path, S3 URL (s3://bucket/key), or HTTP/HTTPS URL
+            auth (Optional[Tuple[str, str]]): Optional authentication for URL
+            additional_metadata (Optional[Dict[str, Any]]): Optional dictionary to add to the metadata
+            
+        Returns:
+            None
         """
+        
         self.source = source
         self.source_type = self._determine_source_type(source)
         self.file_suffix = extract_file_suffix(source)
@@ -89,7 +131,17 @@ class SourceImage:
         if additional_metadata:
             self.add_metadata(additional_metadata)
 
-    def _determine_source_type(self, source):
+    def _determine_source_type(self, source) -> str:
+        """
+        Determines the source type of the image.
+        
+        Args:
+            source (str): The source of the image
+        
+        Returns:
+            str: The source type of the image
+        """
+        
         if isinstance(source, str):
             if source.startswith("s3://"):
                 return "s3"
@@ -99,7 +151,18 @@ class SourceImage:
                 return "file"
         raise ValueError("Invalid source. Provide a valid file path, S3 URL, or HTTP/HTTPS URL.")
 
-    def _load_binary_data(self, source, auth):
+    def _load_binary_data(self, source, auth) -> bytes:
+        """
+        Loads the binary data of the image.
+        
+        Args:
+            source (str): The source of the image
+            auth (Optional[Tuple[str, str]]): Optional authentication for the URL
+        
+        Returns:
+            bytes: The binary data of the image
+        """
+        
         if self.source_type == "file":
             return FileLoader.load(source)
         elif self.source_type == "s3":
@@ -108,32 +171,87 @@ class SourceImage:
         elif self.source_type == "url":
             return URLLoader.load(source, auth)
 
-    def add_metadata(self, metadata_dict):
-        """Adds or updates metadata using a dictionary."""
+    def add_metadata(self, metadata_dict) -> None:
+        """
+        Adds or updates metadata using a dictionary.
+        
+        Args:
+            metadata_dict (Dict[str, Any]): The metadata to add or update
+            
+        Returns:
+            None
+        """
+        
         if not isinstance(metadata_dict, dict):
             raise ValueError("Metadata must be a dictionary.")
         self.metadata.update(metadata_dict)
 
-    def get_binary(self):
-        """Returns the binary data of the image."""
+    def get_binary(self) -> bytes:
+        """
+        Returns the binary data of the image.
+        
+        Args:
+            None
+        
+        Returns:
+            bytes: The binary data of the image
+        """
+        
         return self.binary_data
 
-    def get_base64(self):
-        """Returns the base64 encoded string of the image."""
+    def get_base64(self) -> str:
+        """
+        Returns the base64 encoded string of the image.
+        
+        Args:
+            None
+        
+        Returns:
+            str: The base64 encoded string of the image
+        """
+        
         return self.base64_data
 
-    def get_metadata(self):
-        """Returns the image metadata."""
+    def get_metadata(self) -> dict:
+        """
+        Returns the image metadata.
+        
+        Args:
+            None
+        
+        Returns:
+            dict: The metadata of the image
+        """
+        
         return self.metadata
 
-    def get_source(self):
-        """Returns the original source."""
+    def get_source(self) -> str:
+        """
+        Returns the original source.
+        
+        Args:
+            None
+        
+        Returns:
+            str: The original source of the image
+        """
+        
         return self.source
 
 # Loaders
 class FileLoader:
     @staticmethod
-    def load(filepath):
+    def load(filepath) -> bytes:
+        """
+        Loads the image from the file system.
+        
+        Args:
+            filepath (str): The path to the image file
+        
+        Returns:
+            bytes: The binary data of the image
+        """
+        
         path = Path(filepath)
         if not path.is_file():
             raise FileNotFoundError(f"Image not found at {filepath}")
@@ -141,7 +259,18 @@ class FileLoader:
 
 class S3Loader:
     @staticmethod
-    def load(bucket_name, key):
+    def load(bucket_name, key) -> bytes:
+        """
+        Loads the image from S3.
+        
+        Args:
+            bucket_name (str): The name of the S3 bucket
+            key (str): The key of the S3 object
+        
+        Returns:
+            bytes: The binary data of the image
+        """
+        
         try:
             s3_client = boto3.client("s3", region_name=AWS_REGION)
             response = s3_client.get_object(Bucket=bucket_name, Key=key)
@@ -153,7 +282,18 @@ class S3Loader:
 
 class URLLoader:
     @staticmethod
-    def load(url, auth=None):
+    def load(url, auth=None) -> bytes:
+        """
+        Loads the image from a URL.
+        
+        Args:
+            url (str): The URL of the image
+            auth (Optional[Tuple[str, str]]): Optional authentication for the URL
+        
+        Returns:
+            bytes: The binary data of the image
+        """
+        
         response = requests.get(url, auth=auth, timeout=10)
         if response.status_code == 200:
             return response.content
@@ -161,7 +301,19 @@ class URLLoader:
 
 class ImageWriter:
     @staticmethod
-    def write_to_filesystem(binary_data, filepath, metadata=None):
+    def write_to_filesystem(binary_data, filepath, metadata=None) -> None:
+        """
+        Writes the image to the file system.
+        
+        Args:
+            binary_data (bytes): The binary data of the image
+            filepath (str): The path to the image file
+            metadata (Optional[Dict[str, Any]]): Optional metadata to add to the image
+            
+        Returns:
+            None
+        """
+        
         filepath = Path(filepath)
         filepath.parent.mkdir(parents=True, exist_ok=True)
         filepath.write_bytes(binary_data)
@@ -172,7 +324,20 @@ class ImageWriter:
                 json.dump(metadata, f, indent=4)
 
     @staticmethod
-    def write_to_s3(binary_data, bucket_name, key, metadata=None):
+    def write_to_s3(binary_data, bucket_name, key, metadata=None) -> None:
+        """
+        Writes the image to S3.
+        
+        Args:
+            binary_data (bytes): The binary data of the image
+            bucket_name (str): The name of the S3 bucket
+            key (str): The key of the S3 object
+            metadata (Optional[Dict[str, Any]]): Optional metadata to add to the image
+            
+        Returns:
+            None
+        """
+        
         s3_client = boto3.client("s3", region_name=AWS_REGION)
         
         s3_client.put_object(Bucket=bucket_name, Key=key, Body=binary_data)

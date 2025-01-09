@@ -19,6 +19,16 @@ class GenAI:
     }
     
     def request(self, payload: Dict[str, str]) -> Dict[str, Any]:
+        """
+        Makes a request to the Gen AI endpoint and returns the response.
+
+        Args:
+            payload (Dict[str, str]): The request payload/body as a dictionary
+
+        Returns:
+            Dict[str, Any]: The response from the API, or None if there was an error
+        """
+        
         try:
             # Convert the payload to JSON and encode as bytes for urllib
             json_data = json.dumps(payload).encode("utf-8")
@@ -84,6 +94,14 @@ class GenAI:
             return None
         
     def _add_image_to_payload(self, source_image: SourceImage, payload: Dict[str, str]) -> None:
+        """
+        Adds the image to the payload
+
+        Args:
+            source_image (SourceImage): The image to add to the payload
+            payload (Dict[str, str]): The payload to add the image to
+        """
+        
         image_url = f"data:image/jpeg;base64,{source_image.get_base64()}"
         image_url_payload = {
                 "type": "image_url",
@@ -94,11 +112,33 @@ class GenAI:
         payload["messages"][1]["content"].append(image_url_payload)
 
     def request_for_image_text(self, source_image: SourceImage, payload: Dict[str, str]) -> Dict[str, Any]:
+        """
+        Makes a request to the Gen AI endpoint and returns the text response.
+
+        Args:
+            source_image (SourceImage): The image to add to the payload
+            payload (Dict[str, str]): The payload to add the image to
+
+        Returns:
+            Dict[str, Any]: The response from the API, or None if there was an error
+        """
+        
         print(f"Sending {source_image.get_source()} to: {self.endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
         return self.request(payload=payload)
     
     def request_for_image_json(self, source_image: SourceImage, payload: Dict[str, str]) -> Dict[str, Any]:
+        """
+        Makes a request to the Gen AI endpoint and returns the JSON response.
+
+        Args:
+            source_image (SourceImage): The image to add to the payload
+            payload (Dict[str, str]): The payload to add the image to
+
+        Returns:
+            Dict[str, Any]: The response from the API, or None if there was an error
+        """
+        
         print(f"Sending {source_image.get_source()} to: {self.endpoint}")
         self._add_image_to_payload(source_image=source_image, payload=payload)
         return self.request_json(payload=payload)

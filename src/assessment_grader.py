@@ -188,6 +188,18 @@ class AssessmentGrader:
         return graded_assessment
     
     def grade(self, answer_key_file: str, assessment_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Grade the student's assessment by evaluating the student's answers against the answer key and then grading the assessment
+        
+        Args:
+            answer_key_file (str): The path to the answer key file
+            assessment_name (str): The name of the assessment
+            student_answers (Dict[str, Any]): The student's answers
+        
+        Returns:
+            Dict[str, Any]: The graded assessment
+        """
+        
         # Load answer key file
         with open(answer_key_file, "r", encoding="utf-8") as f:
             answer_keys = json.load(f)

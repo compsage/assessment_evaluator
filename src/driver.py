@@ -46,34 +46,6 @@ def get_file_paths(directory):
 #         output_file = file_path.with_suffix(".json")
 #         with open(output_file, "w", encoding="utf-8") as json_file:
 #             json.dump(answers[key], json_file, indent=4, ensure_ascii=False)
-     
-# NOTE: OLD AND WILL NEED REWORK; HERE FOR REFERENCE       
-# def call_genai_multi_threaded(self, images, key, max_workers=5):
-#     """
-#     Processes a list of SourceImage objects concurrently and extracts data from them.
-
-#     :param images: List of SourceImage objects to process.
-#     :param key: The key to fetch the prompt for processing.
-#     :param max_workers: Maximum number of concurrent workers (default is 5).
-#     :return: A dictionary where keys are image indices and values are the results or errors.
-#     """
-#     results = {}
-
-#     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-#         future_to_index = {
-#             executor.submit(self.call_genai, image, key, **{}): image.get_source() for image in images
-#         }
-
-#         for future in concurrent.futures.as_completed(future_to_index):
-#             source = future_to_index[future]
-#             try:
-#                 result = future.result()
-#                 results[source] = result
-#             except Exception as e:
-#                 print(e)
-#                 print(f"error -> {source}")
-
-#     return results
 
 def format_assessment_output(data: Dict[str, Any]) -> str:
     """
