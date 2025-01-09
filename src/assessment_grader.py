@@ -186,9 +186,6 @@ class AssessmentGrader:
         })
         
         return graded_assessment
-
-    def _format_assessment_output(self, data):
-        pass
     
     def grade(self, answer_key_file: str, assessment_name: str, student_answers: Dict[str, Any]) -> Dict[str, Any]:
         # Load answer key file
@@ -208,8 +205,5 @@ class AssessmentGrader:
                 
         # Grade the student's assessment
         graded_assessment = self._grade_assessment(evaluated_assessment=evaluated_assessment)
-        
-        # Format the student's assessment
-        # formatted_assessment = self._format_assessment_output(graded_assessment)
-        
+
         return graded_assessment
