@@ -31,7 +31,8 @@ class AssessmentGrader:
         student_assessment_date = student_answers.get("date")
         student_name = student_answers.get("student_name")
         if student_name is None:
-            raise ValueError(f"Student name not found in student answers")
+            student_name = "Unknown"
+            print("Student name not found in student answers")
         
         evaluated_assessment = {
             "student_name": student_name,

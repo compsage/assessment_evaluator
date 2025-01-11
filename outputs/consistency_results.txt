@@ -1,0 +1,4556 @@
+Consistency Test Results
+========================
+Date/Time: 2025-01-11 17:12:40
+Number of Threads: 20
+Failed Threads: 2 of 20
+Failed Thread Numbers: 11, 15
+
+Total Execution Time: 34.57 seconds
+Failed Threads: 2 of 20
+Failed Thread Numbers: 11, 15
+
+Thread Results
+==============
+
+
+Thread 0
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 __ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 __ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| __ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 __ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 2,574",
+      "student_answer": "9,939",
+      "generated_answer": "9,939",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly added the numbers."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly multiplied the numbers."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student made a mistake in the rounding process, possibly misunderstanding the rounding rules or miscalculating the digits."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 9,939 is incorrect. The correct sum of 7,365 and 2,574 is 9,939. It seems the student may have made a calculation error."
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places, which led to the incorrect answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 80.5,
+  "grade": 80.5,
+  "overview": "The student performed well on the assessment, correctly answering 11 out of 14 questions. To improve, the student should focus on understanding rounding rules and ensuring accuracy in basic arithmetic calculations."
+}
+
+
+Thread 1
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4,482,190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 95.5,
+  "grade": 95.5,
+  "overview": "The student demonstrated strong performance, correctly answering 13 out of 14 questions. To improve, the student should focus on providing exact answers in calculations, avoiding unnecessary rounding."
+}
+
+
+Thread 2
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 2,574",
+      "student_answer": "9,939",
+      "generated_answer": "9,939",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly added the numbers."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.506",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly subtracted the numbers."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly multiplied the numbers."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3086",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly divided the numbers."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student may have mistakenly changed the hundreds place instead of rounding the tens place correctly."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 9,939 does not match the actual sum of 7,365 and 2,574, which is 9,939. It seems the student may have made a calculation error."
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.506 is incorrect because the correct answer to the subtraction problem 14.56 - 3.054 is 11.506, but the student used a comma instead of a period in the answer format. The correct answer should be written as 11,506 or 11506, depending on the context or formatting requirements."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3086 does not match the true and actual answers of 3.2 or 3.24. It seems the student may have made a calculation error or misunderstood the division operation."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 71.5,
+  "grade": 71.5,
+  "overview": "The student performed well on most questions, demonstrating a strong understanding of the material, but made errors in rounding, calculation, and formatting. To improve, the student should focus on carefully reviewing rounding rules, double-checking calculations, and ensuring correct answer formatting."
+}
+
+
+Thread 3
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value of 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of '4482190' does not match the correct answer of '4,482,190'. The student correctly rounded the number to the tens place, but it seems there was a typographical error in the final digit, resulting in '90' instead of '10'."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3 does not match the true and actual answers of 3.2 or 3.24. It seems the student may have made a calculation error or misunderstood the division process."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 83.5,
+  "grade": 83.5,
+  "overview": "The student demonstrated strong performance, correctly answering 11 out of 14 questions. To improve, the student should focus on avoiding typographical errors and ensuring precision in calculations, particularly with decimal operations and division."
+}
+
+
+Thread 4
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 __ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 __ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| __ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 __ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student made a mistake in the last two digits, possibly misunderstanding the rounding process or misplacing a digit."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places, which led to the incorrect answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3 does not match the true and actual answers of 3.2 or 3.24. It seems the student may have made an error in the division calculation or misunderstood the problem."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 80.5,
+  "grade": 80.5,
+  "overview": "The student performed well on the assessment, correctly answering 11 out of 14 questions. Areas for improvement include understanding the rounding process, ensuring accuracy in decimal subtraction, and correctly interpreting division problems."
+}
+
+
+Thread 5
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "Quiz 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "Quiz 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 4482190 is incorrect. The correct rounding of 4,482,186 to the tens place is 4,482,190. It seems the student may have mistakenly changed the hundreds place instead of rounding the tens place correctly."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 89.5,
+  "grade": 89.5,
+  "overview": "The student performed well on the assessment, correctly answering 12 out of 14 questions. To improve, the student should focus on precise rounding techniques and ensure accuracy in decimal subtraction without unnecessary rounding."
+}
+
+
+Thread 6
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value of 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4,482,190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 95.5,
+  "grade": 95.5,
+  "overview": "The student demonstrated strong performance, correctly answering 13 out of 14 questions. To improve, the student should focus on providing exact answers in calculations, avoiding unnecessary rounding unless specified."
+}
+
+
+Thread 7
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4,482,190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 95.5,
+  "grade": 95.5,
+  "overview": "The student demonstrated strong performance, correctly answering 13 out of 14 questions. To improve, the student should focus on providing exact answers in calculations, avoiding unnecessary rounding unless specified."
+}
+
+
+Thread 8
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "diff",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "partially_correct",
+      "assessment": "The student provided an abbreviated form of the correct term."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "int",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "partially_correct",
+      "assessment": "The student provided an abbreviated form of the correct term."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 2,574",
+      "student_answer": "231658",
+      "generated_answer": "9,939",
+      "number": 11,
+      "correct_value": "incorrect",
+      "assessment": "The student provided an incorrect sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student rounded the answer incorrectly."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "incorrect",
+      "assessment": "The student provided an incorrect quotient."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student may have mistakenly changed the hundreds place instead of the tens place."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 231658 does not match the actual answers of 22,658 or 22658. It appears the student may have mistakenly added an extra digit, possibly due to a calculation or transcription error."
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 80.5,
+  "grade": 80.5,
+  "overview": "The student performed well, correctly answering 11 out of 14 questions, demonstrating a strong understanding of the material. To improve, the student should focus on careful attention to detail in rounding and transcription to avoid minor errors in calculations."
+}
+
+
+Thread 9
+--------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value of 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "incorrect",
+      "assessment": "The student made a mistake in rounding to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "incorrect",
+      "assessment": "The student made a mistake in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "incorrect",
+      "assessment": "The student made a mistake in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer '4482190' does not match the correct rounded number '4,482,190'. It seems the student correctly rounded the number to the tens place but made a typographical error by omitting the comma, which led to a misinterpretation of the number."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 92.5,
+  "grade": 92.5,
+  "overview": "The student demonstrated strong performance, correctly answering 12 out of 14 questions. To improve, the student should focus on attention to detail, particularly in maintaining correct numerical formatting and providing exact answers without unnecessary rounding."
+}
+
+
+Thread 10
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4,482,190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 2,574",
+      "student_answer": "9,939",
+      "generated_answer": "9,939",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly added the numbers."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.506",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly subtracted the numbers."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly multiplied the numbers."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3086",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly divided the numbers."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 9,939 does not match the actual sum of 7,365 and 2,574, which is 9,939. The student may have made a calculation error or misread the numbers."
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.506 is incorrect because the correct answer to the subtraction problem 14.56 - 3.054 is 11.506, which matches the student's answer numerically. However, the expected format for the answer is without a decimal point, as indicated by the true and actual answers ['11,506', '11506']. The student likely misunderstood the required format."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3086 does not match the true and actual answers of 3.2 or 3.24. It appears the student may have made a calculation error when dividing 0.6 by 1.944."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 77.5,
+  "grade": 77.5,
+  "overview": "The student demonstrated strong performance, correctly answering 10 out of 14 questions. To improve, the student should focus on understanding the required answer formats and double-checking calculations to avoid errors in arithmetic operations."
+}
+
+
+Thread 11
+---------
+
+Image JSON:
+None
+
+Graded Quiz:
+None
+
+
+Thread 12
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4,482,190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the term for the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3 does not match the true and actual answers of 3.2 or 3.24. It seems the student may have made an error in the division calculation or misunderstood the problem."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 86.5,
+  "grade": 86.5,
+  "overview": "The student demonstrated strong performance, correctly answering 12 out of 14 questions. To improve, the student should focus on precision in calculations and ensure understanding of division problems to avoid rounding errors and misinterpretations."
+}
+
+
+Thread 13
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value of 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 __ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 __ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| __ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 __ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a rounding error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student may have made a typographical error by entering '4482190' instead of '4482190', which is not a valid rounding of the original number."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places, which led to the incorrect answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3 does not match the true and actual answers of 3.2 or 3.24. It seems the student may have made a calculation error or misunderstood the division operation."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 80.5,
+  "grade": 80.5,
+  "overview": "The student performed well on the assessment, correctly answering 11 out of 14 questions. To improve, the student should focus on avoiding typographical errors and ensuring accurate calculations, particularly in rounding and division operations."
+}
+
+
+Thread 14
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 2,574",
+      "student_answer": "9,939",
+      "generated_answer": "9,939",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly added the numbers."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly multiplied the numbers."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "0.3",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a small error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student may have made a typographical error by entering '4482190' instead of '4482190', which is not a valid rounding of the original number."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 9,939 does not match the actual sum of 7,365 and 2,574, which is 9,939. The student may have made a calculation error or misread the numbers."
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 0.3 does not match the true and actual answers of 3.2 or 3.24. It seems the student may have made a calculation error or misunderstood the division process."
+    }
+  },
+  "total_points": 100,
+  "earned_points": 71.5,
+  "grade": 71.5,
+  "overview": "The student demonstrated strong performance, correctly answering the majority of the questions. However, they should focus on improving accuracy in rounding, arithmetic calculations, and understanding division processes to avoid typographical and calculation errors."
+}
+
+
+Thread 15
+---------
+
+Image JSON:
+None
+
+Graded Quiz:
+None
+
+
+Thread 16
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "diff",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "partially_correct",
+      "assessment": "The student provided an abbreviated form of the correct term."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "int",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "partially_correct",
+      "assessment": "The student provided an abbreviated form of the correct term."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 __ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 __ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| __ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 __ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 2,574",
+      "student_answer": "231658",
+      "generated_answer": "9,939",
+      "number": 11,
+      "correct_value": "incorrect",
+      "assessment": "The student provided an incorrect sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student rounded the answer incorrectly."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 \u00f7 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "0.3086",
+      "number": 14,
+      "correct_value": "incorrect",
+      "assessment": "The student provided an incorrect quotient."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student made a mistake by incorrectly rounding the number, possibly misunderstanding the rounding rules or misplacing the digits."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of 231658 does not match the actual answers of 22,658 or 22658. It appears the student may have mistakenly added an extra digit or miscalculated the sum."
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 80.5,
+  "grade": 80.5,
+  "overview": "The student performed well on the assessment, correctly answering 11 out of 14 questions. To improve, the student should focus on understanding rounding rules, ensuring accurate digit placement, and providing exact answers without unnecessary rounding."
+}
+
+
+Thread 17
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4,482,190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 95.5,
+  "grade": 95.5,
+  "overview": "The student demonstrated strong performance, correctly answering 13 out of 14 questions. To improve, the student should focus on providing exact answers in calculations, avoiding unnecessary rounding unless specified."
+}
+
+
+Thread 18
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "difference",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly named the answer to a subtraction problem."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "integers",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number category."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 ___ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 ___ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| ___ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the absolute value."
+    },
+    {
+      "text": "10. 25.19 ___ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student may have mistakenly changed the hundreds place instead of rounding the tens place correctly."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 89.5,
+  "grade": 89.5,
+  "overview": "The student performed well on the assessment, correctly answering 12 out of 14 questions. To improve, the student should focus on precise rounding techniques and ensure accuracy in decimal subtraction without unnecessary rounding."
+}
+
+
+Thread 19
+---------
+
+Image JSON:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "page": 1,
+  "questions": [
+    {
+      "text": "In which number does the 6 have a greater value: 7,685 or 6,785?",
+      "student_answer": "6,785",
+      "generated_answer": "6,785",
+      "number": 1,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the number with the greater value for 6."
+    },
+    {
+      "text": "In the number 243,107,569, which digit is in the ten thousands place?",
+      "student_answer": "0",
+      "generated_answer": "0",
+      "number": 2,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly identified the digit in the ten thousands place."
+    },
+    {
+      "text": "Round 4,482,186 to the tens place.",
+      "student_answer": "4482190",
+      "generated_answer": "4,482,190",
+      "number": 3,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly rounded the number to the tens place."
+    },
+    {
+      "text": "What is the answer to a subtraction problem called?",
+      "student_answer": "diff",
+      "generated_answer": "difference",
+      "number": 4,
+      "correct_value": "partially_correct",
+      "assessment": "The student provided an abbreviated form of the correct term."
+    },
+    {
+      "text": "What is the value of |-36|?",
+      "student_answer": "36",
+      "generated_answer": "36",
+      "number": 5,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the absolute value."
+    },
+    {
+      "text": "What number category includes whole numbers as well as their opposites?",
+      "student_answer": "int",
+      "generated_answer": "integers",
+      "number": 6,
+      "correct_value": "partially_correct",
+      "assessment": "The student provided an abbreviated form of the correct term."
+    },
+    {
+      "text": "Compare each pair of numbers and write the correct symbol in the blank (>, <, or =). 7. 0.233 __ 0.33",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 7,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "8. -2 __ -11",
+      "student_answer": ">",
+      "generated_answer": ">",
+      "number": 8,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "9. |-7| __ 10",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 9,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "10. 25.19 __ 25.2",
+      "student_answer": "<",
+      "generated_answer": "<",
+      "number": 10,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly compared the numbers."
+    },
+    {
+      "text": "Find the answers. 11. 7,365 + 12,719 + 2,574",
+      "student_answer": "22,658",
+      "generated_answer": "22,658",
+      "number": 11,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the sum."
+    },
+    {
+      "text": "12. 14.56 - 3.054",
+      "student_answer": "11.57",
+      "generated_answer": "11.506",
+      "number": 12,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in subtraction."
+    },
+    {
+      "text": "13. 47.8 \u00d7 1.2",
+      "student_answer": "57.36",
+      "generated_answer": "57.36",
+      "number": 13,
+      "correct_value": "fully_correct",
+      "assessment": "The student correctly calculated the product."
+    },
+    {
+      "text": "14. 0.6 | 1.944",
+      "student_answer": "3.2",
+      "generated_answer": "3.24",
+      "number": 14,
+      "correct_value": "partially_correct",
+      "assessment": "The student made a minor error in division."
+    }
+  ]
+}
+
+Graded Quiz:
+{
+  "student_name": "Jon Luther White",
+  "date": "2024-10-06",
+  "name": "QUIZ 1",
+  "subject": "Intermediate Mathematics",
+  "section": "1.1\u20131.2",
+  "questions": {
+    "1": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "2": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "3": {
+      "answer_match": false,
+      "value": 6,
+      "correct": false,
+      "partial_credit": false,
+      "comments": "The student's answer of '4482190' is incorrect. The correct rounding of 4,482,186 to the tens place is '4,482,190'. It seems the student made a mistake by incorrectly rounding the number, possibly misunderstanding the rounding rules or misplacing the digit."
+    },
+    "4": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "5": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "6": {
+      "answer_match": true,
+      "value": 6,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "7": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "8": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "9": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "10": {
+      "answer_match": true,
+      "value": 7,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "11": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "12": {
+      "answer_match": false,
+      "value": 9,
+      "correct": false,
+      "partial_credit": true,
+      "comments": "The student's answer of 11.57 is incorrect. The correct answer to the subtraction problem 14.56 - 3.054 is 11.506. It seems the student may have rounded the result to two decimal places instead of providing the exact answer."
+    },
+    "13": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    },
+    "14": {
+      "answer_match": true,
+      "value": 9,
+      "correct": true,
+      "partial_credit": false,
+      "comments": "The student's answer correct"
+    }
+  },
+  "total_points": 100,
+  "earned_points": 89.5,
+  "grade": 89.5,
+  "overview": "The student performed well, correctly answering 12 out of 14 questions, demonstrating a strong understanding of the material. To improve, the student should focus on mastering rounding rules and ensuring precision in arithmetic operations to avoid similar mistakes in the future."
+}
+
+
+Analysis Results
+===============
+{
+  "grade_statistics": {
+    "mean": 85.33333333333333,
+    "median": 85.0,
+    "std_dev": 7.979753792457214,
+    "min": 71.5,
+    "max": 95.5,
+    "all_grades": [
+      80.5,
+      95.5,
+      71.5,
+      83.5,
+      80.5,
+      89.5,
+      95.5,
+      95.5,
+      80.5,
+      92.5,
+      77.5,
+      86.5,
+      80.5,
+      71.5,
+      80.5,
+      95.5,
+      89.5,
+      89.5
+    ]
+  },
+  "consistency_metrics": {
+    "total_runs": 18,
+    "unique_final_grades": 8,
+    "grade_range": 24.0,
+    "is_consistent": false,
+    "questions_with_inconsistent_answers": 6
+  },
+  "inconsistent_questions": {
+    "3": {
+      "max_points": 6,
+      "score_distribution": {
+        "0/6 points": {
+          "count": 10,
+          "percentage": 55.55555555555556
+        },
+        "6/6 points": {
+          "count": 6,
+          "percentage": 33.33333333333333
+        },
+        "3.0/6 points": {
+          "count": 2,
+          "percentage": 11.11111111111111
+        }
+      }
+    },
+    "11": {
+      "max_points": 9,
+      "score_distribution": {
+        "0/9 points": {
+          "count": 6,
+          "percentage": 33.33333333333333
+        },
+        "9/9 points": {
+          "count": 12,
+          "percentage": 66.66666666666666
+        }
+      }
+    },
+    "14": {
+      "max_points": 9,
+      "score_distribution": {
+        "9/9 points": {
+          "count": 11,
+          "percentage": 61.111111111111114
+        },
+        "0/9 points": {
+          "count": 7,
+          "percentage": 38.88888888888889
+        }
+      }
+    }
+  },
+  "inconsistent_answers": {
+    "3": {
+      "answer_distribution": {
+        "4482190": {
+          "count": 12,
+          "percentage": 66.66666666666666
+        },
+        "4,482,190": {
+          "count": 6,
+          "percentage": 33.33333333333333
+        }
+      }
+    },
+    "4": {
+      "answer_distribution": {
+        "difference": {
+          "count": 15,
+          "percentage": 83.33333333333334
+        },
+        "diff": {
+          "count": 3,
+          "percentage": 16.666666666666664
+        }
+      }
+    },
+    "6": {
+      "answer_distribution": {
+        "integers": {
+          "count": 15,
+          "percentage": 83.33333333333334
+        },
+        "int": {
+          "count": 3,
+          "percentage": 16.666666666666664
+        }
+      }
+    },
+    "11": {
+      "answer_distribution": {
+        "9,939": {
+          "count": 4,
+          "percentage": 22.22222222222222
+        },
+        "22,658": {
+          "count": 12,
+          "percentage": 66.66666666666666
+        },
+        "231658": {
+          "count": 2,
+          "percentage": 11.11111111111111
+        }
+      }
+    },
+    "12": {
+      "answer_distribution": {
+        "11.57": {
+          "count": 16,
+          "percentage": 88.88888888888889
+        },
+        "11.506": {
+          "count": 2,
+          "percentage": 11.11111111111111
+        }
+      }
+    },
+    "14": {
+      "answer_distribution": {
+        "3.2": {
+          "count": 11,
+          "percentage": 61.111111111111114
+        },
+        "0.3086": {
+          "count": 2,
+          "percentage": 11.11111111111111
+        },
+        "0.3": {
+          "count": 5,
+          "percentage": 27.77777777777778
+        }
+      }
+    }
+  }
+}
