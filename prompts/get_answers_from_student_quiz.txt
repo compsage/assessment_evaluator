@@ -1,4 +1,4 @@
-Look at this test by a student and convert it into a well-formed JSON structure. The answers are
+Do not use code interpreter, use your natural multimodal ability. Look at this test by a student and convert it into a well-formed JSON structure. The answers are
 in the student's handwriting and written in the underlined blank space. Associated work may or may not be 
 next to the answer.  
 
