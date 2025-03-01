@@ -11,9 +11,10 @@ class PromptTemplateManager:
     Class to manage templates.
     """
 
-    def __init__(self, templates_directory="./templates"):
+    def __init__(self, templates_directory="./prompt_templates"):
         """
         Initializes the PromptTemplateManager and loads template files from the specified directory.
+
 
         :param templates_directory: Path to the directory containing .template and .json-schema files.
         """

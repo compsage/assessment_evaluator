@@ -13,7 +13,7 @@ class Processor(ABC):
     """
     api_endpoint = "https://api.openai.com/v1/chat/completions"
 
-    def __init__(self, templates_directory="../prompt_templates", openai_api_key=None):
+    def __init__(self, templates_directory="./prompt_templates", openai_api_key=None):
         """
         Initializes the Processor and loads templates using PromptTemplateManager.
 

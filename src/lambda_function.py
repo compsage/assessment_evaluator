@@ -4,6 +4,7 @@ import base64
 import re
 from datetime import datetime
 import time
+import pprint
 from urllib.parse import parse_qs
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
@@ -62,6 +63,7 @@ def handler(event, context):
     bucket_name = get_parameter(ssm_client, 'from_twillio_bucket_name')
     openai_api_key = get_parameter(ssm_client, 'openai_api_key')
 
+    pprint.pprint(event)
     if not validate_twilio_request(event) :
         print("Not Validated")
         return 
@@ -112,7 +114,7 @@ def handler(event, context):
     #Get the image of the student quiz
     #student_quiz_image = SourceImage("./data/quiz1_sample.jpeg")
     for student_assessment_image in sourceImages :
-        image_processor = Processor(prompts_directory="./prompts", openai_api_key=openai_api_key)
+        image_processor = Processor(openai_api_key=openai_api_key)
         #Call ChatGPT with the image to get the students answers in JSON format
         student_answers = image_processor.call_genai(student_assessment_image, "get_answers_from_student_quiz")
 
@@ -124,7 +126,7 @@ def handler(event, context):
             all_student_answers_dict[key]['questions'].extend(questions)
 
     #Now that we have the Students answers and the Keys Loaded lets grade it
-    assessment_evaluator = AssessmentEvaluator(prompts_directory="./prompts", openai_api_key=openai_api_key)
+    assessment_evaluator = AssessmentEvaluator(openai_api_key=openai_api_key)
 
     #Need to combine test pages 
     for key in all_student_answers_dict :

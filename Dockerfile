@@ -24,9 +24,10 @@ COPY ../src/lambda_function.py ./lambda_function.py
 COPY ../src/SourceImage.py ./SourceImage.py
 COPY ../src/Processors.py ./Processors.py
 COPY ../src/Evaluator.py ./Evaluator.py
+COPY ../src/PromptTemplateManager.py ./PromptTemplateManager.py
 
 # Copy additional directories and files
-COPY ../prompts ./prompts
+COPY prompt_templates ./prompt_templates
 
 # Copy these file ins to test functionality in the cloud
 COPY ../data/aggregated_answer_data.json ./data/answer_keys.json
